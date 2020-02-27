@@ -20,7 +20,6 @@
                     <connections>
                         <segue destination="oLl-Qf-Ycc" kind="show" identifier="unlockSegue" id="bgx-VI-5Bv"/>
                         <segue destination="YWl-PW-4Ay" kind="show" identifier="progressSegue" id="OOT-ot-Nq9"/>
-                        <segue destination="nL2-CI-rFF" kind="presentation" identifier="tutorialSegue" modalPresentationStyle="fullScreen" id="anC-gk-AdA"/>
                         <segue destination="EWK-kq-FLp" kind="presentation" identifier="playSegue" modalPresentationStyle="fullScreen" id="twf-s2-Jaf"/>
                     </connections>
                 </viewController>
@@ -36,7 +35,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9u-f8-57v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="-295"/>
+            <point key="canvasLocation" x="1074" y="-241"/>
         </scene>
         <!--Progress-->
         <scene sceneID="IqV-5x-xbJ">
@@ -46,15 +45,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hef-Fp-1RX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085" y="-228"/>
-        </scene>
-        <!--Tutorial-->
-        <scene sceneID="bUV-YU-POF">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Tutorial" id="nL2-CI-rFF" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="02d-ux-fSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1079" y="-155"/>
+            <point key="canvasLocation" x="1083" y="-190"/>
         </scene>
         <!--1-->
         <scene sceneID="Ucp-AK-oNT">
@@ -62,7 +53,7 @@
                 <viewControllerPlaceholder storyboardName="1" id="EWK-kq-FLp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNq-M0-xmj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="-90"/>
+            <point key="canvasLocation" x="1049" y="-138"/>
         </scene>
     </scenes>
 </document>
