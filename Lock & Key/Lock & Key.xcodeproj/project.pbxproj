@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		37223743240827B000FBAA18 /* Opening.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37223742240827B000FBAA18 /* Opening.storyboard */; };
 		37223745240827C100FBAA18 /* Progress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37223744240827C100FBAA18 /* Progress.storyboard */; };
-		37223747240827CB00FBAA18 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37223746240827CB00FBAA18 /* Tutorial.storyboard */; };
 		372237492408280400FBAA18 /* Unlock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372237482408280400FBAA18 /* Unlock.storyboard */; };
 		3722374D2408282400FBAA18 /* 1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3722374C2408282400FBAA18 /* 1.storyboard */; };
 		3722374F2408282B00FBAA18 /* 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3722374E2408282B00FBAA18 /* 2.storyboard */; };
@@ -28,7 +27,6 @@
 /* Begin PBXFileReference section */
 		37223742240827B000FBAA18 /* Opening.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Opening.storyboard; sourceTree = "<group>"; };
 		37223744240827C100FBAA18 /* Progress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Progress.storyboard; sourceTree = "<group>"; };
-		37223746240827CB00FBAA18 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		372237482408280400FBAA18 /* Unlock.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Unlock.storyboard; sourceTree = "<group>"; };
 		3722374C2408282400FBAA18 /* 1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = 1.storyboard; sourceTree = "<group>"; };
 		3722374E2408282B00FBAA18 /* 2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = 2.storyboard; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 			children = (
 				37223742240827B000FBAA18 /* Opening.storyboard */,
 				37223744240827C100FBAA18 /* Progress.storyboard */,
-				37223746240827CB00FBAA18 /* Tutorial.storyboard */,
 				372237482408280400FBAA18 /* Unlock.storyboard */,
 				37A6C3422406DFAB00670DB4 /* LaunchScreen.storyboard */,
 			);
@@ -227,7 +224,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37223747240827CB00FBAA18 /* Tutorial.storyboard in Resources */,
 				372237532408283A00FBAA18 /* 4.storyboard in Resources */,
 				372237552408284300FBAA18 /* 5.storyboard in Resources */,
 				3722374D2408282400FBAA18 /* 1.storyboard in Resources */,
