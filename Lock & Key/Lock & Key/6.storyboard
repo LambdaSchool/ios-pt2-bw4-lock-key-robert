@@ -1,7 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="giN-yj-gUG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="RSD-Mh-6MP">
+            <objects>
+                <viewController id="giN-yj-gUG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pNb-MY-kG4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eBF-ha-JkO"/>
+                    </view>
+                    <connections>
+                        <segue destination="AG1-TK-vZC" kind="presentation" identifier="openingSegue" modalPresentationStyle="fullScreen" id="O4m-ZH-hFd"/>
+                        <segue destination="nEd-aN-UdY" kind="presentation" identifier="7Segue" modalPresentationStyle="fullScreen" id="bYz-sp-beb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64x-H9-ZKO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="-498"/>
+        </scene>
+        <!--Opening-->
+        <scene sceneID="0FA-XX-VoG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Opening" id="AG1-TK-vZC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bd3-W5-NNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="-581"/>
+        </scene>
+        <!--7-->
+        <scene sceneID="DR7-Wt-V3C">
+            <objects>
+                <viewControllerPlaceholder storyboardName="7" id="nEd-aN-UdY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpB-NE-v5i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1281" y="-427"/>
+        </scene>
+    </scenes>
 </document>
