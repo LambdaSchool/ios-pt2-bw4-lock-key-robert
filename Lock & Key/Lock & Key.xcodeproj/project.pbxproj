@@ -57,7 +57,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3722375A2408286400FBAA18 /* Informational */ = {
+		3722375A2408286400FBAA18 /* Information */ = {
 			isa = PBXGroup;
 			children = (
 				37223742240827B000FBAA18 /* Opening.storyboard */,
@@ -66,10 +66,10 @@
 				372237482408280400FBAA18 /* Unlock.storyboard */,
 				37A6C3422406DFAB00670DB4 /* LaunchScreen.storyboard */,
 			);
-			name = Informational;
+			name = Information;
 			sourceTree = "<group>";
 		};
-		3722375B2408286700FBAA18 /* Gameplay */ = {
+		3722375B2408286700FBAA18 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
 				3722374C2408282400FBAA18 /* 1.storyboard */,
@@ -81,7 +81,7 @@
 				372237582408285100FBAA18 /* 7.storyboard */,
 				3722375C240828AF00FBAA18 /* Finish.storyboard */,
 			);
-			name = Gameplay;
+			name = Levels;
 			sourceTree = "<group>";
 		};
 		3754DF9D2406E37100C200CB /* Views */ = {
@@ -94,8 +94,8 @@
 		3754DF9F2406E37B00C200CB /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				3722375A2408286400FBAA18 /* Informational */,
-				3722375B2408286700FBAA18 /* Gameplay */,
+				3722375A2408286400FBAA18 /* Information */,
+				3722375B2408286700FBAA18 /* Levels */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
