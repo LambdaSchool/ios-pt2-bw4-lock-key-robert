@@ -14,7 +14,65 @@
                     <view key="view" contentMode="scaleToFill" id="kzu-KN-998">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gG1-h6-lHS">
+                                <rect key="frame" x="50" y="144" width="314" height="702"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YJa-Sp-FGa">
+                                        <rect key="frame" x="61.5" y="0.0" width="191.5" height="652"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock  &amp;  Key" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lT-kx-tkZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="191.5" height="260"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="75"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4Q-wc-Iqf">
+                                                <rect key="frame" x="52.5" y="260" width="86" height="392"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                                <state key="normal" title="Play &gt;">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W94-g6-X3G">
+                                        <rect key="frame" x="30" y="652" width="254" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orC-fT-F8u">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="50"/>
+                                                <state key="normal" image="Trophy"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdC-r3-CTu">
+                                                <rect key="frame" x="91.5" y="0.0" width="71" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUA-Cc-9FH">
+                                                <rect key="frame" x="182.5" y="0.0" width="71.5" height="50"/>
+                                                <state key="normal" image="Levels"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="C7k-NC-3tm"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="W94-g6-X3G" firstAttribute="leading" secondItem="gG1-h6-lHS" secondAttribute="leading" constant="30" id="7pd-CE-bPJ"/>
+                                    <constraint firstItem="YJa-Sp-FGa" firstAttribute="centerX" secondItem="gG1-h6-lHS" secondAttribute="centerX" id="8VO-3Y-H8b"/>
+                                    <constraint firstAttribute="trailing" secondItem="W94-g6-X3G" secondAttribute="trailing" constant="30" id="kBJ-FM-ChQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gG1-h6-lHS" firstAttribute="top" secondItem="9Br-lt-011" secondAttribute="top" constant="100" id="7kT-kZ-Qky"/>
+                            <constraint firstAttribute="trailing" secondItem="gG1-h6-lHS" secondAttribute="trailing" constant="50" id="QsA-67-zEI"/>
+                            <constraint firstItem="gG1-h6-lHS" firstAttribute="leading" secondItem="9Br-lt-011" secondAttribute="leading" constant="50" id="nFW-oc-mus"/>
+                            <constraint firstAttribute="bottom" secondItem="gG1-h6-lHS" secondAttribute="bottom" constant="50" id="nGc-72-5nj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9Br-lt-011"/>
                     </view>
                     <connections>
@@ -25,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psp-lk-1un" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="-190"/>
+            <point key="canvasLocation" x="398.55072463768118" y="-190.17857142857142"/>
         </scene>
         <!--Unlock-->
         <scene sceneID="lb0-8a-Xze">
@@ -56,4 +114,8 @@
             <point key="canvasLocation" x="1049" y="-138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Levels" width="275" height="183"/>
+        <image name="Trophy" width="512" height="512"/>
+    </resources>
 </document>
