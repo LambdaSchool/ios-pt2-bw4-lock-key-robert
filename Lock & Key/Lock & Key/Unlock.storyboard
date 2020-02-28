@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oy2-lE-Ubk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eZG-0s-Xn8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -8,39 +8,82 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="Rg7-6g-Fuk">
+        <scene sceneID="iQy-CV-7nO">
             <objects>
-                <viewController id="oy2-lE-Ubk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ryi-kj-xNm">
+                <viewController id="eZG-0s-Xn8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qDD-wC-Afw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="3xP-aX-7KU"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xy6-6c-YHQ">
+                                <rect key="frame" x="63" y="303" width="288" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock the  final 2 levels!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZZ-mf-gZ4">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="288" id="1M1-c5-tCk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="40"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWY-sq-TRx" userLabel="Unlock Button">
+                                        <rect key="frame" x="44" y="210" width="200" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="9r4-YA-mbb"/>
+                                            <constraint firstAttribute="height" constant="40" id="VlS-yC-B3m"/>
+                                            <constraint firstAttribute="width" secondItem="LWY-sq-TRx" secondAttribute="height" multiplier="5:1" id="sYh-KZ-QzK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <state key="normal" title="Unlock (0.99¢)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyInTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="bw9-2y-nba"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQ1-6j-4PE">
+                                        <rect key="frame" x="44" y="260" width="200" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9cl-R4-kLG"/>
+                                            <constraint firstAttribute="width" constant="200" id="NYi-yM-09x"/>
+                                            <constraint firstAttribute="width" secondItem="RQ1-6j-4PE" secondAttribute="height" multiplier="5:1" id="aYF-uU-Zvj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <state key="normal" title="Restore">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyInTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="hHH-Sj-AZS"/>
+                                            <action selector="restoreButtonTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="hPs-Ih-N4O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="bI2-w7-RxV"/>
+                                    <constraint firstItem="RQ1-6j-4PE" firstAttribute="width" secondItem="RQ1-6j-4PE" secondAttribute="height" multiplier="5:1" id="pni-4j-6rd"/>
+                                    <constraint firstAttribute="width" constant="288" id="uU6-PN-4XF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xy6-6c-YHQ" firstAttribute="centerY" secondItem="MOo-v7-O5x" secondAttribute="centerY" id="1P7-Qx-Te1"/>
+                            <constraint firstItem="Xy6-6c-YHQ" firstAttribute="centerX" secondItem="MOo-v7-O5x" secondAttribute="centerX" id="Epf-47-hN5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MOo-v7-O5x"/>
                     </view>
                     <connections>
-                        <segue destination="iba-T9-rp7" kind="presentation" identifier="openingSegue" modalPresentationStyle="fullScreen" id="5vR-vk-a9M"/>
-                        <segue destination="NDT-f3-2qj" kind="presentation" identifier="playSegue" modalPresentationStyle="fullScreen" id="j8G-Vh-bb5"/>
+                        <outlet property="buyInButton" destination="LWY-sq-TRx" id="30u-UG-61O"/>
+                        <outlet property="levelsLabel" destination="KZZ-mf-gZ4" id="Ulf-co-vPa"/>
+                        <outlet property="restoreButton" destination="RQ1-6j-4PE" id="Cev-f4-9KK"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L4Q-uO-Rnx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gdu-iH-dMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="-156"/>
-        </scene>
-        <!--1-->
-        <scene sceneID="RDJ-Nn-FWV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="1" id="NDT-f3-2qj" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HYH-n8-ghX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="917" y="-99"/>
-        </scene>
-        <!--Opening-->
-        <scene sceneID="11E-PO-rCY">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Opening" id="iba-T9-rp7" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2vY-Mn-od7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="949" y="-214"/>
+            <point key="canvasLocation" x="420" y="-99"/>
         </scene>
     </scenes>
 </document>
