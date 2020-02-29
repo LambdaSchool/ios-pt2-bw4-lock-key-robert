@@ -14,6 +14,14 @@ class ProgressViewController: UIViewController {
     
     //MARK: - Outlets
     
+    @IBOutlet weak var level1Label: UILabel!
+    @IBOutlet weak var level2Label: UILabel!
+    @IBOutlet weak var level3Label: UILabel!
+    @IBOutlet weak var level4Label: UILabel!
+    @IBOutlet weak var level5Label: UILabel!
+    @IBOutlet weak var level6Label: UILabel!
+    @IBOutlet weak var level7Label: UILabel!
+    
     //MARK: - Views
     
     override func viewDidLoad() {
@@ -23,6 +31,21 @@ class ProgressViewController: UIViewController {
     //MARK: - Methods
     
     //MARK: - Actions
+    
+    @IBAction func level1ButtonTapped(_ sender: Any) {
+    }
+    @IBAction func level2ButtonTapped(_ sender: Any) {
+    }
+    @IBAction func level3ButtonTapped(_ sender: Any) {
+    }
+    @IBAction func level4ButtonTapped(_ sender: Any) {
+    }
+    @IBAction func level5ButtonTapped(_ sender: Any) {
+    }
+    @IBAction func level6ButtonTapped(_ sender: Any) {
+    }
+    @IBAction func level7ButtonTapped(_ sender: Any) {
+    }
     
     //MARK: - Navigation
 

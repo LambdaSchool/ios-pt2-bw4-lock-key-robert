@@ -38,6 +38,9 @@
                                                                 <state key="normal" title="●">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="level1ButtonTapped:" destination="fmx-DO-RfC" eventType="touchUpInside" id="LmY-4h-h05"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VK4-pZ-wvm">
                                                                 <rect key="frame" x="40.5" y="28" width="32" height="58"/>
@@ -74,6 +77,9 @@
                                                                 <state key="normal" title="●">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="level3ButtonTapped:" destination="fmx-DO-RfC" eventType="touchUpInside" id="CGc-F3-92T"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsh-24-eEd">
                                                                 <rect key="frame" x="40.5" y="28" width="32" height="58"/>
@@ -105,6 +111,9 @@
                                                                 <state key="normal" title="●">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="level5ButtonTapped:" destination="fmx-DO-RfC" eventType="touchUpInside" id="Mqe-p6-QGa"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cy1-ew-fyS">
                                                                 <rect key="frame" x="40.5" y="27.5" width="32" height="58"/>
@@ -147,6 +156,9 @@
                                                                 <state key="normal" title="●">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="level2ButtonTapped:" destination="fmx-DO-RfC" eventType="touchUpInside" id="3ha-Fi-Ncq"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3h-zn-cZn">
                                                                 <rect key="frame" x="41" y="28" width="32" height="58"/>
@@ -183,6 +195,9 @@
                                                                 <state key="normal" title="●">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="level4ButtonTapped:" destination="fmx-DO-RfC" eventType="touchUpInside" id="dUZ-RN-FSW"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgk-sU-fRd">
                                                                 <rect key="frame" x="41" y="28" width="32" height="58"/>
@@ -217,6 +232,9 @@
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <state key="selected" image="Dot6"/>
+                                                                <connections>
+                                                                    <action selector="level6ButtonTapped:" destination="fmx-DO-RfC" eventType="touchUpInside" id="DlV-Dl-z6S"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih8-yg-hoR">
                                                                 <rect key="frame" x="41" y="27.5" width="32" height="58"/>
@@ -261,6 +279,9 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <state key="selected" image="Dot7"/>
+                                                <connections>
+                                                    <action selector="level7ButtonTapped:" destination="fmx-DO-RfC" eventType="touchUpInside" id="XsM-t9-RpB"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cg-Xj-dc4">
                                                 <rect key="frame" x="21.5" y="8.5" width="32" height="58"/>
@@ -297,6 +318,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="niq-ci-Rn6"/>
                     </view>
+                    <connections>
+                        <outlet property="level1Label" destination="VK4-pZ-wvm" id="wE6-86-jiD"/>
+                        <outlet property="level2Label" destination="I3h-zn-cZn" id="lv7-I1-GYL"/>
+                        <outlet property="level3Label" destination="Wsh-24-eEd" id="x5e-hj-x8t"/>
+                        <outlet property="level4Label" destination="rgk-sU-fRd" id="Wog-7m-mZh"/>
+                        <outlet property="level5Label" destination="Cy1-ew-fyS" id="kDy-X9-Uut"/>
+                        <outlet property="level6Label" destination="ih8-yg-hoR" id="Qxq-oY-pkh"/>
+                        <outlet property="level7Label" destination="6cg-Xj-dc4" id="RVv-g6-k9d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IQ-V6-Chr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
