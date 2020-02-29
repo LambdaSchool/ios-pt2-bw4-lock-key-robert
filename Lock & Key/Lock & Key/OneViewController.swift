@@ -14,6 +14,10 @@ class OneViewController: UIViewController {
     
     //MARK: - Outlets
     
+    @IBOutlet weak var startTextView: UITextView!
+    @IBOutlet weak var level1Button: UIButton!
+    @IBOutlet weak var keysButton: UIButton!
+    
     //MARK: - Views
     
     override func viewDidLoad() {
@@ -23,6 +27,21 @@ class OneViewController: UIViewController {
     //MARK: - Methods
     
     //MARK: - Actions
+    
+    @IBAction func topMiddleButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func bottomRightButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func topRightButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func bottomLeftButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func homeButtonTapped(_ sender: Any) {
+    }
     
     //MARK: - Navigation
 
