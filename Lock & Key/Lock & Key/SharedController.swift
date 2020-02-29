@@ -94,26 +94,29 @@ class SharedController {
         viewController.present(rejectedAlert, animated: true, completion: nil)
     }
     
-    func addTransitionRiddleAlert(riddle: String, answer: String, viewController: UIViewController, segue: String, level: String, segue2: String) {
+    func addTransitionRiddleAlert(riddle: String, answer: String, viewController: UIViewController, segue: String, level: String, homeSegue: String) {
+        
         let transitionRiddleAlert = UIAlertController(title: "Level \(level) Complete!", message: riddle, preferredStyle: UIAlertController.Style.alert)
         transitionRiddleAlert.addTextField(configurationHandler: { (textField) in
             textField.placeholder = "Enter correct answer:"
         })
+        
         transitionRiddleAlert.addAction(UIAlertAction(title: "Submit", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction!) in
             guard let guess = transitionRiddleAlert.textFields![0].text?.lowercased() else { return }
             
             if guess == answer {
                 transitionRiddleAlert.message = ""
                 transitionRiddleAlert.dismiss(animated: true, completion: nil)
-                viewController.performSegue(withIdentifier: segue, sender: viewController)
+                self.fadeViewOut(view: viewController.view)
+                self.segueAfterFadeOut(viewController: viewController, segue: segue)
             } else {
-                self.addRejectedTransitionAlert(for: viewController, riddle: riddle, answer: answer, segue: segue, level: level, segue2: segue2)
+                self.addRejectedTransitionAlert(for: viewController, riddle: riddle, answer: answer, segue: segue, level: level, segue2: homeSegue)
             }
         }))
         
         transitionRiddleAlert.addAction(UIAlertAction(title: "Home", style: UIAlertAction.Style.cancel, handler: { _ in
             self.fadeViewOut(view: viewController.view)
-            self.segueAfterFadeOut(viewController: viewController, segue: segue)
+            self.segueAfterFadeOut(viewController: viewController, segue: homeSegue)
         }))
 
         viewController.present(transitionRiddleAlert, animated: true, completion: nil)
@@ -123,7 +126,7 @@ class SharedController {
         let rejectedAlert = UIAlertController(title: "❌", message: "Wrong Answer", preferredStyle: UIAlertController.Style.alert)
         rejectedAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { _ in
             CATransaction.setCompletionBlock({
-                self.addTransitionRiddleAlert(riddle: riddle, answer: answer, viewController: viewController, segue: segue, level: level, segue2: segue)
+                self.addTransitionRiddleAlert(riddle: riddle, answer: answer, viewController: viewController, segue: segue, level: level, homeSegue: segue)
             })
         }))
         viewController.present(rejectedAlert, animated: true, completion: nil)

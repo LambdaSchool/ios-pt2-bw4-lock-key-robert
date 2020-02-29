@@ -84,7 +84,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysLeft(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.topRightButton, gesture: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.topLeftButton, gesture: nil, segue: "openingSegue")
         })
     }
     
@@ -110,7 +110,7 @@ class OneViewController: UIViewController {
         UserDefaults.standard.set(true, forKey: "isOn2")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "2Segue", level: "1", segue2: "openingSegue")
+            self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "2Segue", level: "1", homeSegue: "openingSegue")
         }
     }
     
