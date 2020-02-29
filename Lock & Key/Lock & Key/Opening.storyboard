@@ -33,6 +33,9 @@
                                                 <state key="normal" title="Play &gt;">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="playButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="8Ip-TD-2n1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -42,6 +45,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orC-fT-F8u">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.5" height="60"/>
                                                 <state key="normal" image="Trophy"/>
+                                                <connections>
+                                                    <action selector="trophyButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="Ge7-Ev-ts6"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdC-r3-CTu">
                                                 <rect key="frame" x="104.5" y="0.0" width="85" height="60"/>
@@ -52,6 +58,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUA-Cc-9FH">
                                                 <rect key="frame" x="209.5" y="0.0" width="84.5" height="60"/>
                                                 <state key="normal" image="Levels"/>
+                                                <connections>
+                                                    <action selector="progressButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="iT6-OT-LPg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
