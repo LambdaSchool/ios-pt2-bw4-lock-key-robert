@@ -14,6 +14,9 @@ class UnlockViewController: UIViewController {
     
     //MARK: - Outlets
     
+    @IBOutlet weak var unlockButton: UIButton!
+    @IBOutlet weak var restoreButton: UIButton!
+    
     //MARK: - Views
     
     override func viewDidLoad() {
@@ -23,6 +26,11 @@ class UnlockViewController: UIViewController {
     //MARK: - Methods
     
     //MARK: - Actions
+    
+    @IBAction func unlockButtonTapped(_ sender: Any) {
+    }
+    @IBAction func restoreButtonTapped(_ sender: Any) {
+    }
     
     //MARK: - Navigation
 
