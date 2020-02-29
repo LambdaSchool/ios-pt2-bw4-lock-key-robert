@@ -26,6 +26,9 @@
                                 <state key="normal" title="●">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="level2ButtonTapped:" destination="lnO-jb-FwO" eventType="touchUpInside" id="H17-Oq-JYe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHu-2l-ccd">
                                 <rect key="frame" x="191" y="424" width="32" height="58"/>
@@ -76,6 +79,9 @@
                                 <state key="normal" title="Home">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="lnO-jb-FwO" eventType="touchUpInside" id="Z1I-Tf-feM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGC-M5-OVp">
                                 <rect key="frame" x="167" y="549" width="80" height="80"/>
@@ -119,6 +125,14 @@
                         <viewLayoutGuide key="safeArea" id="MUx-iB-hcZ"/>
                     </view>
                     <connections>
+                        <outlet property="bottomMiddleSwipeView" destination="iZE-iE-NKg" id="w8k-Tj-0at"/>
+                        <outlet property="centerMiddleSwipeView" destination="vAL-ZC-oLr" id="qyj-CR-Yai"/>
+                        <outlet property="homeButton" destination="LAi-ey-ZSl" id="k6b-da-0kP"/>
+                        <outlet property="keysButton" destination="WGC-M5-OVp" id="3sp-bU-KOG"/>
+                        <outlet property="level2Button" destination="tDS-E3-8vK" id="DD9-iM-VdX"/>
+                        <outlet property="middleLeftSwipeView" destination="GTK-e9-jZj" id="zFl-lF-k53"/>
+                        <outlet property="middleRightSwipeView" destination="VS8-A5-eVa" id="hvj-qP-bMq"/>
+                        <outlet property="topMiddleSwipeView" destination="NHm-Ng-ezJ" id="k1W-a6-N3w"/>
                         <segue destination="6Ao-Ud-gk1" kind="presentation" identifier="openingSegue" modalPresentationStyle="fullScreen" id="Op0-of-cWs"/>
                         <segue destination="3SG-9D-u9C" kind="presentation" identifier="3Segue" modalPresentationStyle="fullScreen" id="T13-Kv-ud9"/>
                     </connections>
