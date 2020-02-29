@@ -319,12 +319,19 @@
                         <viewLayoutGuide key="safeArea" id="niq-ci-Rn6"/>
                     </view>
                     <connections>
+                        <outlet property="level1Button" destination="aTN-6V-wZ5" id="el1-Wp-ONR"/>
                         <outlet property="level1Label" destination="VK4-pZ-wvm" id="wE6-86-jiD"/>
+                        <outlet property="level2Button" destination="7JV-mT-3a7" id="hId-Lc-KAY"/>
                         <outlet property="level2Label" destination="I3h-zn-cZn" id="lv7-I1-GYL"/>
+                        <outlet property="level3Button" destination="wnW-sm-QxQ" id="FWK-VH-bbf"/>
                         <outlet property="level3Label" destination="Wsh-24-eEd" id="x5e-hj-x8t"/>
+                        <outlet property="level4Button" destination="p6F-3Z-9j1" id="v7F-3H-gA0"/>
                         <outlet property="level4Label" destination="rgk-sU-fRd" id="Wog-7m-mZh"/>
+                        <outlet property="level5Button" destination="pbt-XY-7ab" id="Vt4-z9-Jlc"/>
                         <outlet property="level5Label" destination="Cy1-ew-fyS" id="kDy-X9-Uut"/>
+                        <outlet property="level6Button" destination="1l6-Jb-iyl" id="8dF-Bv-XLj"/>
                         <outlet property="level6Label" destination="ih8-yg-hoR" id="Qxq-oY-pkh"/>
+                        <outlet property="level7Button" destination="ofp-CJ-pCS" id="vIx-vG-Jqa"/>
                         <outlet property="level7Label" destination="6cg-Xj-dc4" id="RVv-g6-k9d"/>
                     </connections>
                 </viewController>
