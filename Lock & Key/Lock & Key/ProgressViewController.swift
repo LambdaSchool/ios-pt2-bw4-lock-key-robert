@@ -36,8 +36,8 @@ class ProgressViewController: UIViewController {
         super.viewWillAppear(true)
         
         setEnabled()
-        alphaCheck()
         checkUnlocked()
+        alphaCheck()
     }
     
     override func viewWillAppear(_ animated: Bool) {
