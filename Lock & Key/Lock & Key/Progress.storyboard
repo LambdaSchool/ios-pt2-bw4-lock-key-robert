@@ -228,28 +228,22 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title="●">
+                                                                <state key="normal" image="Trophy">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
-                                                                <state key="selected" image="Dot6"/>
+                                                                <state key="selected" image="Dot 6">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                                 <connections>
                                                                     <action selector="level6ButtonTapped:" destination="fmx-DO-RfC" eventType="touchUpInside" id="DlV-Dl-z6S"/>
                                                                 </connections>
                                                             </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih8-yg-hoR">
-                                                                <rect key="frame" x="41" y="27.5" width="32" height="58"/>
-                                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="0mA-Nk-Y6w" secondAttribute="height" multiplier="1:1" id="19j-4S-0xC"/>
                                                             <constraint firstItem="1l6-Jb-iyl" firstAttribute="centerY" secondItem="0mA-Nk-Y6w" secondAttribute="centerY" id="8bO-zi-EwG"/>
-                                                            <constraint firstItem="ih8-yg-hoR" firstAttribute="centerY" secondItem="0mA-Nk-Y6w" secondAttribute="centerY" id="Gpf-Zw-MLo"/>
                                                             <constraint firstItem="1l6-Jb-iyl" firstAttribute="centerX" secondItem="0mA-Nk-Y6w" secondAttribute="centerX" id="J1B-ak-Zd5"/>
-                                                            <constraint firstItem="ih8-yg-hoR" firstAttribute="centerX" secondItem="0mA-Nk-Y6w" secondAttribute="centerX" id="fL9-D4-vLR"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -275,20 +269,14 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="●">
+                                                <state key="normal" image="Trophy">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <state key="selected" image="Dot7"/>
+                                                <state key="selected" image="Dot 7"/>
                                                 <connections>
                                                     <action selector="level7ButtonTapped:" destination="fmx-DO-RfC" eventType="touchUpInside" id="XsM-t9-RpB"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cg-Xj-dc4">
-                                                <rect key="frame" x="21.5" y="8.5" width="32" height="58"/>
-                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -296,8 +284,6 @@
                                             <constraint firstItem="ofp-CJ-pCS" firstAttribute="centerY" secondItem="WF5-TA-x7j" secondAttribute="centerY" id="C0m-QU-EZb"/>
                                             <constraint firstAttribute="width" constant="75" id="F8f-vM-Afy"/>
                                             <constraint firstAttribute="height" constant="75" id="VUt-32-CpN"/>
-                                            <constraint firstItem="6cg-Xj-dc4" firstAttribute="centerX" secondItem="WF5-TA-x7j" secondAttribute="centerX" id="cwL-Hy-cxK"/>
-                                            <constraint firstItem="6cg-Xj-dc4" firstAttribute="centerY" secondItem="WF5-TA-x7j" secondAttribute="centerY" id="dOQ-lz-Hgc"/>
                                             <constraint firstItem="ofp-CJ-pCS" firstAttribute="centerX" secondItem="WF5-TA-x7j" secondAttribute="centerX" id="fop-lu-EEL"/>
                                         </constraints>
                                     </view>
@@ -330,18 +316,80 @@
                         <outlet property="level5Button" destination="pbt-XY-7ab" id="Vt4-z9-Jlc"/>
                         <outlet property="level5Label" destination="Cy1-ew-fyS" id="kDy-X9-Uut"/>
                         <outlet property="level6Button" destination="1l6-Jb-iyl" id="8dF-Bv-XLj"/>
-                        <outlet property="level6Label" destination="ih8-yg-hoR" id="Qxq-oY-pkh"/>
                         <outlet property="level7Button" destination="ofp-CJ-pCS" id="vIx-vG-Jqa"/>
-                        <outlet property="level7Label" destination="6cg-Xj-dc4" id="RVv-g6-k9d"/>
+                        <segue destination="ele-tn-7tf" kind="presentation" identifier="Level1Segue" modalPresentationStyle="fullScreen" id="xK3-HX-pii"/>
+                        <segue destination="GQs-97-gbQ" kind="presentation" identifier="Level2Segue" modalPresentationStyle="fullScreen" id="S1D-d3-NAY"/>
+                        <segue destination="6xp-AI-99c" kind="presentation" identifier="Level3Segue" modalPresentationStyle="fullScreen" id="2oF-3c-fAJ"/>
+                        <segue destination="nPd-4W-nfN" kind="presentation" identifier="Level4Segue" modalPresentationStyle="fullScreen" id="E6w-XD-mKO"/>
+                        <segue destination="Tr8-kO-mxI" kind="presentation" identifier="Level5Segue" modalPresentationStyle="fullScreen" id="14k-fZ-YJK"/>
+                        <segue destination="Dbv-uq-AGZ" kind="presentation" identifier="Level6Segue" modalPresentationStyle="fullScreen" id="8Wt-Nb-VHx"/>
+                        <segue destination="4NY-C1-GZh" kind="presentation" identifier="Level7Segue" modalPresentationStyle="fullScreen" id="gy1-WF-ykK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IQ-V6-Chr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="123.75" y="120.4225352112676"/>
         </scene>
+        <!--1-->
+        <scene sceneID="jqe-L6-g6j">
+            <objects>
+                <viewControllerPlaceholder storyboardName="1" id="ele-tn-7tf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AG0-u8-2pR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="-94"/>
+        </scene>
+        <!--2-->
+        <scene sceneID="1sL-HO-u3o">
+            <objects>
+                <viewControllerPlaceholder storyboardName="2" id="GQs-97-gbQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auC-5O-sfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="-29"/>
+        </scene>
+        <!--3-->
+        <scene sceneID="ryq-Oy-3Bi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="3" id="6xp-AI-99c" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zc-Zc-8ap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="42"/>
+        </scene>
+        <!--4-->
+        <scene sceneID="Slp-sI-PGt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="4" id="nPd-4W-nfN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5k-7N-xfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="120"/>
+        </scene>
+        <!--5-->
+        <scene sceneID="qC2-AV-Gh6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="5" id="Tr8-kO-mxI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDn-aq-5PO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="197"/>
+        </scene>
+        <!--6-->
+        <scene sceneID="j80-bs-kJD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="6" id="Dbv-uq-AGZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LLB-lo-eJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="270"/>
+        </scene>
+        <!--7-->
+        <scene sceneID="KX1-Vf-OwR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="7" id="4NY-C1-GZh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUm-eu-qPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="346"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Dot6" width="16" height="16"/>
-        <image name="Dot7" width="16" height="16"/>
+        <image name="Dot 6" width="97" height="98"/>
+        <image name="Dot 7" width="100" height="100"/>
+        <image name="Trophy" width="512" height="512"/>
     </resources>
 </document>

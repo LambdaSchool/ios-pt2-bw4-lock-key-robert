@@ -179,6 +179,14 @@ class SharedController {
         view.layer.cornerRadius = 35.0
     }
     
+    func toggleButtonAlpha(with button: UIButton) {
+        if button.isEnabled {
+            button.alpha = 1
+        } else {
+            button.alpha = 0.5
+        }
+    }
+    
     
     //MARK: - Segue Methods
     
