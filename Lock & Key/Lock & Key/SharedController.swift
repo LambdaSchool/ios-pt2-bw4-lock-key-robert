@@ -179,4 +179,13 @@ class SharedController {
         view.layer.cornerRadius = 35.0
     }
     
+    
+    //MARK: - Segue Methods
+    
+    func segueAfterFadeOut(viewController: UIViewController, segue: String) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+            viewController.performSegue(withIdentifier: segue, sender: viewController)
+        })
+    }
+    
 }

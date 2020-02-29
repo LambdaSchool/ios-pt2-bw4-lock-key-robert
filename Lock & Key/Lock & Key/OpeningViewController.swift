@@ -12,30 +12,37 @@ class OpeningViewController: UIViewController {
 
     //MARK: - Properties
     
-    //MARK: - Outlets
+    let sharedController = SharedController()
     
     //MARK: - Views
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.alpha = 0
     }
     
-    //MARK: - Methods
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        sharedController.fadeViewIn(view: self.view)
+    }
     
     //MARK: - Actions
     
     @IBAction func playButtonTapped(_ sender: Any) {
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "playSegue")
     }
     
     @IBAction func trophyButtonTapped(_ sender: Any) {
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "unlockSegue")
     }
     
     @IBAction func progressButtonTapped(_ sender: Any) {
-    }
-    
-    //MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "progressSegue")
     }
 
 }
