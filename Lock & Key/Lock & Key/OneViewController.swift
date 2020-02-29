@@ -12,6 +12,8 @@ class OneViewController: UIViewController {
 
     //MARK: - Properties
     
+    let sharedController = SharedController()
+    
     //MARK: - Outlets
     
     @IBOutlet weak var startTextView: UITextView!
@@ -29,9 +31,31 @@ class OneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bordersOn()
+        setUpStartTextView()
     }
     
     //MARK: - Methods
+    
+    private func bordersOn() {
+        sharedController.setupButtonBorders(for: topMiddleButton)
+        sharedController.setupButtonBorders(for: bottomRightButton)
+        sharedController.setupButtonBorders(for: topLeftButton)
+        sharedController.setupButtonBorders(for: topRightButton)
+        sharedController.setupButtonBorders(for: bottomLeftButton)
+    }
+    
+    private func setUpStartTextView() {
+        startTextView.backgroundColor = .white
+        startTextView.textColor = .black
+    }
+    
+    private func fadeStartTextViewOff() {
+        UIView.animate(withDuration: 2.0, animations: {
+            self.startTextView.alpha = 0
+        })
+    }
     
     //MARK: - Actions
     

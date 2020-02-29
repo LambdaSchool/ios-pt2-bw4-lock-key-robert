@@ -83,7 +83,7 @@
                                     <action selector="homeButtonTapped:" destination="lnO-jb-FwO" eventType="touchUpInside" id="Z1I-Tf-feM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGC-M5-OVp">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGC-M5-OVp">
                                 <rect key="frame" x="167" y="549" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="F1J-Sg-7yK"/>

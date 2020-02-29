@@ -36,7 +36,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTM-7V-rBC">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTM-7V-rBC">
                                 <rect key="frame" x="167" y="549" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="J5J-zM-D2a"/>
@@ -111,13 +111,13 @@
                                     <action selector="homeButtonTapped:" destination="ajG-MX-rRG" eventType="touchUpInside" id="vty-C4-ZW2"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tap to Start ↓" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMj-dC-0HG">
-                                <rect key="frame" x="157" y="329" width="100" height="50"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tap to Start Each Level ↓" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMj-dC-0HG">
+                                <rect key="frame" x="147" y="319" width="120" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jMj-dC-0HG" secondAttribute="height" multiplier="2:1" id="dqZ-ZR-pqD"/>
-                                    <constraint firstAttribute="height" constant="50" id="tb0-4X-Qhd"/>
-                                    <constraint firstAttribute="width" constant="100" id="uHc-iw-EXZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="tb0-4X-Qhd"/>
+                                    <constraint firstAttribute="width" constant="120" id="uHc-iw-EXZ"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
