@@ -67,21 +67,28 @@ class OneViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func levelOneButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func topMiddleButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func bottomRightButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func topRightButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func bottomLeftButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func homeButtonTapped(_ sender: Any) {
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "openingSegue")
     }
     
     //MARK: - Navigation
