@@ -133,4 +133,50 @@ class SharedController {
         viewController.present(gestureAlert, animated: true, completion: nil)
     }
     
+    
+    //MARK: - View Methods
+    
+    func fadeViewIn(view: UIView) {
+        UIView.animate(withDuration: 5.0, animations: {
+            view.alpha = 1
+        })
+    }
+    
+    func fadeViewOut(view: UIView) {
+        UIView.animate(withDuration: 5.0, animations: {
+            view.alpha = 0
+        })
+    }
+    
+    func fadeLabelInThenOut(label : UILabel, delay: TimeInterval) {
+        
+        UIView.animate(withDuration: 1.5, animations: { () -> Void in
+            label.alpha = 1
+        }) { (Bool) -> Void in
+            
+            UIView.animate(withDuration: 1.5, delay: delay, options: .curveEaseInOut, animations: { () -> Void in
+                label.alpha = 0
+            },
+                           completion: nil)
+        }
+    }
+    
+    func setupButtonBorders(for button: UIButton) {
+        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderWidth = 2.0
+        button.layer.cornerRadius = 10.0
+    }
+    
+    func setupSwipeViewBorders(for view: UIView) {
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 2.0
+        view.layer.cornerRadius = 10.0
+    }
+    
+    func setUpHoldViewBorders(for view: UIView) {
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 2.0
+        view.layer.cornerRadius = 35.0
+    }
+    
 }
