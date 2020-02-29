@@ -26,6 +26,9 @@
                                 <state key="normal" title="●">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="levelOneButtonTapped:" destination="ajG-MX-rRG" eventType="touchUpInside" id="GR5-gG-dAA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DT0-1v-ztW">
                                 <rect key="frame" x="191" y="424" width="32" height="58"/>
@@ -147,9 +150,15 @@
                         <viewLayoutGuide key="safeArea" id="iBP-6L-wzh"/>
                     </view>
                     <connections>
+                        <outlet property="bottomLeftButton" destination="yqT-lk-ePe" id="z8K-s0-3t2"/>
+                        <outlet property="bottomRightButton" destination="NaI-36-abU" id="7lB-5J-Tby"/>
+                        <outlet property="homeButton" destination="A7t-MP-j6n" id="Ebp-b4-dPV"/>
                         <outlet property="keysButton" destination="wTM-7V-rBC" id="OjZ-mG-oNL"/>
                         <outlet property="level1Button" destination="8c6-Ls-3LI" id="GX7-nR-cj3"/>
                         <outlet property="startTextView" destination="jMj-dC-0HG" id="yBC-cN-Cmn"/>
+                        <outlet property="topLeftButton" destination="aAy-Ya-9xa" id="1bF-8d-1jA"/>
+                        <outlet property="topMiddleButton" destination="WD0-KJ-72G" id="xn2-ff-ffy"/>
+                        <outlet property="topRightButton" destination="hin-mo-2Bp" id="3m1-CP-nkS"/>
                         <segue destination="ZVK-qB-Cyz" kind="presentation" identifier="openingSegue" modalPresentationStyle="fullScreen" id="wds-X7-Wiv"/>
                         <segue destination="WnY-Si-QJh" kind="presentation" identifier="2Segue" modalPresentationStyle="fullScreen" id="Qso-Gv-Dbg"/>
                     </connections>
