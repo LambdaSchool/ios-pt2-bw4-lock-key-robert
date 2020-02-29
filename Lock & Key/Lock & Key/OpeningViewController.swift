@@ -24,6 +24,15 @@ class OpeningViewController: UIViewController {
     
     //MARK: - Actions
     
+    @IBAction func playButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func trophyButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func progressButtonTapped(_ sender: Any) {
+    }
+    
     //MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
