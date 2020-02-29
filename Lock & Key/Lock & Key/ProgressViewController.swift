@@ -40,6 +40,12 @@ class ProgressViewController: UIViewController {
         checkUnlocked()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        sharedController.fadeViewIn(view: self.view)
+    }
+    
     //MARK: - Methods
     
     private func setEnabled() {
