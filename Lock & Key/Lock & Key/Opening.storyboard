@@ -40,23 +40,23 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W94-g6-X3G">
-                                        <rect key="frame" x="10" y="642" width="294" height="60"/>
+                                        <rect key="frame" x="15" y="642" width="284" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orC-fT-F8u">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="60"/>
                                                 <state key="normal" image="Trophy"/>
                                                 <connections>
                                                     <action selector="trophyButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="Ge7-Ev-ts6"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdC-r3-CTu">
-                                                <rect key="frame" x="104.5" y="0.0" width="85" height="60"/>
+                                                <rect key="frame" x="101.5" y="0.0" width="81" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUA-Cc-9FH">
-                                                <rect key="frame" x="209.5" y="0.0" width="84.5" height="60"/>
+                                                <rect key="frame" x="202.5" y="0.0" width="81.5" height="60"/>
                                                 <state key="normal" image="Levels"/>
                                                 <connections>
                                                     <action selector="progressButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="iT6-OT-LPg"/>
@@ -70,8 +70,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="YJa-Sp-FGa" firstAttribute="centerX" secondItem="gG1-h6-lHS" secondAttribute="centerX" id="8VO-3Y-H8b"/>
-                                    <constraint firstAttribute="trailing" secondItem="W94-g6-X3G" secondAttribute="trailing" constant="10" id="H0c-4F-kN5"/>
-                                    <constraint firstItem="W94-g6-X3G" firstAttribute="leading" secondItem="gG1-h6-lHS" secondAttribute="leading" constant="10" id="HZx-Vc-Tnf"/>
+                                    <constraint firstAttribute="trailing" secondItem="W94-g6-X3G" secondAttribute="trailing" constant="15" id="H0c-4F-kN5"/>
+                                    <constraint firstItem="W94-g6-X3G" firstAttribute="leading" secondItem="gG1-h6-lHS" secondAttribute="leading" constant="15" id="HZx-Vc-Tnf"/>
                                 </constraints>
                             </stackView>
                         </subviews>
