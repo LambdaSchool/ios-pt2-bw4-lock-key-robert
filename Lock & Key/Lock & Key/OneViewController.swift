@@ -17,6 +17,13 @@ class OneViewController: UIViewController {
     @IBOutlet weak var startTextView: UITextView!
     @IBOutlet weak var level1Button: UIButton!
     @IBOutlet weak var keysButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
+    
+    @IBOutlet weak var topMiddleButton: UIButton!
+    @IBOutlet weak var bottomRightButton: UIButton!
+    @IBOutlet weak var topLeftButton: UIButton!
+    @IBOutlet weak var topRightButton: UIButton!
+    @IBOutlet weak var bottomLeftButton: UIButton!
     
     //MARK: - Views
     
@@ -27,6 +34,9 @@ class OneViewController: UIViewController {
     //MARK: - Methods
     
     //MARK: - Actions
+    
+    @IBAction func levelOneButtonTapped(_ sender: Any) {
+    }
     
     @IBAction func topMiddleButtonTapped(_ sender: Any) {
     }
