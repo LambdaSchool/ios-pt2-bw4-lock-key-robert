@@ -137,13 +137,13 @@ class SharedController {
     //MARK: - View Methods
     
     func fadeViewIn(view: UIView) {
-        UIView.animate(withDuration: 5.0, animations: {
+        UIView.animate(withDuration: 3.0, animations: {
             view.alpha = 1
         })
     }
     
     func fadeViewOut(view: UIView) {
-        UIView.animate(withDuration: 5.0, animations: {
+        UIView.animate(withDuration: 1.5, animations: {
             view.alpha = 0
         })
     }
@@ -183,7 +183,7 @@ class SharedController {
     //MARK: - Segue Methods
     
     func segueAfterFadeOut(viewController: UIViewController, segue: String) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             viewController.performSegue(withIdentifier: segue, sender: viewController)
         })
     }

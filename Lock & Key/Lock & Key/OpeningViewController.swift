@@ -36,13 +36,11 @@ class OpeningViewController: UIViewController {
     }
     
     @IBAction func trophyButtonTapped(_ sender: Any) {
-        sharedController.fadeViewOut(view: self.view)
-        sharedController.segueAfterFadeOut(viewController: self, segue: "unlockSegue")
+        self.performSegue(withIdentifier: "unlockSegue", sender: self)
     }
     
     @IBAction func progressButtonTapped(_ sender: Any) {
-        sharedController.fadeViewOut(view: self.view)
-        sharedController.segueAfterFadeOut(viewController: self, segue: "progressSegue")
+        self.performSegue(withIdentifier: "progressSegue", sender: self)
     }
 
 }
