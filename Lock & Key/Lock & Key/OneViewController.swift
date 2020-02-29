@@ -67,33 +67,56 @@ class OneViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func levelOneButtonTapped(_ sender: Any) {
+        fadeStartTextViewOff()
         
+        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: topMiddleButton, gesture: nil, segue: "openingSegue")
     }
     
     @IBAction func topMiddleButtonTapped(_ sender: Any) {
+        sharedController.fadeKeysIn(for: keysButton)
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.bottomRightButton, gesture: nil, segue: "openingSegue")
+        })
     }
     
     @IBAction func bottomRightButtonTapped(_ sender: Any) {
+        sharedController.rotateKeysLeft(for: keysButton)
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.topRightButton, gesture: nil, segue: "openingSegue")
+        })
+    }
+    
+    @IBAction func topLeftButtonTapped(_ sender: Any) {
+        sharedController.rotateKeysDown(for: keysButton)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.topRightButton, gesture: nil, segue: "openingSegue")
+        })
     }
     
     @IBAction func topRightButtonTapped(_ sender: Any) {
+        sharedController.rotateKeysRight(for: keysButton)
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.bottomLeftButton, gesture: nil, segue: "openingSegue")
+        })
     }
     
     @IBAction func bottomLeftButtonTapped(_ sender: Any) {
+        sharedController.rotateKeysUp(for: keysButton)
         
+        UserDefaults.standard.set(true, forKey: "isOn2")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "2Segue", level: "1", segue2: "openingSegue")
+        }
     }
     
     @IBAction func homeButtonTapped(_ sender: Any) {
         sharedController.fadeViewOut(view: self.view)
         sharedController.segueAfterFadeOut(viewController: self, segue: "openingSegue")
-    }
-    
-    //MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 
 }

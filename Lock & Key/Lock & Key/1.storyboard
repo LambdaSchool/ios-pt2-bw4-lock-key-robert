@@ -74,6 +74,9 @@
                                     <constraint firstAttribute="width" secondItem="aAy-Ya-9xa" secondAttribute="height" multiplier="1:1" id="Red-cs-dHg"/>
                                     <constraint firstAttribute="height" constant="80" id="ybL-hF-BJ8"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="topLeftButtonTapped:" destination="ajG-MX-rRG" eventType="touchUpInside" id="Gsa-T7-MZl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hin-mo-2Bp">
                                 <rect key="frame" x="314" y="174" width="80" height="80"/>
