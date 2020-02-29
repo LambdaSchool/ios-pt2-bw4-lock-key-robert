@@ -41,6 +41,7 @@
                                         </state>
                                         <connections>
                                             <action selector="buyInTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="bw9-2y-nba"/>
+                                            <action selector="unlockButtonTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="C1H-aK-W1l"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQ1-6j-4PE">
@@ -57,7 +58,7 @@
                                         </state>
                                         <connections>
                                             <action selector="buyInTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="hHH-Sj-AZS"/>
-                                            <action selector="restoreButtonTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="hPs-Ih-N4O"/>
+                                            <action selector="restoreButtonTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="bhA-ef-M9B"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -78,7 +79,8 @@
                     <connections>
                         <outlet property="buyInButton" destination="LWY-sq-TRx" id="30u-UG-61O"/>
                         <outlet property="levelsLabel" destination="KZZ-mf-gZ4" id="Ulf-co-vPa"/>
-                        <outlet property="restoreButton" destination="RQ1-6j-4PE" id="Cev-f4-9KK"/>
+                        <outlet property="restoreButton" destination="RQ1-6j-4PE" id="DHM-m2-2ON"/>
+                        <outlet property="unlockButton" destination="LWY-sq-TRx" id="CNe-uc-XWH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdu-iH-dMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
