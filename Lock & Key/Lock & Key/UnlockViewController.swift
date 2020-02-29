@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import StoreKit
 
 class UnlockViewController: UIViewController {
 
     //MARK: - Properties
+    
+    let sharedController = SharedController()
     
     //MARK: - Outlets
     
@@ -21,20 +24,25 @@ class UnlockViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpSubviews()
     }
     
     //MARK: - Methods
     
+    private func setUpSubviews() {
+        sharedController.setupButtonBorders(for: unlockButton)
+        sharedController.setupButtonBorders(for: restoreButton)
+    }
+    
     //MARK: - Actions
     
     @IBAction func unlockButtonTapped(_ sender: Any) {
-    }
-    @IBAction func restoreButtonTapped(_ sender: Any) {
+        //Purchase product
     }
     
-    //MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    @IBAction func restoreButtonTapped(_ sender: Any) {
+        //Restore product
     }
-
+    
 }
