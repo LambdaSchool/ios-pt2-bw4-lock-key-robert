@@ -14,6 +14,17 @@ class FourViewController: UIViewController {
     
     //MARK: - Outlets
     
+    @IBOutlet weak var level4Button: UIButton!
+    @IBOutlet weak var keysButton: UIButton!
+    
+    @IBOutlet weak var topLeftButton: UIButton!
+    @IBOutlet weak var topRightButton: UIButton!
+    
+    @IBOutlet weak var bottomLeftHoldView: UIView!
+    @IBOutlet weak var bottomRightHoldView: UIView!
+    
+    @IBOutlet weak var swipeView: UIView!
+    
     //MARK: - Views
     
     override func viewDidLoad() {
@@ -23,6 +34,14 @@ class FourViewController: UIViewController {
     //MARK: - Methods
     
     //MARK: - Actions
+    
+    @IBAction func level4ButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func homeButtonTapped(_ sender: Any) {
+        
+    }
     
     //MARK: - Navigation
 
