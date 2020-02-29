@@ -21,7 +21,6 @@
 		3722375F240A041600FBAA18 /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722375E240A041600FBAA18 /* OpeningViewController.swift */; };
 		37223761240A042500FBAA18 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37223760240A042500FBAA18 /* ProgressViewController.swift */; };
 		37223763240A043200FBAA18 /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37223762240A043200FBAA18 /* UnlockViewController.swift */; };
-		37223769240A045C00FBAA18 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37223768240A045C00FBAA18 /* TwoViewController.swift */; };
 		3722376B240A046500FBAA18 /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722376A240A046500FBAA18 /* ThreeViewController.swift */; };
 		3722376D240A047100FBAA18 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722376C240A047100FBAA18 /* FourViewController.swift */; };
 		3722376F240A047B00FBAA18 /* FiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722376E240A047B00FBAA18 /* FiveViewController.swift */; };
@@ -29,6 +28,7 @@
 		37223773240A049000FBAA18 /* SevenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37223772240A048F00FBAA18 /* SevenViewController.swift */; };
 		37223775240A049A00FBAA18 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37223774240A049A00FBAA18 /* FinishViewController.swift */; };
 		376B7D62240A133C0074AC73 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7D61240A133C0074AC73 /* OneViewController.swift */; };
+		376B7D64240A23280074AC73 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7D63240A23280074AC73 /* TwoViewController.swift */; };
 		37A6C3382406DFA800670DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6C3372406DFA800670DB4 /* AppDelegate.swift */; };
 		37A6C33A2406DFA800670DB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6C3392406DFA800670DB4 /* SceneDelegate.swift */; };
 		37A6C3412406DFAB00670DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A6C3402406DFAB00670DB4 /* Assets.xcassets */; };
@@ -50,7 +50,6 @@
 		3722375E240A041600FBAA18 /* OpeningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
 		37223760240A042500FBAA18 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		37223762240A043200FBAA18 /* UnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewController.swift; sourceTree = "<group>"; };
-		37223768240A045C00FBAA18 /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		3722376A240A046500FBAA18 /* ThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
 		3722376C240A047100FBAA18 /* FourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		3722376E240A047B00FBAA18 /* FiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		37223772240A048F00FBAA18 /* SevenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenViewController.swift; sourceTree = "<group>"; };
 		37223774240A049A00FBAA18 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		376B7D61240A133C0074AC73 /* OneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
+		376B7D63240A23280074AC73 /* TwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		37A6C3342406DFA800670DB4 /* Lock & Key.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock & Key.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A6C3372406DFA800670DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A6C3392406DFA800670DB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				376B7D61240A133C0074AC73 /* OneViewController.swift */,
-				37223768240A045C00FBAA18 /* TwoViewController.swift */,
+				376B7D63240A23280074AC73 /* TwoViewController.swift */,
 				3722376A240A046500FBAA18 /* ThreeViewController.swift */,
 				3722376C240A047100FBAA18 /* FourViewController.swift */,
 				3722376E240A047B00FBAA18 /* FiveViewController.swift */,
@@ -302,12 +302,12 @@
 				37223775240A049A00FBAA18 /* FinishViewController.swift in Sources */,
 				3722376B240A046500FBAA18 /* ThreeViewController.swift in Sources */,
 				37223763240A043200FBAA18 /* UnlockViewController.swift in Sources */,
-				37223769240A045C00FBAA18 /* TwoViewController.swift in Sources */,
 				3722376F240A047B00FBAA18 /* FiveViewController.swift in Sources */,
 				37223771240A048400FBAA18 /* SixViewController.swift in Sources */,
 				37A6C33A2406DFA800670DB4 /* SceneDelegate.swift in Sources */,
 				376B7D62240A133C0074AC73 /* OneViewController.swift in Sources */,
 				37223773240A049000FBAA18 /* SevenViewController.swift in Sources */,
+				376B7D64240A23280074AC73 /* TwoViewController.swift in Sources */,
 				37223761240A042500FBAA18 /* ProgressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
