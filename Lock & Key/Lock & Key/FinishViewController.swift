@@ -14,6 +14,8 @@ class FinishViewController: UIViewController {
     
     //MARK: - Outlets
     
+    @IBOutlet weak var congratulationsLabel: UILabel!
+    
     //MARK: - Views
     
     override func viewDidLoad() {

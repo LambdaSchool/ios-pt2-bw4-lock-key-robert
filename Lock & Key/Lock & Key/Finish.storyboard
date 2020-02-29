@@ -30,6 +30,7 @@
                         <viewLayoutGuide key="safeArea" id="RV8-61-Wf1"/>
                     </view>
                     <connections>
+                        <outlet property="congratulationsLabel" destination="RqK-Ag-AwT" id="dbe-iE-CMl"/>
                         <segue destination="9Tm-fq-bqI" kind="presentation" identifier="openingSegue" modalPresentationStyle="fullScreen" id="vRv-b3-aE7"/>
                     </connections>
                 </viewController>
