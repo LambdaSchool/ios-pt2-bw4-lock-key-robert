@@ -26,6 +26,9 @@
                                 <state key="normal" title="●">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="level4ButtonTapped:" destination="mG0-cs-Xo7" eventType="touchUpInside" id="6ZD-Yp-R6E"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX0-K9-jxN">
                                 <rect key="frame" x="191" y="424" width="32" height="58"/>
@@ -97,6 +100,9 @@
                                 <state key="normal" title="Home">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="mG0-cs-Xo7" eventType="touchUpInside" id="yqG-cY-FGM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,6 +130,13 @@
                         <viewLayoutGuide key="safeArea" id="XQl-mS-XtT"/>
                     </view>
                     <connections>
+                        <outlet property="bottomLeftHoldView" destination="QVA-0V-wMP" id="RTw-fI-gkC"/>
+                        <outlet property="bottomRightHoldView" destination="SHe-Ki-MGI" id="nTT-lt-ASe"/>
+                        <outlet property="keysButton" destination="sPi-HL-LBa" id="IVv-oQ-amH"/>
+                        <outlet property="level4Button" destination="HA3-Lm-13K" id="pFO-mA-dzk"/>
+                        <outlet property="swipeView" destination="fh1-Br-X08" id="ydw-GE-h3Y"/>
+                        <outlet property="topLeftButton" destination="Qeb-2w-Uw4" id="Mlt-Ng-aNr"/>
+                        <outlet property="topRightButton" destination="Dka-XU-cqw" id="K0w-rx-Nly"/>
                         <segue destination="GGu-R7-buS" kind="presentation" identifier="openingSegue" modalPresentationStyle="fullScreen" id="nwH-vy-H6b"/>
                         <segue destination="5W3-lj-FMg" kind="presentation" identifier="5Segue" modalPresentationStyle="fullScreen" id="cgM-pI-YfO"/>
                     </connections>
