@@ -40,7 +40,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="buyInTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="bw9-2y-nba"/>
                                             <action selector="unlockButtonTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="C1H-aK-W1l"/>
                                         </connections>
                                     </button>
@@ -57,7 +56,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="buyInTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="hHH-Sj-AZS"/>
                                             <action selector="restoreButtonTapped:" destination="eZG-0s-Xn8" eventType="touchUpInside" id="bhA-ef-M9B"/>
                                         </connections>
                                     </button>
@@ -77,8 +75,6 @@
                         <viewLayoutGuide key="safeArea" id="MOo-v7-O5x"/>
                     </view>
                     <connections>
-                        <outlet property="buyInButton" destination="LWY-sq-TRx" id="30u-UG-61O"/>
-                        <outlet property="levelsLabel" destination="KZZ-mf-gZ4" id="Ulf-co-vPa"/>
                         <outlet property="restoreButton" destination="RQ1-6j-4PE" id="DHM-m2-2ON"/>
                         <outlet property="unlockButton" destination="LWY-sq-TRx" id="CNe-uc-XWH"/>
                     </connections>
