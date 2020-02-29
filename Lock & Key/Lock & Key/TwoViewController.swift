@@ -1,5 +1,5 @@
 //
-//  FinishViewController.swift
+//  2ViewController.swift
 //  Lock & Key
 //
 //  Created by Bobby Keffury on 2/28/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FinishViewController: UIViewController {
+class TwoViewController: UIViewController {
 
     //MARK: - Properties
     
