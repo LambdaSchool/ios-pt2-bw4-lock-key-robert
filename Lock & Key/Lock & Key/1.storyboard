@@ -49,6 +49,9 @@
                                     <constraint firstAttribute="height" constant="80" id="GLg-oL-OO1"/>
                                     <constraint firstAttribute="width" constant="80" id="at8-kj-bhN"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="topMiddleButtonTapped:" destination="ajG-MX-rRG" eventType="touchUpInside" id="mmb-V4-124"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-36-abU">
                                 <rect key="frame" x="314" y="682" width="80" height="80"/>
@@ -57,6 +60,9 @@
                                     <constraint firstAttribute="width" secondItem="NaI-36-abU" secondAttribute="height" multiplier="1:1" id="Iob-R1-QMx"/>
                                     <constraint firstAttribute="height" constant="80" id="Wbw-3t-xLc"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="bottomRightButtonTapped:" destination="ajG-MX-rRG" eventType="touchUpInside" id="gvC-2A-oIa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAy-Ya-9xa">
                                 <rect key="frame" x="20" y="174" width="80" height="80"/>
@@ -73,6 +79,9 @@
                                     <constraint firstAttribute="height" constant="80" id="rWI-tE-wgO"/>
                                     <constraint firstAttribute="width" constant="80" id="wX7-bQ-2bJ"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="topRightButtonTapped:" destination="ajG-MX-rRG" eventType="touchUpInside" id="A4R-hd-T1l"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqT-lk-ePe">
                                 <rect key="frame" x="20" y="682" width="80" height="80"/>
@@ -81,6 +90,9 @@
                                     <constraint firstAttribute="width" secondItem="yqT-lk-ePe" secondAttribute="height" multiplier="1:1" id="qW1-im-rN4"/>
                                     <constraint firstAttribute="height" constant="80" id="tP0-ec-HNo"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="bottomLeftButtonTapped:" destination="ajG-MX-rRG" eventType="touchUpInside" id="P6e-i1-6Ib"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7t-MP-j6n">
                                 <rect key="frame" x="182" y="699" width="50" height="40"/>
@@ -92,6 +104,9 @@
                                 <state key="normal" title="Home">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="ajG-MX-rRG" eventType="touchUpInside" id="vty-C4-ZW2"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tap to Start ↓" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMj-dC-0HG">
                                 <rect key="frame" x="157" y="329" width="100" height="50"/>
@@ -132,6 +147,9 @@
                         <viewLayoutGuide key="safeArea" id="iBP-6L-wzh"/>
                     </view>
                     <connections>
+                        <outlet property="keysButton" destination="wTM-7V-rBC" id="OjZ-mG-oNL"/>
+                        <outlet property="level1Button" destination="8c6-Ls-3LI" id="GX7-nR-cj3"/>
+                        <outlet property="startTextView" destination="jMj-dC-0HG" id="yBC-cN-Cmn"/>
                         <segue destination="ZVK-qB-Cyz" kind="presentation" identifier="openingSegue" modalPresentationStyle="fullScreen" id="wds-X7-Wiv"/>
                         <segue destination="WnY-Si-QJh" kind="presentation" identifier="2Segue" modalPresentationStyle="fullScreen" id="Qso-Gv-Dbg"/>
                     </connections>
