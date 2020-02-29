@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Unlock View Controller-->
         <scene sceneID="iQy-CV-7nO">
             <objects>
-                <viewController id="eZG-0s-Xn8" sceneMemberID="viewController">
+                <viewController id="eZG-0s-Xn8" customClass="UnlockViewController" customModule="Lock___Key" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qDD-wC-Afw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
