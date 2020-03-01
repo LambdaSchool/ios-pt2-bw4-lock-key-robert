@@ -16,11 +16,12 @@ class ProgressViewController: UIViewController {
     
     //MARK: - Outlets
     
-    @IBOutlet weak var level1Label: UILabel!
     @IBOutlet weak var level2Label: UILabel!
     @IBOutlet weak var level3Label: UILabel!
     @IBOutlet weak var level4Label: UILabel!
     @IBOutlet weak var level5Label: UILabel!
+    @IBOutlet weak var level6Label: UILabel!
+    @IBOutlet weak var level7Label: UILabel!
     
     @IBOutlet weak var level1Button: UIButton!
     @IBOutlet weak var level2Button: UIButton!
@@ -37,6 +38,7 @@ class ProgressViewController: UIViewController {
         
         setEnabled()
         checkUnlocked()
+        configureLabels()
         alphaCheck()
     }
     
@@ -58,6 +60,38 @@ class ProgressViewController: UIViewController {
         } else {
             level6Button.isSelected = false
             level7Button.isSelected = false
+        }
+    }
+    
+    private func configureLabels() {
+        if level2Button.isEnabled {
+            level2Label.text = "Unlocked"
+            level2Label.textColor = .black
+        }
+        
+        if level3Button.isEnabled {
+            level3Label.text = "Unlocked"
+            level3Label.textColor = .black
+        }
+        
+        if level4Button.isEnabled {
+            level4Label.text = "Unlocked"
+            level4Label.textColor = .black
+        }
+        
+        if level5Button.isEnabled {
+            level5Label.text = "Unlocked"
+            level5Label.textColor = .black
+        }
+        
+        if level6Button.isEnabled {
+            level6Label.text = "Unlocked"
+            level6Label.textColor = .black
+        }
+        
+        if level7Button.isEnabled {
+            level7Label.text = "Unlocked"
+            level7Label.textColor = .black
         }
     }
     
