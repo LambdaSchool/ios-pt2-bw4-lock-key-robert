@@ -14,20 +14,6 @@ class OpeningViewController: UIViewController {
     
     let sharedController = SharedController()
     
-    //MARK: - Views
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.view.alpha = 0
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        sharedController.fadeViewIn(view: self.view)
-    }
-    
     //MARK: - Actions
     
     @IBAction func playButtonTapped(_ sender: Any) {
@@ -40,6 +26,7 @@ class OpeningViewController: UIViewController {
     }
     
     @IBAction func progressButtonTapped(_ sender: Any) {
+        self.view.alpha = 0
         self.performSegue(withIdentifier: "progressSegue", sender: self)
     }
 
