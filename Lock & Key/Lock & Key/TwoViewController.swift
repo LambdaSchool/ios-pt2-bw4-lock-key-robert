@@ -37,42 +37,57 @@ class TwoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.alpha = 0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        sharedController.fadeViewIn(view: self.view)
+        bordersOn()
     }
     
     //MARK: - Methods
+    
+    private func bordersOn() {
+        sharedController.setupSwipeViewBorders(for: topMiddleSwipeView)
+        sharedController.setupSwipeViewBorders(for: centerMiddleSwipeView)
+        sharedController.setupSwipeViewBorders(for: middleLeftSwipeView)
+        sharedController.setupSwipeViewBorders(for: middleRightSwipeView)
+        sharedController.setupSwipeViewBorders(for: bottomMiddleSwipeView)
+    }
     
     //MARK: - Actions
     
     @IBAction func level2ButtonTapped(_ sender: Any) {
         
+        
     }
     
     @IBAction func swipeLeftGestureCompleted(_ sender: Any) {
-        
+        sharedController.fadeKeysIn(for: keysButton)
     }
     
     @IBAction func swipeRightGestureCompleted(_ sender: Any) {
-        
+        sharedController.rotateKeysLeft(for: keysButton)
     }
     
     @IBAction func swipeDownGestureCompleted(_ sender: Any) {
-        
+        sharedController.rotateKeysDown(for: keysButton)
     }
     
     @IBAction func swipeUpGestureCompleted(_ sender: Any) {
-        
+        sharedController.rotateKeysRight(for: keysButton)
     }
     
     @IBAction func swipeLeftTwoGestureCompleted(_ sender: Any) {
-        
+        sharedController.rotateKeysUp(for: keysButton)
     }
     
     @IBAction func homeButtonTapped(_ sender: Any) {
+        sharedController.fadeViewOut(view: self.view)
         
+        sharedController.segueAfterFadeOut(viewController: self, segue: "openingSegue")
     }
-    //MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-
 }
