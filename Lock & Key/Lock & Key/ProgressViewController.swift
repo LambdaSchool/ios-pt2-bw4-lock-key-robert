@@ -108,37 +108,44 @@ class ProgressViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level1ButtonTapped(_ sender: Any) {
-        openingVC.on1 = true
         self.dismiss(animated: true)
+        
+        self.performSegue(withIdentifier: "Level1Segue", sender: self)
     }
     
     @IBAction func level2ButtonTapped(_ sender: Any) {
-        openingVC.on2 = true
         self.dismiss(animated: true)
+        
+        self.performSegue(withIdentifier: "Level2Segue", sender: self)
     }
     
     @IBAction func level3ButtonTapped(_ sender: Any) {
-        openingVC.on3 = true
         self.dismiss(animated: true)
+        
+        self.performSegue(withIdentifier: "Level3Segue", sender: self)
     }
     
     @IBAction func level4ButtonTapped(_ sender: Any) {
-        openingVC.on4 = true
         self.dismiss(animated: true)
+        
+        self.performSegue(withIdentifier: "Level4Segue", sender: self)
     }
     
     @IBAction func level5ButtonTapped(_ sender: Any) {
-        openingVC.on5 = true
         self.dismiss(animated: true)
+        
+        self.performSegue(withIdentifier: "Level5Segue", sender: self)
     }
     
     @IBAction func level6ButtonTapped(_ sender: Any) {
-        openingVC.on6 = true
         self.dismiss(animated: true)
+        
+        self.performSegue(withIdentifier: "Level6Segue", sender: self)
     }
     
     @IBAction func level7ButtonTapped(_ sender: Any) {
-        openingVC.on7 = true
         self.dismiss(animated: true)
+        
+        self.performSegue(withIdentifier: "Level7Segue", sender: self)
     }
 }
