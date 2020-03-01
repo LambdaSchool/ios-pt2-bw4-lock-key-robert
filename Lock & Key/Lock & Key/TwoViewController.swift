@@ -21,6 +21,12 @@ class TwoViewController: UIViewController {
     @IBOutlet weak var middleRightSwipeView: UIView!
     @IBOutlet weak var bottomMiddleSwipeView: UIView!
     
+    @IBOutlet var swipeLeftGestureRecognizer: UISwipeGestureRecognizer!
+    @IBOutlet var swipeRightGestureRecognizer: UISwipeGestureRecognizer!
+    @IBOutlet var swipeDownGestureRecognizer: UISwipeGestureRecognizer!
+    @IBOutlet var swipeUpGestureRecognizer: UISwipeGestureRecognizer!
+    @IBOutlet var swipeLeftTwoGestureRecognizer: UISwipeGestureRecognizer!
+    
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var keysButton: UIButton!
     
