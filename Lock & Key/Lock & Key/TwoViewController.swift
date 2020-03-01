@@ -14,7 +14,6 @@ class TwoViewController: UIViewController {
     
     let sharedController = SharedController()
     
-    
     //MARK: - Outlets
     
     @IBOutlet weak var level2Button: UIButton!
