@@ -12,6 +12,8 @@ class FourViewController: UIViewController {
 
     //MARK: - Properties
     
+    let sharedController = SharedController()
+    
     //MARK: - Outlets
     
     @IBOutlet weak var level4Button: UIButton!
@@ -22,8 +24,11 @@ class FourViewController: UIViewController {
     
     @IBOutlet weak var bottomLeftHoldView: UIView!
     @IBOutlet weak var bottomRightHoldView: UIView!
-    
     @IBOutlet weak var swipeView: UIView!
+    
+    @IBOutlet var bottomLeftHoldRecognizer: UILongPressGestureRecognizer!
+    @IBOutlet var bottomRightHoldRecognizer: UILongPressGestureRecognizer!
+    @IBOutlet var swipeRightRecognizer: UISwipeGestureRecognizer!
     
     //MARK: - Views
     
@@ -38,6 +43,26 @@ class FourViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level4ButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func topLeftButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func topRightButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func bottomLeftHoldComplete(_ sender: Any) {
+        
+    }
+    
+    @IBAction func bottomRightHoldComplete(_ sender: Any) {
+        
+    }
+    
+    @IBAction func swipeRightComplete(_ sender: Any) {
         
     }
     
