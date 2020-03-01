@@ -12,6 +12,9 @@ class TwoViewController: UIViewController {
 
     //MARK: - Properties
     
+    let sharedController = SharedController()
+    
+    
     //MARK: - Outlets
     
     @IBOutlet weak var level2Button: UIButton!
@@ -40,12 +43,33 @@ class TwoViewController: UIViewController {
     
     //MARK: - Actions
     
-    @IBAction func homeButtonTapped(_ sender: Any) {
-    }
-    
     @IBAction func level2ButtonTapped(_ sender: Any) {
+        
     }
     
+    @IBAction func swipeLeftGestureCompleted(_ sender: Any) {
+        
+    }
+    
+    @IBAction func swipeRightGestureCompleted(_ sender: Any) {
+        
+    }
+    
+    @IBAction func swipeDownGestureCompleted(_ sender: Any) {
+        
+    }
+    
+    @IBAction func swipeUpGestureCompleted(_ sender: Any) {
+        
+    }
+    
+    @IBAction func swipeLeftTwoGestureCompleted(_ sender: Any) {
+        
+    }
+    
+    @IBAction func homeButtonTapped(_ sender: Any) {
+        
+    }
     //MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

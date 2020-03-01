@@ -163,11 +163,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yER-Zg-KDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer enabled="NO" direction="left" id="Z5K-wl-xAf"/>
-                <swipeGestureRecognizer enabled="NO" direction="right" id="vJS-k3-cs7"/>
-                <swipeGestureRecognizer enabled="NO" direction="down" id="VVz-fb-dyO"/>
-                <swipeGestureRecognizer enabled="NO" direction="up" id="Kp5-Lx-idw"/>
-                <swipeGestureRecognizer enabled="NO" direction="left" id="5ml-8A-B1m"/>
+                <swipeGestureRecognizer enabled="NO" direction="left" id="Z5K-wl-xAf">
+                    <connections>
+                        <action selector="swipeLeftGestureCompleted:" destination="lnO-jb-FwO" id="8iG-PZ-06w"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer enabled="NO" direction="right" id="vJS-k3-cs7">
+                    <connections>
+                        <action selector="swipeRightGestureCompleted:" destination="lnO-jb-FwO" id="R9A-EP-vT2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer enabled="NO" direction="down" id="VVz-fb-dyO">
+                    <connections>
+                        <action selector="swipeDownGestureCompleted:" destination="lnO-jb-FwO" id="qg3-8B-THU"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer enabled="NO" direction="up" id="Kp5-Lx-idw">
+                    <connections>
+                        <action selector="swipeUpGestureCompleted:" destination="lnO-jb-FwO" id="4PK-hV-NhS"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer enabled="NO" direction="left" id="5ml-8A-B1m">
+                    <connections>
+                        <action selector="swipeLeftTwoGestureCompleted:" destination="lnO-jb-FwO" id="E65-qs-9bo"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="436" y="-175"/>
         </scene>
