@@ -68,7 +68,9 @@ class TwoViewController: UIViewController {
         if swipeLeftGestureRecognizer.state == .ended {
             sharedController.fadeKeysIn(for: keysButton)
             
-            sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeRightGestureRecognizer, segue: "openingSegue")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
+                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeRightGestureRecognizer, segue: "openingSegue")
+            })
         }
     }
     
@@ -76,7 +78,9 @@ class TwoViewController: UIViewController {
         if swipeRightGestureRecognizer.state == .ended {
             sharedController.rotateKeysLeft(for: keysButton)
             
-            sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeDownGestureRecognizer, segue: "openingSegue")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
+                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeDownGestureRecognizer, segue: "openingSegue")
+            })
         }
     }
     
@@ -84,7 +88,9 @@ class TwoViewController: UIViewController {
         if swipeDownGestureRecognizer.state == .ended {
             sharedController.rotateKeysDown(for: keysButton)
             
-            sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeUpGestureRecognizer, segue: "openingSegue")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
+                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeUpGestureRecognizer, segue: "openingSegue")
+            })
         }
     }
     
@@ -92,7 +98,9 @@ class TwoViewController: UIViewController {
         if swipeUpGestureRecognizer.state == .ended {
             sharedController.rotateKeysRight(for: keysButton)
             
-            sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeLeftTwoGestureRecognizer, segue: "openingSegue")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
+                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeLeftTwoGestureRecognizer, segue: "openingSegue")
+            })
         }
     }
     
@@ -102,7 +110,9 @@ class TwoViewController: UIViewController {
             
             UserDefaults.standard.set(true, forKey: "isOn3")
             
-            sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "3Segue", level: "2", homeSegue: "openingSegue")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
+                self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "3Segue", level: "2", homeSegue: "openingSegue")
+            })
         }
     }
     
