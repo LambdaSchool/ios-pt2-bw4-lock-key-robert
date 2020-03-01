@@ -23,6 +23,7 @@ class SevenViewController: UIViewController {
     @IBOutlet weak var bottomLeftButton: UIButton!
     
     @IBOutlet weak var customGestureView: UIView!
+    @IBOutlet var customGestureRecognizer: UIGestureRecognizer!
     
     @IBOutlet weak var middleLeftSwipeView: UIView!
     @IBOutlet weak var middleRightButton: UIButton!
@@ -60,6 +61,10 @@ class SevenViewController: UIViewController {
     }
     
     @IBAction func middleRightButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func customGestureComplete(_ sender: Any) {
         
     }
     

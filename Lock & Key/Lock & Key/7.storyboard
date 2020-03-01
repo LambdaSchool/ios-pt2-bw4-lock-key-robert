@@ -108,6 +108,9 @@
                                     <constraint firstAttribute="height" constant="100" id="5G1-GF-AJe"/>
                                     <constraint firstAttribute="width" constant="100" id="dt2-am-E6H"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="irK-El-N2O" appends="YES" id="yK1-CI-Wkw"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqd-Z6-OGw">
                                 <rect key="frame" x="301" y="403" width="50" height="100"/>
@@ -173,6 +176,7 @@
                     <connections>
                         <outlet property="bottomLeftButton" destination="GYG-ac-Zid" id="AaG-1g-0Iy"/>
                         <outlet property="bottomRightButton" destination="Slh-kY-FuR" id="0Tk-jg-S76"/>
+                        <outlet property="customGestureRecognizer" destination="irK-El-N2O" id="8qP-J8-rgo"/>
                         <outlet property="customGestureView" destination="tsP-KX-rcn" id="Fsf-Vf-qsk"/>
                         <outlet property="keysButton" destination="fjs-OO-K6U" id="PFX-A6-Y1Q"/>
                         <outlet property="level7Button" destination="pb0-E3-VuA" id="lln-qX-mpt"/>
@@ -185,6 +189,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfu-4P-5AZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <gestureRecognizer id="irK-El-N2O">
+                    <connections>
+                        <action selector="customGestureComplete:" destination="WrO-iy-wgF" id="i3i-lC-Mmc"/>
+                    </connections>
+                </gestureRecognizer>
             </objects>
             <point key="canvasLocation" x="327" y="-204"/>
         </scene>
