@@ -47,9 +47,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" image="Keys"/>
-                                <connections>
-                                    <action selector="keysButtonTapped:" destination="WrO-iy-wgF" eventType="touchUpInside" id="1wu-T6-A9P"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tQ-DW-NXP">
                                 <rect key="frame" x="20" y="64" width="80" height="80"/>
@@ -109,7 +106,7 @@
                                     <constraint firstAttribute="width" constant="100" id="dt2-am-E6H"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="irK-El-N2O" appends="YES" id="yK1-CI-Wkw"/>
+                                    <outletCollection property="gestureRecognizers" destination="2lL-XX-d2g" appends="YES" id="TUh-tI-53c"/>
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqd-Z6-OGw">
@@ -119,9 +116,6 @@
                                     <constraint firstAttribute="height" constant="100" id="aoX-go-gDS"/>
                                     <constraint firstAttribute="width" constant="50" id="bik-4p-Dtp"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="middleRightButtonTapped:" destination="WrO-iy-wgF" eventType="touchUpInside" id="c3o-OH-XaC"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5W-kT-OdQ">
                                 <rect key="frame" x="63" y="403" width="50" height="100"/>
@@ -143,6 +137,9 @@
                                 <state key="normal" title="Home">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="WrO-iy-wgF" eventType="touchUpInside" id="zO3-J4-Rsl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -176,8 +173,8 @@
                     <connections>
                         <outlet property="bottomLeftButton" destination="GYG-ac-Zid" id="AaG-1g-0Iy"/>
                         <outlet property="bottomRightButton" destination="Slh-kY-FuR" id="0Tk-jg-S76"/>
-                        <outlet property="customGestureRecognizer" destination="irK-El-N2O" id="8qP-J8-rgo"/>
-                        <outlet property="customGestureView" destination="tsP-KX-rcn" id="Fsf-Vf-qsk"/>
+                        <outlet property="holdGestureView" destination="tsP-KX-rcn" id="80w-fr-u0w"/>
+                        <outlet property="holdRecognizer" destination="2lL-XX-d2g" id="VyW-co-TDZ"/>
                         <outlet property="keysButton" destination="fjs-OO-K6U" id="PFX-A6-Y1Q"/>
                         <outlet property="level7Button" destination="pb0-E3-VuA" id="lln-qX-mpt"/>
                         <outlet property="middleLeftSwipeView" destination="V5W-kT-OdQ" id="Vup-20-ciG"/>
@@ -189,11 +186,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfu-4P-5AZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <gestureRecognizer id="irK-El-N2O">
+                <pongPressGestureRecognizer enabled="NO" allowableMovement="10" minimumPressDuration="3" id="2lL-XX-d2g">
                     <connections>
-                        <action selector="customGestureComplete:" destination="WrO-iy-wgF" id="i3i-lC-Mmc"/>
+                        <action selector="holdComplete:" destination="WrO-iy-wgF" id="3A5-wl-sig"/>
                     </connections>
-                </gestureRecognizer>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="327" y="-204"/>
         </scene>

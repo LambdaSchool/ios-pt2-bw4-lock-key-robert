@@ -106,6 +106,8 @@ class SixViewController: UIViewController {
         if holdRecognizer.state == .ended {
             sharedController.rotateKeysUp(for: keysButton)
             
+            UserDefaults.standard.set(true, forKey: "isOn7")
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "7Segue", level: "6", homeSegue: "openingSegue")
             })
