@@ -12,6 +12,8 @@ class SevenViewController: UIViewController {
 
     //MARK: - Properties
     
+    let sharedController = SharedController()
+    
     //MARK: - Outlets
     
     @IBOutlet weak var level7Button: UIButton!
@@ -34,9 +36,28 @@ class SevenViewController: UIViewController {
         super.viewDidLoad()
         
         UIApplication.shared.isIdleTimerDisabled = true
+        self.view.alpha = 0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        sharedController.fadeViewIn(view: self.view)
+        bordersOn()
     }
     
     //MARK: - Methods
+    
+    private func bordersOn() {
+        sharedController.setupButtonBorders(for: topLeftButton)
+        sharedController.setupButtonBorders(for: bottomRightButton)
+        sharedController.setupButtonBorders(for: topRightButton)
+        sharedController.setupButtonBorders(for: bottomLeftButton)
+        sharedController.setupButtonBorders(for: middleRightButton)
+        
+        sharedController.setupSwipeViewBorders(for: middleLeftSwipeView)
+        sharedController.setupSwipeViewBorders(for: customGestureView)
+    }
     
     //MARK: - Actions
     
@@ -69,12 +90,8 @@ class SevenViewController: UIViewController {
     }
     
     @IBAction func keysButtonTapped(_ sender: Any) {
+        sharedController.fadeViewOut(view: self.view)
         
+        sharedController.segueAfterFadeOut(viewController: self, segue: "openingSegue")
     }
-    
-    //MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-
 }
