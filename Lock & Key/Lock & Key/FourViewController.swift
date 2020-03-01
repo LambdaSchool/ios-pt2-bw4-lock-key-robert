@@ -36,9 +36,27 @@ class FourViewController: UIViewController {
         super.viewDidLoad()
         
         UIApplication.shared.isIdleTimerDisabled = true
+        self.view.alpha = 0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        sharedController.fadeViewIn(view: self.view)
+        bordersOn()
     }
     
     //MARK: - Methods
+    
+    private func bordersOn() {
+        sharedController.setupButtonBorders(for: topLeftButton)
+        sharedController.setupButtonBorders(for: topRightButton)
+        
+        sharedController.setUpHoldViewBorders(for: bottomLeftHoldView)
+        sharedController.setUpHoldViewBorders(for: bottomRightHoldView)
+        
+        sharedController.setupSwipeViewBorders(for: swipeView)
+    }
     
     //MARK: - Actions
     
@@ -67,12 +85,8 @@ class FourViewController: UIViewController {
     }
     
     @IBAction func homeButtonTapped(_ sender: Any) {
-        
-    }
-    
-    //MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "openingSegue")
     }
 
 }
