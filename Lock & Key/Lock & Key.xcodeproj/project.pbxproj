@@ -30,6 +30,7 @@
 		376B7D6D240A24DA0074AC73 /* FiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7D68240A24D90074AC73 /* FiveViewController.swift */; };
 		376B7D6E240A24DA0074AC73 /* SevenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7D69240A24D90074AC73 /* SevenViewController.swift */; };
 		376B7D70240A33D70074AC73 /* SharedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7D6F240A33D70074AC73 /* SharedController.swift */; };
+		376B964D240C62BA00773A71 /* Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B964C240C62BA00773A71 /* Firework.swift */; };
 		37A6C3382406DFA800670DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6C3372406DFA800670DB4 /* AppDelegate.swift */; };
 		37A6C33A2406DFA800670DB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6C3392406DFA800670DB4 /* SceneDelegate.swift */; };
 		37A6C3412406DFAB00670DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A6C3402406DFAB00670DB4 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		376B7D68240A24D90074AC73 /* FiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveViewController.swift; sourceTree = "<group>"; };
 		376B7D69240A24D90074AC73 /* SevenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SevenViewController.swift; sourceTree = "<group>"; };
 		376B7D6F240A33D70074AC73 /* SharedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedController.swift; sourceTree = "<group>"; };
+		376B964C240C62BA00773A71 /* Firework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firework.swift; sourceTree = "<group>"; };
 		37A6C3342406DFA800670DB4 /* Lock & Key.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock & Key.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A6C3372406DFA800670DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A6C3392406DFA800670DB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		3754DF9D2406E37100C200CB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				376B964C240C62BA00773A71 /* Firework.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				376B7D70240A33D70074AC73 /* SharedController.swift in Sources */,
+				376B964D240C62BA00773A71 /* Firework.swift in Sources */,
 				37A6C3382406DFA800670DB4 /* AppDelegate.swift in Sources */,
 				3722375F240A041600FBAA18 /* OpeningViewController.swift in Sources */,
 				376B7D6C240A24DA0074AC73 /* ThreeViewController.swift in Sources */,
