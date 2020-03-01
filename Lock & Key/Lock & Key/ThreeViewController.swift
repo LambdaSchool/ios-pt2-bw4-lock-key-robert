@@ -12,6 +12,8 @@ class ThreeViewController: UIViewController {
 
     //MARK: - Properties
     
+    let sharedController = SharedController()
+    
     //MARK: - Outlets
     
     @IBOutlet weak var level3Button: UIButton!
@@ -37,9 +39,25 @@ class ThreeViewController: UIViewController {
         super.viewDidLoad()
         
         UIApplication.shared.isIdleTimerDisabled = true
+        self.view.alpha = 0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        sharedController.fadeViewIn(view: self.view)
+        bordersOn()
     }
     
     //MARK: - Methods
+    
+    private func bordersOn() {
+        sharedController.setUpHoldViewBorders(for: topRightHoldView)
+        sharedController.setUpHoldViewBorders(for: bottomLeftHoldView)
+        sharedController.setUpHoldViewBorders(for: bottomMiddleHoldView)
+        sharedController.setUpHoldViewBorders(for: bottomRightHoldView)
+        sharedController.setUpHoldViewBorders(for: topLeftHoldView)
+    }
     
     //MARK: - Actions
     
