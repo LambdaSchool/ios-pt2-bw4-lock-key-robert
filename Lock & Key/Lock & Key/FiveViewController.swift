@@ -119,6 +119,8 @@ class FiveViewController: UIViewController {
         if middleSwipeRecognizer.state == .ended {
             sharedController.rotateKeysUp(for: keysButton)
             
+            UserDefaults.standard.set(true, forKey: "isOn6")
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "6Segue", level: "5", homeSegue: "openingSegue")
             })
