@@ -13,6 +13,7 @@ class ProgressViewController: UIViewController {
     //MARK: - Properties
     
     let sharedController = SharedController()
+    let openingVC = OpeningViewController()
     
     //MARK: - Outlets
     
@@ -107,38 +108,37 @@ class ProgressViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level1ButtonTapped(_ sender: Any) {
-        sharedController.fadeViewOut(view: self.view)
-        sharedController.segueAfterFadeOut(viewController: self, segue: "Level1Segue")
+        openingVC.on1 = true
+        self.dismiss(animated: true)
     }
     
     @IBAction func level2ButtonTapped(_ sender: Any) {
-        sharedController.fadeViewOut(view: self.view)
-        sharedController.segueAfterFadeOut(viewController: self, segue: "Level2Segue")
+        openingVC.on2 = true
+        self.dismiss(animated: true)
     }
     
     @IBAction func level3ButtonTapped(_ sender: Any) {
-        sharedController.fadeViewOut(view: self.view)
-        sharedController.segueAfterFadeOut(viewController: self, segue: "Level3Segue")
+        openingVC.on3 = true
+        self.dismiss(animated: true)
     }
     
     @IBAction func level4ButtonTapped(_ sender: Any) {
-        sharedController.fadeViewOut(view: self.view)
-        sharedController.segueAfterFadeOut(viewController: self, segue: "Level4Segue")
+        openingVC.on4 = true
+        self.dismiss(animated: true)
     }
     
     @IBAction func level5ButtonTapped(_ sender: Any) {
-        sharedController.fadeViewOut(view: self.view)
-        sharedController.segueAfterFadeOut(viewController: self, segue: "Level5Segue")
+        openingVC.on5 = true
+        self.dismiss(animated: true)
     }
     
     @IBAction func level6ButtonTapped(_ sender: Any) {
-        sharedController.fadeViewOut(view: self.view)
-        sharedController.segueAfterFadeOut(viewController: self, segue: "Level6Segue")
+        openingVC.on6 = true
+        self.dismiss(animated: true)
     }
     
     @IBAction func level7ButtonTapped(_ sender: Any) {
-        sharedController.fadeViewOut(view: self.view)
-        sharedController.segueAfterFadeOut(viewController: self, segue: "Level7Segue")
+        openingVC.on7 = true
+        self.dismiss(animated: true)
     }
-
 }
