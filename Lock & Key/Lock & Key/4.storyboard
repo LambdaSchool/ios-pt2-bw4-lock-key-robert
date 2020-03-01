@@ -52,6 +52,9 @@
                                     <constraint firstAttribute="width" secondItem="Qeb-2w-Uw4" secondAttribute="height" multiplier="1:1" id="ZWm-8N-NvD"/>
                                     <constraint firstAttribute="width" constant="80" id="pPS-cL-mBG"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="topLeftButtonTapped:" destination="mG0-cs-Xo7" eventType="touchUpInside" id="CLQ-1x-qvN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-XU-cqw">
                                 <rect key="frame" x="314" y="64" width="80" height="80"/>
@@ -60,6 +63,9 @@
                                     <constraint firstAttribute="width" secondItem="Dka-XU-cqw" secondAttribute="height" multiplier="1:1" id="ZSa-8T-jxu"/>
                                     <constraint firstAttribute="height" constant="80" id="gt8-sl-aF8"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="topRightButtonTapped:" destination="mG0-cs-Xo7" eventType="touchUpInside" id="baE-aQ-yBn"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVA-0V-wMP">
                                 <rect key="frame" x="20" y="762" width="80" height="80"/>
@@ -70,15 +76,22 @@
                                     <constraint firstAttribute="height" constant="80" id="dgl-vy-w8D"/>
                                     <constraint firstAttribute="width" constant="80" id="or6-MB-5GM"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cIg-lo-OMC" appends="YES" id="7Hy-kc-RCs"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHe-Ki-MGI">
                                 <rect key="frame" x="314" y="762" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="3Dp-X0-CxF"/>
                                     <constraint firstAttribute="width" constant="80" id="4Hu-SL-g35"/>
                                     <constraint firstAttribute="width" secondItem="SHe-Ki-MGI" secondAttribute="height" multiplier="1:1" id="Xhb-Yt-yUA"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KY6-Og-uC0" appends="YES" id="qHa-dx-FK2"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fh1-Br-X08">
                                 <rect key="frame" x="157" y="317" width="100" height="50"/>
@@ -88,6 +101,9 @@
                                     <constraint firstAttribute="width" constant="100" id="Cfy-47-EFO"/>
                                     <constraint firstAttribute="height" constant="50" id="kHU-QM-mEf"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hTO-Dw-txP" appends="YES" id="l72-kR-iMz"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLa-0S-dBa">
                                 <rect key="frame" x="182" y="699" width="50" height="30"/>
@@ -130,10 +146,13 @@
                         <viewLayoutGuide key="safeArea" id="XQl-mS-XtT"/>
                     </view>
                     <connections>
-                        <outlet property="bottomLeftHoldView" destination="QVA-0V-wMP" id="RTw-fI-gkC"/>
+                        <outlet property="bottomLeftHoldRecognizer" destination="cIg-lo-OMC" id="BvA-Xf-ZNW"/>
+                        <outlet property="bottomLeftHoldView" destination="QVA-0V-wMP" id="Px7-Pe-JOu"/>
+                        <outlet property="bottomRightHoldRecognizer" destination="KY6-Og-uC0" id="VKF-xw-4rj"/>
                         <outlet property="bottomRightHoldView" destination="SHe-Ki-MGI" id="nTT-lt-ASe"/>
                         <outlet property="keysButton" destination="sPi-HL-LBa" id="IVv-oQ-amH"/>
                         <outlet property="level4Button" destination="HA3-Lm-13K" id="pFO-mA-dzk"/>
+                        <outlet property="swipeRightRecognizer" destination="hTO-Dw-txP" id="zqV-C4-EZs"/>
                         <outlet property="swipeView" destination="fh1-Br-X08" id="ydw-GE-h3Y"/>
                         <outlet property="topLeftButton" destination="Qeb-2w-Uw4" id="Mlt-Ng-aNr"/>
                         <outlet property="topRightButton" destination="Dka-XU-cqw" id="K0w-rx-Nly"/>
@@ -142,6 +161,21 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCL-es-fTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer enabled="NO" allowableMovement="10" minimumPressDuration="1" id="cIg-lo-OMC">
+                    <connections>
+                        <action selector="bottomLeftHoldComplete:" destination="mG0-cs-Xo7" id="w1J-mv-chg"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer enabled="NO" allowableMovement="10" minimumPressDuration="1" id="KY6-Og-uC0">
+                    <connections>
+                        <action selector="bottomRightHoldComplete:" destination="mG0-cs-Xo7" id="muL-Gn-yAD"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="hTO-Dw-txP">
+                    <connections>
+                        <action selector="swipeRightComplete:" destination="mG0-cs-Xo7" id="BMI-Up-rez"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="41" y="220"/>
         </scene>
