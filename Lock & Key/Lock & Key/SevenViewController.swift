@@ -13,6 +13,8 @@ class SevenViewController: UIViewController {
     //MARK: - Properties
     
     let sharedController = SharedController()
+    var didCompleteTaps: Bool = false
+    var didCompletePress: Bool = false
     
     //MARK: - Outlets
     
