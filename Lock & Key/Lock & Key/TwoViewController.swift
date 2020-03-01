@@ -100,6 +100,8 @@ class TwoViewController: UIViewController {
         if swipeLeftTwoGestureRecognizer.state == .ended {
             sharedController.rotateKeysUp(for: keysButton)
             
+            UserDefaults.standard.set(true, forKey: "isOn3")
+            
             sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "3Segue", level: "2", homeSegue: "openingSegue")
         }
     }
