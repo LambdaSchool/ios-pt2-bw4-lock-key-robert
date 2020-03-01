@@ -39,34 +39,50 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHm-Ng-ezJ">
                                 <rect key="frame" x="157" y="217" width="100" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="8YS-eI-hig"/>
                                     <constraint firstAttribute="height" constant="50" id="x0H-St-5bg"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Z5K-wl-xAf" appends="YES" id="Kkc-P1-vQb"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAL-ZC-oLr">
                                 <rect key="frame" x="157" y="287" width="100" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6Bc-hJ-Knt"/>
                                     <constraint firstAttribute="width" constant="100" id="JnI-LM-9GS"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vJS-k3-cs7" appends="YES" id="XKL-uL-XGe"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTK-e9-jZj">
                                 <rect key="frame" x="51" y="403" width="50" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Ifa-y9-z1G"/>
                                     <constraint firstAttribute="height" constant="100" id="k2x-ic-7VM"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="VVz-fb-dyO" appends="YES" id="orJ-VG-cLv"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VS8-A5-eVa">
                                 <rect key="frame" x="313" y="403" width="50" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="N9V-Gn-1Hh"/>
                                     <constraint firstAttribute="width" constant="50" id="sgJ-hK-JOp"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Kp5-Lx-idw" appends="YES" id="buH-E0-EtU"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAi-ey-ZSl">
                                 <rect key="frame" x="182" y="699" width="50" height="30"/>
@@ -95,10 +111,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZE-iE-NKg">
                                 <rect key="frame" x="157" y="649" width="100" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="36N-72-IkY"/>
                                     <constraint firstAttribute="height" constant="50" id="tqa-16-pdb"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5ml-8A-B1m" appends="YES" id="tT2-Yp-946"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -132,12 +152,22 @@
                         <outlet property="level2Button" destination="tDS-E3-8vK" id="DD9-iM-VdX"/>
                         <outlet property="middleLeftSwipeView" destination="GTK-e9-jZj" id="zFl-lF-k53"/>
                         <outlet property="middleRightSwipeView" destination="VS8-A5-eVa" id="hvj-qP-bMq"/>
+                        <outlet property="swipeDownGestureRecognizer" destination="VVz-fb-dyO" id="MbE-m9-szD"/>
+                        <outlet property="swipeLeftGestureRecognizer" destination="Z5K-wl-xAf" id="Cg6-Jf-uQc"/>
+                        <outlet property="swipeLeftTwoGestureRecognizer" destination="5ml-8A-B1m" id="voP-b9-anU"/>
+                        <outlet property="swipeRightGestureRecognizer" destination="vJS-k3-cs7" id="8nS-b2-g5c"/>
+                        <outlet property="swipeUpGestureRecognizer" destination="Kp5-Lx-idw" id="N3Q-aL-KVR"/>
                         <outlet property="topMiddleSwipeView" destination="NHm-Ng-ezJ" id="k1W-a6-N3w"/>
                         <segue destination="6Ao-Ud-gk1" kind="presentation" identifier="openingSegue" modalPresentationStyle="fullScreen" id="Op0-of-cWs"/>
                         <segue destination="3SG-9D-u9C" kind="presentation" identifier="3Segue" modalPresentationStyle="fullScreen" id="T13-Kv-ud9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yER-Zg-KDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer enabled="NO" direction="left" id="Z5K-wl-xAf"/>
+                <swipeGestureRecognizer enabled="NO" direction="right" id="vJS-k3-cs7"/>
+                <swipeGestureRecognizer enabled="NO" direction="down" id="VVz-fb-dyO"/>
+                <swipeGestureRecognizer enabled="NO" direction="up" id="Kp5-Lx-idw"/>
+                <swipeGestureRecognizer enabled="NO" direction="left" id="5ml-8A-B1m"/>
             </objects>
             <point key="canvasLocation" x="436" y="-175"/>
         </scene>
