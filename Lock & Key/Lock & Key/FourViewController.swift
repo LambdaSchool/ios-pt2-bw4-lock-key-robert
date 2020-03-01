@@ -61,27 +61,48 @@ class FourViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level4ButtonTapped(_ sender: Any) {
-        
+        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: topLeftButton, gesture: nil, segue: "openingSegue")
     }
     
     @IBAction func topLeftButtonTapped(_ sender: Any) {
+        sharedController.fadeKeysIn(for: keysButton)
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.topRightButton, gesture: nil, segue: "openingSegue")
+        })
     }
     
     @IBAction func topRightButtonTapped(_ sender: Any) {
+        sharedController.rotateKeysLeft(for: keysButton)
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.bottomLeftHoldRecognizer, segue: "openingSegue")
+        })
     }
     
     @IBAction func bottomLeftHoldComplete(_ sender: Any) {
+        sharedController.rotateKeysDown(for: keysButton)
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.bottomRightHoldRecognizer, segue: "openingSegue")
+        })
     }
     
     @IBAction func bottomRightHoldComplete(_ sender: Any) {
+        sharedController.rotateKeysRight(for: keysButton)
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeRightRecognizer, segue: "openingSegue")
+        })
     }
     
     @IBAction func swipeRightComplete(_ sender: Any) {
+        sharedController.rotateKeysUp(for: keysButton)
         
+        UserDefaults.standard.set(true, forKey: "isOn5")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "5Segue", level: "4", homeSegue: "openingSegue")
+        })
     }
     
     @IBAction func homeButtonTapped(_ sender: Any) {
