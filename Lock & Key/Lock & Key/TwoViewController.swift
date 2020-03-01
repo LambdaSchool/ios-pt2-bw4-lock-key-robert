@@ -61,28 +61,47 @@ class TwoViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level2ButtonTapped(_ sender: Any) {
-        
-        
+        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeLeftGestureRecognizer, segue: "openingSegue")
     }
     
     @IBAction func swipeLeftGestureCompleted(_ sender: Any) {
-        sharedController.fadeKeysIn(for: keysButton)
+        if swipeLeftGestureRecognizer.state == .ended {
+            sharedController.fadeKeysIn(for: keysButton)
+            
+            sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeRightGestureRecognizer, segue: "openingSegue")
+        }
     }
     
     @IBAction func swipeRightGestureCompleted(_ sender: Any) {
-        sharedController.rotateKeysLeft(for: keysButton)
+        if swipeRightGestureRecognizer.state == .ended {
+            sharedController.rotateKeysLeft(for: keysButton)
+            
+            sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeDownGestureRecognizer, segue: "openingSegue")
+        }
     }
     
     @IBAction func swipeDownGestureCompleted(_ sender: Any) {
-        sharedController.rotateKeysDown(for: keysButton)
+        if swipeDownGestureRecognizer.state == .ended {
+            sharedController.rotateKeysDown(for: keysButton)
+            
+            sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeUpGestureRecognizer, segue: "openingSegue")
+        }
     }
     
     @IBAction func swipeUpGestureCompleted(_ sender: Any) {
-        sharedController.rotateKeysRight(for: keysButton)
+        if swipeUpGestureRecognizer.state == .ended {
+            sharedController.rotateKeysRight(for: keysButton)
+            
+            sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeLeftTwoGestureRecognizer, segue: "openingSegue")
+        }
     }
     
     @IBAction func swipeLeftTwoGestureCompleted(_ sender: Any) {
-        sharedController.rotateKeysUp(for: keysButton)
+        if swipeLeftTwoGestureRecognizer.state == .ended {
+            sharedController.rotateKeysUp(for: keysButton)
+            
+            sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "3Segue", level: "2", homeSegue: "openingSegue")
+        }
     }
     
     @IBAction func homeButtonTapped(_ sender: Any) {
