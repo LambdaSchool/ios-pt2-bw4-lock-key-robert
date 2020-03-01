@@ -31,6 +31,8 @@ class SevenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     
     //MARK: - Methods

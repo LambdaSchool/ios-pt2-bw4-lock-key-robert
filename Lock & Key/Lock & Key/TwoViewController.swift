@@ -37,6 +37,7 @@ class TwoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIApplication.shared.isIdleTimerDisabled = true
         self.view.alpha = 0
     }
     

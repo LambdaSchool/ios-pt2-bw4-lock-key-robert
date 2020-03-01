@@ -35,6 +35,8 @@ class ThreeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     
     //MARK: - Methods
@@ -68,10 +70,4 @@ class ThreeViewController: UIViewController {
     @IBAction func homeButtonTapped(_ sender: Any) {
         
     }
-    
-    //MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-
 }
