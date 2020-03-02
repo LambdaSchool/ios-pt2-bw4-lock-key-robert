@@ -17,6 +17,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA3-Lm-13K">
                                 <rect key="frame" x="141" y="387" width="132" height="132"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="BgR-cK-OKp"/>
                                     <constraint firstAttribute="width" constant="132" id="LbH-cv-dny"/>
@@ -38,6 +39,7 @@
                             </label>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPi-HL-LBa">
                                 <rect key="frame" x="167" y="549" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Qja-MM-VBd"/>
                                     <constraint firstAttribute="width" constant="80" id="TMT-eh-stH"/>
@@ -47,6 +49,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeb-2w-Uw4">
                                 <rect key="frame" x="20" y="64" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="UUi-i9-JFc"/>
                                     <constraint firstAttribute="width" secondItem="Qeb-2w-Uw4" secondAttribute="height" multiplier="1:1" id="ZWm-8N-NvD"/>
@@ -58,6 +61,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-XU-cqw">
                                 <rect key="frame" x="314" y="64" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="SOL-yK-R1L"/>
                                     <constraint firstAttribute="width" secondItem="Dka-XU-cqw" secondAttribute="height" multiplier="1:1" id="ZSa-8T-jxu"/>
@@ -107,6 +111,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLa-0S-dBa">
                                 <rect key="frame" x="182" y="699" width="50" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OLa-0S-dBa" secondAttribute="height" multiplier="5:3" id="4fE-Bd-6w9"/>
                                     <constraint firstAttribute="height" constant="30" id="GQA-pk-Kix"/>
