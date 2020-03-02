@@ -61,51 +61,56 @@ class TwoViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level2ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeLeftGestureRecognizer, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: swipeLeftGestureRecognizer, view: topMiddleSwipeView, segue: "openingSegue")
     }
     
     @IBAction func swipeLeftGestureCompleted(_ sender: Any) {
         if swipeLeftGestureRecognizer.state == .ended {
+            sharedController.shadowOff(for: nil, or: topMiddleSwipeView)
             sharedController.fadeKeysIn(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeRightGestureRecognizer, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeRightGestureRecognizer, view: self.centerMiddleSwipeView, segue: "openingSegue")
             })
         }
     }
     
     @IBAction func swipeRightGestureCompleted(_ sender: Any) {
         if swipeRightGestureRecognizer.state == .ended {
+            sharedController.shadowOff(for: nil, or: centerMiddleSwipeView)
             sharedController.rotateKeysLeft(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeDownGestureRecognizer, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeDownGestureRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue")
             })
         }
     }
     
     @IBAction func swipeDownGestureCompleted(_ sender: Any) {
         if swipeDownGestureRecognizer.state == .ended {
+            sharedController.shadowOff(for: nil, or: middleLeftSwipeView)
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeUpGestureRecognizer, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeUpGestureRecognizer, view: self.middleRightSwipeView, segue: "openingSegue")
             })
         }
     }
     
     @IBAction func swipeUpGestureCompleted(_ sender: Any) {
         if swipeUpGestureRecognizer.state == .ended {
+            sharedController.shadowOff(for: nil, or: middleRightSwipeView)
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeLeftTwoGestureRecognizer, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.swipeLeftTwoGestureRecognizer, view: self.bottomMiddleSwipeView, segue: "openingSegue")
             })
         }
     }
     
     @IBAction func swipeLeftTwoGestureCompleted(_ sender: Any) {
         if swipeLeftTwoGestureRecognizer.state == .ended {
+            sharedController.shadowOff(for: nil, or: bottomMiddleSwipeView)
             sharedController.rotateKeysUp(for: keysButton)
             
             UserDefaults.standard.set(true, forKey: "isOn3")

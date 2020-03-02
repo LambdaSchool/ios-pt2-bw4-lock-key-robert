@@ -63,43 +63,48 @@ class SevenViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level7ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: topLeftButton, gesture: nil, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: topLeftButton, gesture: nil, view: nil, segue: "openingSegue")
     }
     
     @IBAction func topLeftButtonTapped(_ sender: Any) {
+        sharedController.shadowOff(for: topLeftButton, or: nil)
         sharedController.fadeKeysIn(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.bottomRightButton, gesture: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue")
         })
     }
     
     @IBAction func bottomRightButtonTapped(_ sender: Any) {
+        sharedController.shadowOff(for: bottomRightButton, or: nil)
         sharedController.rotateKeysLeft(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.topRightButton, gesture: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
         })
     }
     
     @IBAction func topRightButtonTapped(_ sender: Any) {
+        sharedController.shadowOff(for: topRightButton, or: nil)
         sharedController.rotateKeysDown(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.bottomLeftButton, gesture: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue")
         })
     }
     
     @IBAction func bottomLeftButtonTapped(_ sender: Any) {
+        sharedController.shadowOff(for: bottomLeftButton, or: nil)
         sharedController.rotateKeysRight(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.holdRecognizer, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: nil, gesture: self.holdRecognizer, view: self.holdGestureView, segue: "openingSegue")
         })
     }
     
     @IBAction func holdComplete(_ sender: Any) {
         if holdRecognizer.state == .ended {
+            sharedController.shadowOff(for: nil, or: holdGestureView)
             sharedController.rotateKeysUp(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
