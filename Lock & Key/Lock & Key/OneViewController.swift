@@ -70,7 +70,7 @@ class OneViewController: UIViewController {
     @IBAction func levelOneButtonTapped(_ sender: Any) {
         fadeStartTextViewOff()
         
-        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: topMiddleButton, gesture: nil, view: nil, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Tap", viewController: self, button: topMiddleButton, gesture: nil, view: nil, segue: "openingSegue")
     }
     
     @IBAction func topMiddleButtonTapped(_ sender: Any) {
@@ -78,7 +78,7 @@ class OneViewController: UIViewController {
         sharedController.fadeKeysIn(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Tap", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue")
         })
     }
     
@@ -87,7 +87,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysLeft(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.topLeftButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Tap", viewController: self, button: self.topLeftButton, gesture: nil, view: nil, segue: "openingSegue")
         })
     }
     
@@ -96,7 +96,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysDown(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Tap", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
         })
     }
     
@@ -105,7 +105,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysRight(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "", viewController: self, button: self.bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Tap", viewController: self, button: self.bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue")
         })
     }
     
