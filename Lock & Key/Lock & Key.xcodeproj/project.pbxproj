@@ -23,6 +23,7 @@
 		37223763240A043200FBAA18 /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37223762240A043200FBAA18 /* UnlockViewController.swift */; };
 		37223775240A049A00FBAA18 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37223774240A049A00FBAA18 /* FinishViewController.swift */; };
 		3722AE93240D7CB5001F77F1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3722AE92240D7CB5001F77F1 /* StoreKit.framework */; };
+		3722AE95240D9066001F77F1 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722AE94240D9066001F77F1 /* IAPHelper.swift */; };
 		376B7D62240A133C0074AC73 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7D61240A133C0074AC73 /* OneViewController.swift */; };
 		376B7D64240A23280074AC73 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7D63240A23280074AC73 /* TwoViewController.swift */; };
 		376B7D6A240A24DA0074AC73 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7D65240A24D90074AC73 /* FourViewController.swift */; };
@@ -55,6 +56,7 @@
 		37223762240A043200FBAA18 /* UnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewController.swift; sourceTree = "<group>"; };
 		37223774240A049A00FBAA18 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		3722AE92240D7CB5001F77F1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3722AE94240D9066001F77F1 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		376B7D61240A133C0074AC73 /* OneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		376B7D63240A23280074AC73 /* TwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		376B7D65240A24D90074AC73 /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		3754DFA42406E3EB00C200CB /* In App Purchases */ = {
 			isa = PBXGroup;
 			children = (
+				3722AE94240D9066001F77F1 /* IAPHelper.swift */,
 			);
 			name = "In App Purchases";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				376B964D240C62BA00773A71 /* Firework.swift in Sources */,
 				37A6C3382406DFA800670DB4 /* AppDelegate.swift in Sources */,
 				3722375F240A041600FBAA18 /* OpeningViewController.swift in Sources */,
+				3722AE95240D9066001F77F1 /* IAPHelper.swift in Sources */,
 				376B7D6C240A24DA0074AC73 /* ThreeViewController.swift in Sources */,
 				37223775240A049A00FBAA18 /* FinishViewController.swift in Sources */,
 				376B7D6D240A24DA0074AC73 /* FiveViewController.swift in Sources */,

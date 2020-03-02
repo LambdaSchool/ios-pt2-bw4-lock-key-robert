@@ -14,7 +14,6 @@ class UnlockViewController: UIViewController {
     //MARK: - Properties
     
     let sharedController = SharedController()
-    var product: SKProduct?
     
     //MARK: - Outlets
     
@@ -26,7 +25,8 @@ class UnlockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchProduct()
+        
+        IAPService.shared.fetchProducts()
         setUpSubviews()
     }
     
@@ -35,10 +35,6 @@ class UnlockViewController: UIViewController {
     private func setUpSubviews() {
         sharedController.setupButtonBorders(for: unlockButton)
         sharedController.setupButtonBorders(for: restoreButton)
-    }
-    
-    private func fetchProduct() {
-        //Fetch Product & Set.
     }
     
     //MARK: - Actions
