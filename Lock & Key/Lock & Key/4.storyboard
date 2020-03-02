@@ -117,7 +117,7 @@
                                     <constraint firstAttribute="height" constant="30" id="GQA-pk-Kix"/>
                                     <constraint firstAttribute="width" constant="50" id="x8a-tb-oz3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <state key="normal" title="Home">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>

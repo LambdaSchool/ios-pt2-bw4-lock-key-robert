@@ -24,7 +24,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="288" id="1M1-c5-tCk"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="45"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -36,8 +36,8 @@
                                             <constraint firstAttribute="height" constant="40" id="VlS-yC-B3m"/>
                                             <constraint firstAttribute="width" secondItem="LWY-sq-TRx" secondAttribute="height" multiplier="5:1" id="sYh-KZ-QzK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
-                                        <state key="normal" title="Unlock (0.99¢)">
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                        <state key="normal" title="Unlock">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -52,7 +52,7 @@
                                             <constraint firstAttribute="width" constant="200" id="NYi-yM-09x"/>
                                             <constraint firstAttribute="width" secondItem="RQ1-6j-4PE" secondAttribute="height" multiplier="5:1" id="aYF-uU-Zvj"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                         <state key="normal" title="Restore">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
