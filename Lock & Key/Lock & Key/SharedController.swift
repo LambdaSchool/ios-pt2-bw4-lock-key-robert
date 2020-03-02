@@ -73,16 +73,16 @@ class SharedController {
         DispatchQueue.main.async {
             UIView.animate(withDuration: 1.0, animations: {
                 //Button
-                button?.layer.shadowColor = UIColor.darkGray.cgColor
-                button?.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-                button?.layer.shadowOpacity = 1.0
+                button?.layer.shadowColor = UIColor.black.cgColor
+                button?.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+                button?.layer.shadowOpacity = 0.8
                 button?.layer.shadowRadius = 0.0
                 button?.layer.masksToBounds = false
                 
                 //View
-                view?.layer.shadowColor = UIColor.darkGray.cgColor
-                view?.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-                view?.layer.shadowOpacity = 1.0
+                view?.layer.shadowColor = UIColor.black.cgColor
+                view?.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+                view?.layer.shadowOpacity = 0.8
                 view?.layer.shadowRadius = 0.0
                 view?.layer.masksToBounds = false
             })

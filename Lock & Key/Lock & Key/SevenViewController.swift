@@ -108,7 +108,7 @@ class SevenViewController: UIViewController {
             sharedController.rotateKeysUp(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "FinishSegue", level: "7", homeSegue: "openingSegue")
+                self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "finishSegue", level: "7", homeSegue: "openingSegue")
             })
         }
     }
