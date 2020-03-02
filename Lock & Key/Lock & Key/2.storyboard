@@ -93,7 +93,7 @@
                                     <constraint firstAttribute="width" secondItem="LAi-ey-ZSl" secondAttribute="height" multiplier="5:3" id="GS1-7h-2B7"/>
                                     <constraint firstAttribute="height" constant="30" id="Rhw-iJ-ylP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <state key="normal" title="Home">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>

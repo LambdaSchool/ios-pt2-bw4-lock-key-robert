@@ -154,7 +154,7 @@
                                     <constraint firstAttribute="width" constant="50" id="vXR-B9-nfV"/>
                                     <constraint firstAttribute="width" secondItem="Ynv-4E-WJz" secondAttribute="height" multiplier="5:3" id="xmC-H2-JhF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <state key="normal" title="Home">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
