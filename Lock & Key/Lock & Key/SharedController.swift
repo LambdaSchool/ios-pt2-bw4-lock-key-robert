@@ -70,28 +70,36 @@ class SharedController {
     
     func shadowOn(for button: UIButton?, or view: UIView?) {
         
-        //Button
-        button?.layer.shadowColor = UIColor.black.cgColor
-        button?.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        button?.layer.shadowOpacity = 1.0
-        button?.layer.shadowRadius = 0.0
-        button?.layer.masksToBounds = false
-        
-        //View
-        view?.layer.shadowColor = UIColor.black.cgColor
-        view?.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        view?.layer.shadowOpacity = 1.0
-        view?.layer.shadowRadius = 0.0
-        view?.layer.masksToBounds = false
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 1.0, animations: {
+                //Button
+                button?.layer.shadowColor = UIColor.darkGray.cgColor
+                button?.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+                button?.layer.shadowOpacity = 1.0
+                button?.layer.shadowRadius = 0.0
+                button?.layer.masksToBounds = false
+                
+                //View
+                view?.layer.shadowColor = UIColor.darkGray.cgColor
+                view?.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+                view?.layer.shadowOpacity = 1.0
+                view?.layer.shadowRadius = 0.0
+                view?.layer.masksToBounds = false
+            })
+        }
     }
     
     func shadowOff(for button: UIButton?, or view: UIView?) {
         
-        //Button
-        button?.layer.shadowOpacity = 0.0
-        
-        //View
-        view?.layer.shadowOpacity = 0.0
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 1.0, animations: {
+                //Button
+                button?.layer.shadowOpacity = 0.0
+                
+                //View
+                view?.layer.shadowOpacity = 0.0
+            })
+        }
     }
     
     //MARK: - Riddle Methods
@@ -107,7 +115,7 @@ class SharedController {
         viewController.present(freeAlert, animated: true, completion: nil)
     }
     
-    func addRiddleAlert(riddle: String, answer: String, clue: String, viewController: UIViewController, button: UIButton?, gesture: UIGestureRecognizer?, segue: String) {
+    func addRiddleAlert(riddle: String, answer: String, clue: String, viewController: UIViewController, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String) {
         
         let riddleAlert = UIAlertController(title: riddle, message: "", preferredStyle: UIAlertController.Style.alert)
         riddleAlert.addTextField(configurationHandler: { (textField) in
@@ -121,11 +129,12 @@ class SharedController {
                 riddleAlert.message = ""
                 riddleAlert.dismiss(animated: true, completion: nil)
                 self.addGestureAlert(with: clue, viewController: viewController)
+                self.shadowOn(for: button, or: view)
                 button?.isEnabled = true
                 gesture?.isEnabled = true
             } else {
                 CATransaction.setCompletionBlock({
-                    self.addRejectedAlert(for: viewController, riddle: riddle, answer: answer, clue: clue, button: button, gesture: gesture, segue: segue)
+                    self.addRejectedAlert(for: viewController, riddle: riddle, answer: answer, clue: clue, button: button, gesture: gesture, view: view, segue: segue)
                 })
             }
         }))
@@ -137,10 +146,10 @@ class SharedController {
         viewController.present(riddleAlert, animated: true, completion: nil)
     }
     
-    private func addRejectedAlert(for viewController: UIViewController, riddle: String, answer: String, clue: String, button: UIButton?, gesture: UIGestureRecognizer?, segue: String) {
+    private func addRejectedAlert(for viewController: UIViewController, riddle: String, answer: String, clue: String, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String) {
         let rejectedAlert = UIAlertController(title: "❌", message: "Wrong Answer", preferredStyle: UIAlertController.Style.alert)
         rejectedAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { _ in
-            self.addRiddleAlert(riddle: riddle, answer: answer, clue: clue, viewController: viewController, button: button, gesture: gesture, segue: segue)
+            self.addRiddleAlert(riddle: riddle, answer: answer, clue: clue, viewController: viewController, button: button, gesture: gesture, view: view, segue: segue)
         }))
         viewController.present(rejectedAlert, animated: true, completion: nil)
     }
