@@ -56,11 +56,8 @@ class ProgressViewController: UIViewController {
     
     private func checkUnlocked() {
         if UserDefaults.standard.bool(forKey: "Unlocked") == true {
-            level6Button.isSelected = true
-            level7Button.isSelected = true
-        } else {
-            level6Button.isSelected = false
-            level7Button.isSelected = false
+            level6Label.text = "6"
+            level7Label.text = "7"
         }
     }
     
