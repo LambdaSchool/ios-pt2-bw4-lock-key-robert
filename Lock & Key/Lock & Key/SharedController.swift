@@ -144,14 +144,16 @@ class SharedController {
         }))
         
         viewController.present(riddleAlert, animated: true, completion: nil)
+        riddleAlert.view.tintColor = .white
     }
     
     private func addRejectedAlert(for viewController: UIViewController, riddle: String, answer: String, clue: String, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String) {
-        let rejectedAlert = UIAlertController(title: "❌", message: "Wrong Answer", preferredStyle: UIAlertController.Style.alert)
+        let rejectedAlert = UIAlertController(title: "Wrong Answer", message: "please try again", preferredStyle: UIAlertController.Style.alert)
         rejectedAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { _ in
             self.addRiddleAlert(riddle: riddle, answer: answer, clue: clue, viewController: viewController, button: button, gesture: gesture, view: view, segue: segue)
         }))
         viewController.present(rejectedAlert, animated: true, completion: nil)
+        rejectedAlert.view.tintColor = .white
     }
     
     func addTransitionRiddleAlert(riddle: String, answer: String, viewController: UIViewController, segue: String, level: String, homeSegue: String) {
@@ -180,22 +182,25 @@ class SharedController {
         }))
 
         viewController.present(transitionRiddleAlert, animated: true, completion: nil)
+        transitionRiddleAlert.view.tintColor = .white
     }
     
     private func addRejectedTransitionAlert(for viewController: UIViewController, riddle: String, answer: String, segue: String, level: String, segue2: String) {
-        let rejectedAlert = UIAlertController(title: "❌", message: "Wrong Answer", preferredStyle: UIAlertController.Style.alert)
+        let rejectedAlert = UIAlertController(title: "Wrong Answer", message: "please try again", preferredStyle: UIAlertController.Style.alert)
         rejectedAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { _ in
             CATransaction.setCompletionBlock({
                 self.addTransitionRiddleAlert(riddle: riddle, answer: answer, viewController: viewController, segue: segue, level: level, homeSegue: segue)
             })
         }))
         viewController.present(rejectedAlert, animated: true, completion: nil)
+        rejectedAlert.view.tintColor = .white
     }
     
     private func addGestureAlert(with clue: String, viewController: UIViewController) {
         let gestureAlert = UIAlertController(title: clue, message: "", preferredStyle: UIAlertController.Style.alert)
         gestureAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
         viewController.present(gestureAlert, animated: true, completion: nil)
+        gestureAlert.view.tintColor = .white
     }
     
     
