@@ -58,6 +58,11 @@ extension IAPService: SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
+            if transaction.transactionState == .purchased {
+                UserDefaults.standard.set(true, forKey: "Unlocked")
+            } else if transaction.transactionState == .restored {
+                UserDefaults.standard.set(true, forKey: "Unlocked")
+            }
             print(transaction.transactionState.status())
         }
     }
