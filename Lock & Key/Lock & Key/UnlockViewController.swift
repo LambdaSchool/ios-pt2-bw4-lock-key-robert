@@ -40,11 +40,11 @@ class UnlockViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func unlockButtonTapped(_ sender: Any) {
-        //Purchase product
+        IAPService.shared.purchase(product: .Unlock)
     }
     
     @IBAction func restoreButtonTapped(_ sender: Any) {
-        //Restore product
+        IAPService.shared.restore()
     }
     
 }
