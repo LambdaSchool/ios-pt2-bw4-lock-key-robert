@@ -50,6 +50,7 @@ extension IAPService: SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         self.product = response.products.first
+        
         for product in response.products {
             print(product.localizedTitle)
         }
@@ -60,11 +61,12 @@ extension IAPService: SKProductsRequestDelegate, SKPaymentTransactionObserver {
             print(transaction.transactionState.status())
         }
     }
+    
 }
 
 extension SKPaymentTransactionState {
+    
     func status() -> String {
-        
         switch self {
         case .deferred:
             return "Deferred"
@@ -80,4 +82,5 @@ extension SKPaymentTransactionState {
             fatalError()
         }
     }
+    
 }
