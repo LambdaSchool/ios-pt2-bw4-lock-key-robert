@@ -113,6 +113,7 @@ class SharedController {
         }))
         
         viewController.present(freeAlert, animated: true, completion: nil)
+        freeAlert.view.tintColor = .white
     }
     
     func addRiddleAlert(riddle: String, answer: String, clue: String, viewController: UIViewController, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String) {
