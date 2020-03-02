@@ -43,6 +43,57 @@ class SharedController {
         })
     }
     
+    func fadeViewIn(view: UIView) {
+        UIView.animate(withDuration: 3.0, animations: {
+            view.alpha = 1
+        })
+    }
+    
+    func fadeViewOut(view: UIView) {
+        UIView.animate(withDuration: 1.5, animations: {
+            view.alpha = 0
+        })
+    }
+    
+    func fadeLabelInThenOut(label : UILabel, delay: TimeInterval) {
+        
+        UIView.animate(withDuration: 1.5, animations: { () -> Void in
+            label.alpha = 1
+        }) { (Bool) -> Void in
+            
+            UIView.animate(withDuration: 1.5, delay: delay, options: .curveEaseInOut, animations: { () -> Void in
+                label.alpha = 0
+            },
+                           completion: nil)
+        }
+    }
+    
+    func shadowOn(for button: UIButton?, or view: UIView?) {
+        
+        //Button
+        button?.layer.shadowColor = UIColor.black.cgColor
+        button?.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        button?.layer.shadowOpacity = 1.0
+        button?.layer.shadowRadius = 0.0
+        button?.layer.masksToBounds = false
+        
+        //View
+        view?.layer.shadowColor = UIColor.black.cgColor
+        view?.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        view?.layer.shadowOpacity = 1.0
+        view?.layer.shadowRadius = 0.0
+        view?.layer.masksToBounds = false
+    }
+    
+    func shadowOff(for button: UIButton?, or view: UIView?) {
+        
+        //Button
+        button?.layer.shadowOpacity = 0.0
+        
+        //View
+        view?.layer.shadowOpacity = 0.0
+    }
+    
     //MARK: - Riddle Methods
     
     func endFreePlayAlert(viewController: UIViewController, segue: String) {
@@ -140,31 +191,6 @@ class SharedController {
     
     
     //MARK: - View Methods
-    
-    func fadeViewIn(view: UIView) {
-        UIView.animate(withDuration: 3.0, animations: {
-            view.alpha = 1
-        })
-    }
-    
-    func fadeViewOut(view: UIView) {
-        UIView.animate(withDuration: 1.5, animations: {
-            view.alpha = 0
-        })
-    }
-    
-    func fadeLabelInThenOut(label : UILabel, delay: TimeInterval) {
-        
-        UIView.animate(withDuration: 1.5, animations: { () -> Void in
-            label.alpha = 1
-        }) { (Bool) -> Void in
-            
-            UIView.animate(withDuration: 1.5, delay: delay, options: .curveEaseInOut, animations: { () -> Void in
-                label.alpha = 0
-            },
-                           completion: nil)
-        }
-    }
     
     func setupButtonBorders(for button: UIButton) {
         button.layer.borderColor = UIColor.black.cgColor
