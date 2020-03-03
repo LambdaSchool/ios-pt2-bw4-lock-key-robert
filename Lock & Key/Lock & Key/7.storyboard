@@ -134,27 +134,11 @@
                                     <constraint firstAttribute="height" constant="100" id="bPI-gt-FnJ"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wha-gN-k9c">
-                                <rect key="frame" x="182" y="699" width="50" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="wha-gN-k9c" secondAttribute="height" multiplier="5:3" id="fzH-0s-EOC"/>
-                                    <constraint firstAttribute="height" constant="30" id="ofh-H3-lbE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <state key="normal" title="Home">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="homeButtonTapped:" destination="WrO-iy-wgF" eventType="touchUpInside" id="zO3-J4-Rsl"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="nqd-Z6-OGw" firstAttribute="leading" secondItem="pb0-E3-VuA" secondAttribute="trailing" constant="28" id="1e9-yA-LeJ"/>
-                            <constraint firstItem="wha-gN-k9c" firstAttribute="top" secondItem="fjs-OO-K6U" secondAttribute="bottom" constant="70" id="1fL-Xa-y94"/>
                             <constraint firstItem="tsP-KX-rcn" firstAttribute="centerX" secondItem="kR8-j7-l2l" secondAttribute="centerX" id="2N6-Up-35h"/>
                             <constraint firstItem="pb0-E3-VuA" firstAttribute="centerY" secondItem="kR8-j7-l2l" secondAttribute="centerY" id="35G-dd-UEh"/>
                             <constraint firstItem="V5W-kT-OdQ" firstAttribute="centerY" secondItem="kR8-j7-l2l" secondAttribute="centerY" id="4Ki-7E-Dvs"/>
@@ -167,7 +151,6 @@
                             <constraint firstItem="kR8-j7-l2l" firstAttribute="trailing" secondItem="Slh-kY-FuR" secondAttribute="trailing" constant="20" id="PPQ-fV-nCr"/>
                             <constraint firstItem="3tQ-DW-NXP" firstAttribute="leading" secondItem="kR8-j7-l2l" secondAttribute="leading" constant="20" id="Tgf-eD-fKI"/>
                             <constraint firstItem="pb0-E3-VuA" firstAttribute="centerX" secondItem="kR8-j7-l2l" secondAttribute="centerX" id="cyv-Dh-WUN"/>
-                            <constraint firstItem="wha-gN-k9c" firstAttribute="centerX" secondItem="kR8-j7-l2l" secondAttribute="centerX" id="dfZ-sA-0so"/>
                             <constraint firstItem="GYG-ac-Zid" firstAttribute="leading" secondItem="kR8-j7-l2l" secondAttribute="leading" constant="20" id="go9-0E-lXT"/>
                             <constraint firstItem="aUh-L0-8Jr" firstAttribute="top" secondItem="kR8-j7-l2l" secondAttribute="top" constant="20" id="in1-AL-Y3g"/>
                             <constraint firstItem="fjs-OO-K6U" firstAttribute="centerX" secondItem="kR8-j7-l2l" secondAttribute="centerX" id="q6t-7j-aSe"/>

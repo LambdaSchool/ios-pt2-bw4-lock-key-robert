@@ -15,9 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Death" translatesAutoresizingMaskIntoConstraints="NO" id="TzO-Dt-xaS">
+                                <rect key="frame" x="0.0" y="20" width="414" height="842"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDS-E3-8vK">
                                 <rect key="frame" x="141" y="387" width="132" height="132"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="DzN-Xz-cqs"/>
                                     <constraint firstAttribute="width" secondItem="tDS-E3-8vK" secondAttribute="height" multiplier="1:1" id="FGh-sh-nJv"/>
@@ -85,22 +88,6 @@
                                     <outletCollection property="gestureRecognizers" destination="Kp5-Lx-idw" appends="YES" id="buH-E0-EtU"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAi-ey-ZSl">
-                                <rect key="frame" x="182" y="699" width="50" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="8Op-88-cnt"/>
-                                    <constraint firstAttribute="width" secondItem="LAi-ey-ZSl" secondAttribute="height" multiplier="5:3" id="GS1-7h-2B7"/>
-                                    <constraint firstAttribute="height" constant="30" id="Rhw-iJ-ylP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <state key="normal" title="Home">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="homeButtonTapped:" destination="lnO-jb-FwO" eventType="touchUpInside" id="Z1I-Tf-feM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGC-M5-OVp">
                                 <rect key="frame" x="167" y="549" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,6 +117,7 @@
                             <constraint firstItem="tDS-E3-8vK" firstAttribute="leading" secondItem="GTK-e9-jZj" secondAttribute="trailing" constant="40" id="4to-G5-dqu"/>
                             <constraint firstItem="WGC-M5-OVp" firstAttribute="centerX" secondItem="MUx-iB-hcZ" secondAttribute="centerX" id="8Fm-Tx-5NT"/>
                             <constraint firstItem="VS8-A5-eVa" firstAttribute="centerY" secondItem="MUx-iB-hcZ" secondAttribute="centerY" id="BG3-Pq-0fI"/>
+                            <constraint firstItem="TzO-Dt-xaS" firstAttribute="trailing" secondItem="MUx-iB-hcZ" secondAttribute="trailing" id="I49-T0-uEp"/>
                             <constraint firstItem="VS8-A5-eVa" firstAttribute="leading" secondItem="tDS-E3-8vK" secondAttribute="trailing" constant="40" id="IGG-dh-tnM"/>
                             <constraint firstItem="tDS-E3-8vK" firstAttribute="centerX" secondItem="MUx-iB-hcZ" secondAttribute="centerX" id="JyO-mR-hLH"/>
                             <constraint firstItem="GTK-e9-jZj" firstAttribute="centerY" secondItem="MUx-iB-hcZ" secondAttribute="centerY" id="MTr-BI-BJ7"/>
@@ -137,11 +125,12 @@
                             <constraint firstItem="vAL-ZC-oLr" firstAttribute="centerX" secondItem="MUx-iB-hcZ" secondAttribute="centerX" id="VTG-qq-B7L"/>
                             <constraint firstItem="tDS-E3-8vK" firstAttribute="top" secondItem="vAL-ZC-oLr" secondAttribute="bottom" constant="50" id="VZd-25-xRg"/>
                             <constraint firstItem="tDS-E3-8vK" firstAttribute="centerY" secondItem="MUx-iB-hcZ" secondAttribute="centerY" id="VdH-cp-fn9"/>
+                            <constraint firstItem="TzO-Dt-xaS" firstAttribute="top" secondItem="ipW-xH-6Pt" secondAttribute="top" constant="20" symbolic="YES" id="YNx-jU-Ke7"/>
                             <constraint firstItem="iZE-iE-NKg" firstAttribute="top" secondItem="WGC-M5-OVp" secondAttribute="bottom" constant="20" id="c0J-bX-w9i"/>
-                            <constraint firstItem="LAi-ey-ZSl" firstAttribute="centerX" secondItem="MUx-iB-hcZ" secondAttribute="centerX" id="dqa-Xh-hal"/>
+                            <constraint firstItem="TzO-Dt-xaS" firstAttribute="leading" secondItem="MUx-iB-hcZ" secondAttribute="leading" id="jbD-C3-W4h"/>
                             <constraint firstItem="fHu-2l-ccd" firstAttribute="centerX" secondItem="MUx-iB-hcZ" secondAttribute="centerX" id="p8L-Vh-9Pg"/>
-                            <constraint firstItem="LAi-ey-ZSl" firstAttribute="top" secondItem="WGC-M5-OVp" secondAttribute="bottom" constant="70" id="tsO-Mf-bT0"/>
                             <constraint firstItem="iZE-iE-NKg" firstAttribute="centerX" secondItem="MUx-iB-hcZ" secondAttribute="centerX" id="u6V-23-cZM"/>
+                            <constraint firstItem="TzO-Dt-xaS" firstAttribute="bottom" secondItem="MUx-iB-hcZ" secondAttribute="bottom" id="v5j-Bg-1Rn"/>
                             <constraint firstItem="fHu-2l-ccd" firstAttribute="centerY" secondItem="MUx-iB-hcZ" secondAttribute="centerY" id="wau-tn-4lb"/>
                             <constraint firstItem="WGC-M5-OVp" firstAttribute="top" secondItem="tDS-E3-8vK" secondAttribute="bottom" constant="30" id="xmP-wy-io0"/>
                         </constraints>
@@ -150,7 +139,6 @@
                     <connections>
                         <outlet property="bottomMiddleSwipeView" destination="iZE-iE-NKg" id="w8k-Tj-0at"/>
                         <outlet property="centerMiddleSwipeView" destination="vAL-ZC-oLr" id="qyj-CR-Yai"/>
-                        <outlet property="homeButton" destination="LAi-ey-ZSl" id="k6b-da-0kP"/>
                         <outlet property="keysButton" destination="WGC-M5-OVp" id="3sp-bU-KOG"/>
                         <outlet property="level2Button" destination="tDS-E3-8vK" id="DD9-iM-VdX"/>
                         <outlet property="middleLeftSwipeView" destination="GTK-e9-jZj" id="zFl-lF-k53"/>
@@ -192,7 +180,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="436" y="-175"/>
+            <point key="canvasLocation" x="434.78260869565219" y="-175.44642857142856"/>
         </scene>
         <!--Opening-->
         <scene sceneID="UGp-qf-oS4">
@@ -212,6 +200,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Death" width="450" height="450"/>
         <image name="Keys" width="177" height="180"/>
     </resources>
 </document>

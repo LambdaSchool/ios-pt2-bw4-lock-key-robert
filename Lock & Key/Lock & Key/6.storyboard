@@ -112,29 +112,12 @@
                                     <outletCollection property="gestureRecognizers" destination="915-3m-rwC" appends="YES" id="eJp-zU-6Do"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBr-xR-22h">
-                                <rect key="frame" x="182" y="699" width="50" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0ro-DT-uQY"/>
-                                    <constraint firstAttribute="width" secondItem="uBr-xR-22h" secondAttribute="height" multiplier="5:3" id="Ik8-sL-Jd1"/>
-                                    <constraint firstAttribute="width" constant="50" id="z9d-RG-zMM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <state key="normal" title="Home">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="homeButtonTapped:" destination="giN-yj-gUG" eventType="touchUpInside" id="S5V-xK-H6k"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fEW-aT-2M3" firstAttribute="centerX" secondItem="TEA-Kg-kfd" secondAttribute="centerX" id="0HU-ab-eiZ"/>
                             <constraint firstItem="rxC-Bd-Shh" firstAttribute="centerX" secondItem="TEA-Kg-kfd" secondAttribute="centerX" id="1zS-0N-ddv"/>
                             <constraint firstItem="NsE-gg-0jv" firstAttribute="centerX" secondItem="TEA-Kg-kfd" secondAttribute="centerX" id="6Pa-dv-pYC"/>
-                            <constraint firstItem="uBr-xR-22h" firstAttribute="centerX" secondItem="TEA-Kg-kfd" secondAttribute="centerX" id="Khq-Oi-6oL"/>
                             <constraint firstItem="rxC-Bd-Shh" firstAttribute="top" secondItem="NsE-gg-0jv" secondAttribute="bottom" constant="120" id="LE3-lD-02q"/>
                             <constraint firstItem="gDv-mR-02N" firstAttribute="centerY" secondItem="TEA-Kg-kfd" secondAttribute="centerY" id="LfX-gK-qqK"/>
                             <constraint firstItem="pss-Hq-P5q" firstAttribute="centerY" secondItem="TEA-Kg-kfd" secondAttribute="centerY" id="NrR-XW-SOK"/>
@@ -147,7 +130,6 @@
                             <constraint firstItem="TEA-Kg-kfd" firstAttribute="bottom" secondItem="Q36-8e-7Is" secondAttribute="bottom" constant="20" id="qRv-Lj-ehW"/>
                             <constraint firstItem="TEA-Kg-kfd" firstAttribute="trailing" secondItem="gDv-mR-02N" secondAttribute="trailing" constant="20" id="scO-4F-3vZ"/>
                             <constraint firstItem="TEA-Kg-kfd" firstAttribute="bottom" secondItem="91K-sz-19t" secondAttribute="bottom" constant="20" id="shk-N4-iLT"/>
-                            <constraint firstItem="uBr-xR-22h" firstAttribute="top" secondItem="5jf-Be-9Gq" secondAttribute="bottom" constant="70" id="we7-JG-WVQ"/>
                             <constraint firstItem="rxC-Bd-Shh" firstAttribute="centerY" secondItem="TEA-Kg-kfd" secondAttribute="centerY" id="xTB-3l-ahx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TEA-Kg-kfd"/>
