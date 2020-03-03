@@ -15,9 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Love" translatesAutoresizingMaskIntoConstraints="NO" id="cPJ-TP-RLu">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlP-de-lhg">
                                 <rect key="frame" x="141" y="387" width="132" height="132"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,7 +45,7 @@
                                     <constraint firstAttribute="width" secondItem="ZQw-Og-q3E" secondAttribute="height" multiplier="1:1" id="GLl-0X-8BP"/>
                                     <constraint firstAttribute="height" constant="80" id="ubL-br-KqW"/>
                                 </constraints>
-                                <state key="normal" image="Keys"/>
+                                <state key="normal" image="Love"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2W-Ra-mQK">
                                 <rect key="frame" x="267" y="187" width="80" height="80"/>
@@ -124,15 +121,11 @@
                             <constraint firstItem="ZQw-Og-q3E" firstAttribute="centerX" secondItem="po7-9T-2xz" secondAttribute="centerX" id="1Fc-ct-gma"/>
                             <constraint firstItem="Zv1-xN-qT8" firstAttribute="leading" secondItem="Mpl-8G-3lP" secondAttribute="trailing" constant="20" id="3Cz-6d-QdM"/>
                             <constraint firstItem="Mpl-8G-3lP" firstAttribute="top" secondItem="syf-mj-2s8" secondAttribute="bottom" constant="20" id="HKH-Ij-1i9"/>
-                            <constraint firstItem="cPJ-TP-RLu" firstAttribute="top" secondItem="po7-9T-2xz" secondAttribute="top" id="JaS-fT-sLf"/>
                             <constraint firstItem="Mpl-8G-3lP" firstAttribute="bottom" secondItem="Zv1-xN-qT8" secondAttribute="bottom" id="Ny1-1p-eot"/>
                             <constraint firstItem="ZQw-Og-q3E" firstAttribute="top" secondItem="OlP-de-lhg" secondAttribute="bottom" constant="30" id="S64-uz-I4b"/>
                             <constraint firstItem="Vos-nB-3sM" firstAttribute="leading" secondItem="Zv1-xN-qT8" secondAttribute="trailing" constant="20" id="avr-ci-5j6"/>
                             <constraint firstItem="OlP-de-lhg" firstAttribute="top" secondItem="Zv1-xN-qT8" secondAttribute="bottom" constant="20" id="dnC-ie-95L"/>
-                            <constraint firstItem="cPJ-TP-RLu" firstAttribute="leading" secondItem="po7-9T-2xz" secondAttribute="leading" id="dte-nK-CGE"/>
-                            <constraint firstItem="cPJ-TP-RLu" firstAttribute="trailing" secondItem="po7-9T-2xz" secondAttribute="trailing" id="fXe-VH-BkS"/>
                             <constraint firstItem="Vos-nB-3sM" firstAttribute="top" secondItem="r2W-Ra-mQK" secondAttribute="bottom" constant="20" id="hXg-90-syu"/>
-                            <constraint firstItem="cPJ-TP-RLu" firstAttribute="bottom" secondItem="po7-9T-2xz" secondAttribute="bottom" id="j4A-Hp-g9M"/>
                             <constraint firstItem="1zE-hd-FPI" firstAttribute="centerY" secondItem="po7-9T-2xz" secondAttribute="centerY" id="jlE-X1-mT5"/>
                             <constraint firstItem="Zv1-xN-qT8" firstAttribute="centerX" secondItem="po7-9T-2xz" secondAttribute="centerX" id="sas-AH-356"/>
                             <constraint firstItem="OlP-de-lhg" firstAttribute="centerX" secondItem="po7-9T-2xz" secondAttribute="centerX" id="skl-OR-zig"/>
@@ -205,7 +198,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Keys" width="177" height="180"/>
         <image name="Love" width="996" height="996"/>
     </resources>
 </document>
