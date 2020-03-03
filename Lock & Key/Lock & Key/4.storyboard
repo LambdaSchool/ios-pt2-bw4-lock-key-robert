@@ -15,9 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Freedom" translatesAutoresizingMaskIntoConstraints="NO" id="NIq-Mw-ZFf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA3-Lm-13K">
                                 <rect key="frame" x="141" y="387" width="132" height="132"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,7 +45,7 @@
                                     <constraint firstAttribute="width" constant="80" id="TMT-eh-stH"/>
                                     <constraint firstAttribute="width" secondItem="sPi-HL-LBa" secondAttribute="height" multiplier="1:1" id="Xy6-XG-RTW"/>
                                 </constraints>
-                                <state key="normal" image="Keys"/>
+                                <state key="normal" image="Freedom"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeb-2w-Uw4">
                                 <rect key="frame" x="20" y="64" width="80" height="80"/>
@@ -118,13 +115,10 @@
                         <constraints>
                             <constraint firstItem="sPi-HL-LBa" firstAttribute="centerX" secondItem="XQl-mS-XtT" secondAttribute="centerX" id="072-qc-0Sh"/>
                             <constraint firstItem="HA3-Lm-13K" firstAttribute="centerX" secondItem="XQl-mS-XtT" secondAttribute="centerX" id="3gQ-qs-cFv"/>
-                            <constraint firstItem="NIq-Mw-ZFf" firstAttribute="top" secondItem="XQl-mS-XtT" secondAttribute="top" id="5DB-Cg-1Ii"/>
                             <constraint firstItem="QVA-0V-wMP" firstAttribute="leading" secondItem="XQl-mS-XtT" secondAttribute="leading" constant="20" id="6Zd-GN-x1w"/>
                             <constraint firstItem="bX0-K9-jxN" firstAttribute="centerX" secondItem="XQl-mS-XtT" secondAttribute="centerX" id="7TI-Ly-SpI"/>
                             <constraint firstItem="Dka-XU-cqw" firstAttribute="top" secondItem="XQl-mS-XtT" secondAttribute="top" constant="20" id="AMn-ox-xBr"/>
-                            <constraint firstItem="NIq-Mw-ZFf" firstAttribute="bottom" secondItem="XQl-mS-XtT" secondAttribute="bottom" id="Ki2-nU-sit"/>
                             <constraint firstItem="XQl-mS-XtT" firstAttribute="trailing" secondItem="SHe-Ki-MGI" secondAttribute="trailing" constant="20" id="TJx-tl-qFf"/>
-                            <constraint firstItem="NIq-Mw-ZFf" firstAttribute="trailing" secondItem="XQl-mS-XtT" secondAttribute="trailing" id="U7S-0h-9y7"/>
                             <constraint firstItem="bX0-K9-jxN" firstAttribute="centerY" secondItem="XQl-mS-XtT" secondAttribute="centerY" id="Uip-Nm-Qgp"/>
                             <constraint firstItem="Qeb-2w-Uw4" firstAttribute="top" secondItem="XQl-mS-XtT" secondAttribute="top" constant="20" id="V6H-EZ-u4L"/>
                             <constraint firstItem="XQl-mS-XtT" firstAttribute="bottom" secondItem="SHe-Ki-MGI" secondAttribute="bottom" constant="20" id="VJU-xq-qiW"/>
@@ -133,7 +127,6 @@
                             <constraint firstItem="Qeb-2w-Uw4" firstAttribute="leading" secondItem="XQl-mS-XtT" secondAttribute="leading" constant="20" id="c8R-3u-Ghl"/>
                             <constraint firstItem="XQl-mS-XtT" firstAttribute="bottom" secondItem="QVA-0V-wMP" secondAttribute="bottom" constant="20" id="hdd-3d-kTp"/>
                             <constraint firstItem="HA3-Lm-13K" firstAttribute="top" secondItem="fh1-Br-X08" secondAttribute="bottom" constant="20" id="ptV-Cv-NYC"/>
-                            <constraint firstItem="NIq-Mw-ZFf" firstAttribute="leading" secondItem="XQl-mS-XtT" secondAttribute="leading" id="q6N-SH-Pr7"/>
                             <constraint firstItem="sPi-HL-LBa" firstAttribute="top" secondItem="HA3-Lm-13K" secondAttribute="bottom" constant="30" id="waQ-pd-0gx"/>
                             <constraint firstItem="HA3-Lm-13K" firstAttribute="centerY" secondItem="XQl-mS-XtT" secondAttribute="centerY" id="x1i-A1-jfl"/>
                         </constraints>
@@ -191,7 +184,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Freedom" width="426" height="93"/>
-        <image name="Keys" width="177" height="180"/>
+        <image name="Freedom" width="512" height="512"/>
     </resources>
 </document>

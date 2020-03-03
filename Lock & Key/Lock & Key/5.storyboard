@@ -15,9 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Music" translatesAutoresizingMaskIntoConstraints="NO" id="VU7-xr-Fao">
-                                <rect key="frame" x="100" y="144" width="214" height="618"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPB-6x-aG0">
                                 <rect key="frame" x="141" y="387" width="132" height="132"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,7 +45,7 @@
                                     <constraint firstAttribute="width" secondItem="OZj-eM-1cN" secondAttribute="height" multiplier="1:1" id="MzF-x8-bsO"/>
                                     <constraint firstAttribute="height" constant="80" id="hC6-uV-YvO"/>
                                 </constraints>
-                                <state key="normal" image="Keys"/>
+                                <state key="normal" image="Music"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qa-nn-nGf">
                                 <rect key="frame" x="157" y="327" width="100" height="50"/>
@@ -157,7 +154,6 @@
                             <constraint firstItem="nmV-iR-wFf" firstAttribute="centerX" secondItem="ZLI-tQ-NjR" secondAttribute="centerX" id="0z3-ml-Pya"/>
                             <constraint firstItem="z9s-Yk-Vrn" firstAttribute="leading" secondItem="ZLI-tQ-NjR" secondAttribute="leading" constant="20" id="20F-3G-GDW"/>
                             <constraint firstItem="LPB-6x-aG0" firstAttribute="top" secondItem="1qa-nn-nGf" secondAttribute="bottom" constant="10" id="62v-sm-cDS"/>
-                            <constraint firstItem="VU7-xr-Fao" firstAttribute="top" secondItem="ZLI-tQ-NjR" secondAttribute="top" constant="100" id="64H-Ai-QCh"/>
                             <constraint firstItem="AK5-lX-g5c" firstAttribute="top" secondItem="ZLI-tQ-NjR" secondAttribute="top" constant="20" id="6Iq-g2-6Fd"/>
                             <constraint firstItem="ZLI-tQ-NjR" firstAttribute="trailing" secondItem="YEm-9F-3CX" secondAttribute="trailing" constant="20" id="8sZ-l7-4Nx"/>
                             <constraint firstItem="nmV-iR-wFf" firstAttribute="centerY" secondItem="ZLI-tQ-NjR" secondAttribute="centerY" id="9fu-sb-Mkk"/>
@@ -170,14 +166,11 @@
                             <constraint firstItem="ZLI-tQ-NjR" firstAttribute="trailing" secondItem="XG8-JR-A7C" secondAttribute="trailing" constant="20" id="M8n-c2-5PA"/>
                             <constraint firstItem="OZj-eM-1cN" firstAttribute="top" secondItem="LPB-6x-aG0" secondAttribute="bottom" constant="30" id="Rg9-Lk-GMd"/>
                             <constraint firstItem="r6e-HB-p19" firstAttribute="leading" secondItem="LPB-6x-aG0" secondAttribute="trailing" constant="21.5" id="Ux9-xq-XnM"/>
-                            <constraint firstItem="VU7-xr-Fao" firstAttribute="trailing" secondItem="ZLI-tQ-NjR" secondAttribute="trailing" constant="-100" id="VQ8-BU-t3c"/>
                             <constraint firstItem="ZLI-tQ-NjR" firstAttribute="bottom" secondItem="XG8-JR-A7C" secondAttribute="bottom" constant="20" id="Xcg-Gi-y8o"/>
-                            <constraint firstItem="VU7-xr-Fao" firstAttribute="bottom" secondItem="ZLI-tQ-NjR" secondAttribute="bottom" constant="-100" id="et2-5e-QZh"/>
                             <constraint firstItem="ZLI-tQ-NjR" firstAttribute="bottom" secondItem="z9s-Yk-Vrn" secondAttribute="bottom" constant="20" id="gPL-0a-ZQn"/>
                             <constraint firstItem="1qa-nn-nGf" firstAttribute="centerX" secondItem="ZLI-tQ-NjR" secondAttribute="centerX" id="jZh-lO-PFd"/>
                             <constraint firstItem="LPB-6x-aG0" firstAttribute="centerX" secondItem="ZLI-tQ-NjR" secondAttribute="centerX" id="kqG-l6-CpR"/>
                             <constraint firstItem="LPB-6x-aG0" firstAttribute="leading" secondItem="S9i-Qc-dmP" secondAttribute="trailing" constant="21.5" id="ob0-MV-q3L"/>
-                            <constraint firstItem="VU7-xr-Fao" firstAttribute="leading" secondItem="ZLI-tQ-NjR" secondAttribute="leading" constant="100" id="t9c-D6-XdM"/>
                             <constraint firstItem="r6e-HB-p19" firstAttribute="centerY" secondItem="ZLI-tQ-NjR" secondAttribute="centerY" id="yxa-x5-HCK"/>
                             <constraint firstItem="WH2-Ga-0lJ" firstAttribute="centerX" secondItem="ZLI-tQ-NjR" secondAttribute="centerX" id="zMb-AQ-sO5"/>
                         </constraints>
@@ -251,7 +244,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Keys" width="177" height="180"/>
-        <image name="Music" width="419" height="996"/>
+        <image name="Music" width="512" height="512"/>
     </resources>
 </document>
