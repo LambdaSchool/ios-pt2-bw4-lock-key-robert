@@ -15,9 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Freedom" translatesAutoresizingMaskIntoConstraints="NO" id="NIq-Mw-ZFf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA3-Lm-13K">
                                 <rect key="frame" x="141" y="387" width="132" height="132"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="BgR-cK-OKp"/>
                                     <constraint firstAttribute="width" constant="132" id="LbH-cv-dny"/>
@@ -99,7 +102,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fh1-Br-X08">
                                 <rect key="frame" x="157" y="317" width="100" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Cfy-47-EFO"/>
@@ -109,42 +112,28 @@
                                     <outletCollection property="gestureRecognizers" destination="hTO-Dw-txP" appends="YES" id="l72-kR-iMz"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLa-0S-dBa">
-                                <rect key="frame" x="182" y="699" width="50" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="OLa-0S-dBa" secondAttribute="height" multiplier="5:3" id="4fE-Bd-6w9"/>
-                                    <constraint firstAttribute="height" constant="30" id="GQA-pk-Kix"/>
-                                    <constraint firstAttribute="width" constant="50" id="x8a-tb-oz3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <state key="normal" title="Home">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="homeButtonTapped:" destination="mG0-cs-Xo7" eventType="touchUpInside" id="yqG-cY-FGM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="sPi-HL-LBa" firstAttribute="centerX" secondItem="XQl-mS-XtT" secondAttribute="centerX" id="072-qc-0Sh"/>
                             <constraint firstItem="HA3-Lm-13K" firstAttribute="centerX" secondItem="XQl-mS-XtT" secondAttribute="centerX" id="3gQ-qs-cFv"/>
+                            <constraint firstItem="NIq-Mw-ZFf" firstAttribute="top" secondItem="XQl-mS-XtT" secondAttribute="top" id="5DB-Cg-1Ii"/>
                             <constraint firstItem="QVA-0V-wMP" firstAttribute="leading" secondItem="XQl-mS-XtT" secondAttribute="leading" constant="20" id="6Zd-GN-x1w"/>
                             <constraint firstItem="bX0-K9-jxN" firstAttribute="centerX" secondItem="XQl-mS-XtT" secondAttribute="centerX" id="7TI-Ly-SpI"/>
                             <constraint firstItem="Dka-XU-cqw" firstAttribute="top" secondItem="XQl-mS-XtT" secondAttribute="top" constant="20" id="AMn-ox-xBr"/>
+                            <constraint firstItem="NIq-Mw-ZFf" firstAttribute="bottom" secondItem="XQl-mS-XtT" secondAttribute="bottom" id="Ki2-nU-sit"/>
                             <constraint firstItem="XQl-mS-XtT" firstAttribute="trailing" secondItem="SHe-Ki-MGI" secondAttribute="trailing" constant="20" id="TJx-tl-qFf"/>
+                            <constraint firstItem="NIq-Mw-ZFf" firstAttribute="trailing" secondItem="XQl-mS-XtT" secondAttribute="trailing" id="U7S-0h-9y7"/>
                             <constraint firstItem="bX0-K9-jxN" firstAttribute="centerY" secondItem="XQl-mS-XtT" secondAttribute="centerY" id="Uip-Nm-Qgp"/>
                             <constraint firstItem="Qeb-2w-Uw4" firstAttribute="top" secondItem="XQl-mS-XtT" secondAttribute="top" constant="20" id="V6H-EZ-u4L"/>
                             <constraint firstItem="XQl-mS-XtT" firstAttribute="bottom" secondItem="SHe-Ki-MGI" secondAttribute="bottom" constant="20" id="VJU-xq-qiW"/>
                             <constraint firstItem="fh1-Br-X08" firstAttribute="centerX" secondItem="XQl-mS-XtT" secondAttribute="centerX" id="YMC-34-kK1"/>
                             <constraint firstItem="XQl-mS-XtT" firstAttribute="trailing" secondItem="Dka-XU-cqw" secondAttribute="trailing" constant="20" id="Z7d-o8-ero"/>
-                            <constraint firstItem="OLa-0S-dBa" firstAttribute="top" secondItem="sPi-HL-LBa" secondAttribute="bottom" constant="70" id="ZTK-L3-Jfq"/>
-                            <constraint firstItem="OLa-0S-dBa" firstAttribute="centerX" secondItem="XQl-mS-XtT" secondAttribute="centerX" id="Zdb-Ed-cEF"/>
                             <constraint firstItem="Qeb-2w-Uw4" firstAttribute="leading" secondItem="XQl-mS-XtT" secondAttribute="leading" constant="20" id="c8R-3u-Ghl"/>
                             <constraint firstItem="XQl-mS-XtT" firstAttribute="bottom" secondItem="QVA-0V-wMP" secondAttribute="bottom" constant="20" id="hdd-3d-kTp"/>
                             <constraint firstItem="HA3-Lm-13K" firstAttribute="top" secondItem="fh1-Br-X08" secondAttribute="bottom" constant="20" id="ptV-Cv-NYC"/>
+                            <constraint firstItem="NIq-Mw-ZFf" firstAttribute="leading" secondItem="XQl-mS-XtT" secondAttribute="leading" id="q6N-SH-Pr7"/>
                             <constraint firstItem="sPi-HL-LBa" firstAttribute="top" secondItem="HA3-Lm-13K" secondAttribute="bottom" constant="30" id="waQ-pd-0gx"/>
                             <constraint firstItem="HA3-Lm-13K" firstAttribute="centerY" secondItem="XQl-mS-XtT" secondAttribute="centerY" id="x1i-A1-jfl"/>
                         </constraints>
@@ -182,7 +171,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="41" y="220"/>
+            <point key="canvasLocation" x="40.579710144927539" y="219.64285714285714"/>
         </scene>
         <!--Opening-->
         <scene sceneID="xew-77-Bdt">
@@ -202,6 +191,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Freedom" width="426" height="93"/>
         <image name="Keys" width="177" height="180"/>
     </resources>
 </document>
