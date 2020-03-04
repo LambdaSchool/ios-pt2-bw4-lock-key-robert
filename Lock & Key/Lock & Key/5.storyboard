@@ -147,7 +147,7 @@
                                 </constraints>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.54400306940078735" green="0.40586371068307497" blue="0.24137043792601434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="OZj-eM-1cN" firstAttribute="centerX" secondItem="ZLI-tQ-NjR" secondAttribute="centerX" id="0H6-0G-17A"/>
                             <constraint firstItem="WH2-Ga-0lJ" firstAttribute="top" secondItem="oP8-6A-FTg" secondAttribute="bottom" constant="10" id="0ry-Gm-IRz"/>
@@ -244,6 +244,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Music" width="512" height="512"/>
+        <image name="Music" width="1331" height="1882"/>
     </resources>
 </document>

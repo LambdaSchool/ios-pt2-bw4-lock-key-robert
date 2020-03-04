@@ -110,7 +110,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="sPi-HL-LBa" firstAttribute="centerX" secondItem="XQl-mS-XtT" secondAttribute="centerX" id="072-qc-0Sh"/>
@@ -184,6 +184,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Freedom" width="512" height="512"/>
+        <image name="Freedom" width="491" height="491"/>
     </resources>
 </document>

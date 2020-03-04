@@ -112,7 +112,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.83966273114159551" blue="0.96382085582632226" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="syf-mj-2s8" firstAttribute="leading" secondItem="Mpl-8G-3lP" secondAttribute="leading" id="0jt-jS-jA6"/>
@@ -198,6 +198,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Love" width="996" height="996"/>
+        <image name="Love" width="619" height="584"/>
     </resources>
 </document>
