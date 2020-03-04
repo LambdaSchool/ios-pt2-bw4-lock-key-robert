@@ -15,66 +15,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W94-g6-X3G">
-                                <rect key="frame" x="94.5" y="762" width="225" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-gD-dS1">
+                                <rect key="frame" x="94.5" y="269" width="225" height="553"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orC-fT-F8u">
-                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="50"/>
-                                        <state key="normal" image="Trophy"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="EcH-6G-i8O">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="253"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="70"/>
+                                        <state key="normal" title="Lock  &amp; Key">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
-                                            <action selector="trophyButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="Ge7-Ev-ts6"/>
+                                            <action selector="playButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="qat-aG-rJB"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdC-r3-CTu">
-                                        <rect key="frame" x="81.5" y="0.0" width="62" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W94-g6-X3G">
+                                        <rect key="frame" x="0.0" y="503" width="225" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orC-fT-F8u">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="50"/>
+                                                <state key="normal" image="Trophy"/>
+                                                <connections>
+                                                    <action selector="trophyButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="Ge7-Ev-ts6"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdC-r3-CTu">
+                                                <rect key="frame" x="81.5" y="0.0" width="62" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUA-Cc-9FH">
+                                                <rect key="frame" x="163.5" y="0.0" width="61.5" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="Levels"/>
+                                                <connections>
+                                                    <action selector="progressButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="iT6-OT-LPg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUA-Cc-9FH">
-                                        <rect key="frame" x="163.5" y="0.0" width="61.5" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="Levels"/>
-                                        <connections>
-                                            <action selector="progressButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="iT6-OT-LPg"/>
-                                        </connections>
-                                    </button>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="225" id="poJ-NQ-IDE"/>
+                                            <constraint firstAttribute="height" constant="50" id="sDM-2b-zcg"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="225" id="poJ-NQ-IDE"/>
-                                    <constraint firstAttribute="height" constant="50" id="sDM-2b-zcg"/>
-                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4Q-wc-Iqf">
-                                <rect key="frame" x="165" y="557" width="84" height="105"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
-                                <state key="normal" title="Play &gt;">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="playButtonTapped:" destination="SrO-h8-aj5" eventType="touchUpInside" id="8Ip-TD-2n1"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock  &amp;  Key" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lT-kx-tkZ">
-                                <rect key="frame" x="112" y="244" width="190" height="273"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="80"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="W94-g6-X3G" firstAttribute="centerX" secondItem="9Br-lt-011" secondAttribute="centerX" id="F11-Tq-VY5"/>
-                            <constraint firstItem="9Br-lt-011" firstAttribute="bottom" secondItem="W94-g6-X3G" secondAttribute="bottom" constant="50" id="I56-YC-5Fh"/>
-                            <constraint firstItem="5lT-kx-tkZ" firstAttribute="top" relation="lessThanOrEqual" secondItem="9Br-lt-011" secondAttribute="top" constant="200" id="K5w-2N-WV8"/>
-                            <constraint firstItem="5lT-kx-tkZ" firstAttribute="centerX" secondItem="9Br-lt-011" secondAttribute="centerX" id="S7B-UT-6FX"/>
-                            <constraint firstItem="W94-g6-X3G" firstAttribute="top" secondItem="f4Q-wc-Iqf" secondAttribute="bottom" constant="100" id="beT-v7-tMw"/>
-                            <constraint firstItem="f4Q-wc-Iqf" firstAttribute="centerX" secondItem="9Br-lt-011" secondAttribute="centerX" id="yW6-cX-4KE"/>
-                            <constraint firstItem="f4Q-wc-Iqf" firstAttribute="top" secondItem="5lT-kx-tkZ" secondAttribute="bottom" constant="40" id="zDv-uB-tF0"/>
+                            <constraint firstItem="9Br-lt-011" firstAttribute="bottom" secondItem="lI3-gD-dS1" secondAttribute="bottom" constant="40" id="C8c-vi-8tR"/>
+                            <constraint firstItem="lI3-gD-dS1" firstAttribute="centerX" secondItem="9Br-lt-011" secondAttribute="centerX" id="CUj-Le-paY"/>
+                            <constraint firstItem="lI3-gD-dS1" firstAttribute="top" secondItem="9Br-lt-011" secondAttribute="top" constant="225" id="Lfb-J1-Tcr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Br-lt-011"/>
                     </view>
