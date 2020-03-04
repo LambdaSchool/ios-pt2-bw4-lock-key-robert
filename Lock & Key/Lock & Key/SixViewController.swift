@@ -62,7 +62,7 @@ class SixViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level6ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Tap Square", viewController: self, button: bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "With simple supplies, i could be anything. However, most children just call me this.", answer: "fort", clue: "Tap Square", viewController: self, button: bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue")
     }
 
     @IBAction func bottomLeftButtonTapped(_ sender: Any) {
@@ -114,7 +114,7 @@ class SixViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isOn7")
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "7Segue", level: "6", homeSegue: "openingSegue")
+                self.sharedController.addTransitionRiddleAlert(riddle: "Through the beatings, I stand strong... for this is what I live for. What am I?", answer: "drums", viewController: self, segue: "7Segue", level: "6", homeSegue: "openingSegue")
             })
         }
     }
