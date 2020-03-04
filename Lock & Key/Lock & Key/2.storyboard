@@ -193,6 +193,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Death" width="450" height="450"/>
+        <image name="Death" width="246" height="246"/>
     </resources>
 </document>
