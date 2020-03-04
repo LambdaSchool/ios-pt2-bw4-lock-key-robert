@@ -106,10 +106,11 @@ class SharedController {
     
     func endFreePlayAlert(viewController: UIViewController, segue: String) {
         
-        let freeAlert = UIAlertController(title: "This is the end of the free game!", message: "If you wish to continue, please unlock the final 2 levels", preferredStyle: .alert)
+        let freeAlert = UIAlertController(title: "This is the End of the Free Game", message: "Please unlock final levels", preferredStyle: .alert)
         
         freeAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
-            viewController.performSegue(withIdentifier: segue, sender: viewController)
+            self.fadeViewOut(view: viewController.view)
+            self.segueAfterFadeOut(viewController: viewController, segue: segue)
         }))
         
         viewController.present(freeAlert, animated: true, completion: nil)
