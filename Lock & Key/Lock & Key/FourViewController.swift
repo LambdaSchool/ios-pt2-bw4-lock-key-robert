@@ -61,7 +61,7 @@ class FourViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level4ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "", answer: "surfing", clue: "Tap Square", viewController: self, button: topLeftButton, gesture: nil, view: nil, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "If you havent tried, you haven't lived. Come join me & feel at one with the ocean.", answer: "surfing", clue: "Tap Square", viewController: self, button: topLeftButton, gesture: nil, view: nil, segue: "openingSegue")
     }
     
     @IBAction func topLeftButtonTapped(_ sender: Any) {
@@ -69,7 +69,7 @@ class FourViewController: UIViewController {
         sharedController.fadeKeysIn(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "music", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "The greatest day of my life is when I'm broken & my master is finally free.", answer: "chains", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
         })
     }
     
@@ -78,7 +78,7 @@ class FourViewController: UIViewController {
         sharedController.rotateKeysLeft(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "wind", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHoldRecognizer, view: self.bottomLeftHoldView, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "Like a woman, I am ever changing. Calm & soothing when happy, yet forceful & merciles when you get on my bad side.", answer: "wind", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHoldRecognizer, view: self.bottomLeftHoldView, segue: "openingSegue")
         })
     }
     
@@ -87,7 +87,7 @@ class FourViewController: UIViewController {
         sharedController.rotateKeysDown(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "beach", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHoldRecognizer, view: self.bottomRightHoldView, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "I reside where the land meets the sea.", answer: "beach", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHoldRecognizer, view: self.bottomRightHoldView, segue: "openingSegue")
         })
     }
     
@@ -96,7 +96,7 @@ class FourViewController: UIViewController {
         sharedController.rotateKeysRight(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "", answer: "flight", clue: "Swipe Right", viewController: self, button: nil, gesture: self.swipeRightRecognizer, view: self.swipeView, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "They are more free than we could ever be.", answer: "birds", clue: "Swipe Right", viewController: self, button: nil, gesture: self.swipeRightRecognizer, view: self.swipeView, segue: "openingSegue")
         })
     }
     
@@ -106,7 +106,7 @@ class FourViewController: UIViewController {
         
         UserDefaults.standard.set(true, forKey: "isOn5")
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "ocean", viewController: self, segue: "5Segue", level: "4", homeSegue: "openingSegue")
+            self.sharedController.addTransitionRiddleAlert(riddle: "Revered for my beauty, some say I can't be tamed. How fitting.", answer: "ocean", viewController: self, segue: "5Segue", level: "4", homeSegue: "openingSegue")
         })
     }
     
