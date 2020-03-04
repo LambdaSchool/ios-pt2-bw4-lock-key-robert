@@ -340,8 +340,10 @@
                         <outlet property="level5Button" destination="nLA-bo-9dt" id="MyM-51-dMG"/>
                         <outlet property="level5Label" destination="5Is-Ib-eEY" id="CLU-oh-mKU"/>
                         <outlet property="level6Button" destination="v8N-I1-8qy" id="pUa-EC-3u8"/>
+                        <outlet property="level6ButtonLabel" destination="vmK-1G-m4u" id="4wH-RX-VDS"/>
                         <outlet property="level6Label" destination="DdP-m7-Jos" id="qLE-tc-ceU"/>
                         <outlet property="level7Button" destination="Pis-8j-74v" id="tFQ-P6-3Zv"/>
+                        <outlet property="level7ButtonLabel" destination="yJc-y7-wal" id="SfZ-qA-ju2"/>
                         <outlet property="level7Label" destination="5KS-P7-vzP" id="SaP-tq-Wks"/>
                         <segue destination="ele-tn-7tf" kind="presentation" identifier="Level1Segue" modalPresentationStyle="fullScreen" id="xK3-HX-pii"/>
                         <segue destination="GQs-97-gbQ" kind="presentation" identifier="Level2Segue" modalPresentationStyle="fullScreen" id="S1D-d3-NAY"/>
