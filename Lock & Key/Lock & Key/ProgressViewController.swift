@@ -107,44 +107,37 @@ class ProgressViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level1ButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-        
-        self.performSegue(withIdentifier: "Level1Segue", sender: self)
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "Level1Segue")
     }
     
     @IBAction func level2ButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-        
-        self.performSegue(withIdentifier: "Level2Segue", sender: self)
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "Level2Segue")
     }
     
     @IBAction func level3ButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-        
-        self.performSegue(withIdentifier: "Level3Segue", sender: self)
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "Level3Segue")
     }
     
     @IBAction func level4ButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-        
-        self.performSegue(withIdentifier: "Level4Segue", sender: self)
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "Level4Segue")
     }
     
     @IBAction func level5ButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-        
-        self.performSegue(withIdentifier: "Level5Segue", sender: self)
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "Level5Segue")
     }
     
     @IBAction func level6ButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-        
-        self.performSegue(withIdentifier: "Level6Segue", sender: self)
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "Level6Segue")
     }
     
     @IBAction func level7ButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-        
-        self.performSegue(withIdentifier: "Level7Segue", sender: self)
+        sharedController.fadeViewOut(view: self.view)
+        sharedController.segueAfterFadeOut(viewController: self, segue: "Level7Segue")
     }
 }
