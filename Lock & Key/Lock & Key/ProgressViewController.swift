@@ -23,6 +23,8 @@ class ProgressViewController: UIViewController {
     @IBOutlet weak var level5Label: UILabel!
     @IBOutlet weak var level6Label: UILabel!
     @IBOutlet weak var level7Label: UILabel!
+    @IBOutlet weak var level6ButtonLabel: UILabel!
+    @IBOutlet weak var level7ButtonLabel: UILabel!
     
     @IBOutlet weak var level1Button: UIButton!
     @IBOutlet weak var level2Button: UIButton!
@@ -56,8 +58,8 @@ class ProgressViewController: UIViewController {
     
     private func checkUnlocked() {
         if UserDefaults.standard.bool(forKey: "Unlocked") == true {
-            level6Label.text = "6"
-            level7Label.text = "7"
+            level6ButtonLabel.text = "6"
+            level7ButtonLabel.text = "7"
         }
     }
     
@@ -82,12 +84,12 @@ class ProgressViewController: UIViewController {
             level5Label.textColor = .black
         }
         
-        if level6Button.isEnabled {
+        if level6Button.isEnabled && UserDefaults.standard.bool(forKey: "Unlocked") == true {
             level6Label.text = "Unlocked"
             level6Label.textColor = .black
         }
         
-        if level7Button.isEnabled {
+        if level7Button.isEnabled && UserDefaults.standard.bool(forKey: "Unlocked") == true {
             level7Label.text = "Unlocked"
             level7Label.textColor = .black
         }
