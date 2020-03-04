@@ -18,8 +18,7 @@ class ThreeViewController: UIViewController {
     
     @IBOutlet weak var level3Button: UIButton!
     @IBOutlet weak var keysButton: UIButton!
-    @IBOutlet weak var homeButton: UIButton!
-    
+
     @IBOutlet weak var topRightHoldView: UIView!
     @IBOutlet weak var bottomLeftHoldView: UIView!
     @IBOutlet weak var bottomMiddleHoldView: UIView!

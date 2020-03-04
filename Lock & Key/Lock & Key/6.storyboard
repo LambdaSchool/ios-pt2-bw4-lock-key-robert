@@ -48,6 +48,9 @@
                                 <state key="normal" image="Keys">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="giN-yj-gUG" eventType="touchUpInside" id="pHb-JJ-cW3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91K-sz-19t">
                                 <rect key="frame" x="40" y="762" width="80" height="80"/>
