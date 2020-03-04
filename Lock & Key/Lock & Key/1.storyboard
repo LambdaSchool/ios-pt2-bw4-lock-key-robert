@@ -179,6 +179,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Life" width="996" height="996"/>
+        <image name="Life" width="608" height="608"/>
     </resources>
 </document>
