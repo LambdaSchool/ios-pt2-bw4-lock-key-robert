@@ -61,7 +61,7 @@ class ThreeViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level3ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Hold for Three", viewController: self, button: nil, gesture: topRightHold, view: topRightHoldView, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "", answer: "flowers", clue: "Hold for Three", viewController: self, button: nil, gesture: topRightHold, view: topRightHoldView, segue: "openingSegue")
     }
     
     @IBAction func topRightHoldComplete(_ sender: Any) {
@@ -70,7 +70,7 @@ class ThreeViewController: UIViewController {
             sharedController.fadeKeysIn(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHold, view: self.bottomLeftHoldView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "romance", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHold, view: self.bottomLeftHoldView, segue: "openingSegue")
             })
         }
     }
@@ -81,7 +81,7 @@ class ThreeViewController: UIViewController {
             sharedController.rotateKeysLeft(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomMiddleHold, view: self.bottomMiddleHoldView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "heart", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomMiddleHold, view: self.bottomMiddleHoldView, segue: "openingSegue")
             })
         }
     }
@@ -92,7 +92,7 @@ class ThreeViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHold, view: self.bottomRightHoldView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "emotions", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHold, view: self.bottomRightHoldView, segue: "openingSegue")
             })
         }
     }
@@ -103,7 +103,7 @@ class ThreeViewController: UIViewController {
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Hold for Three", viewController: self, button: nil, gesture: self.topLeftHold, view: self.topLeftHoldView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "chocolate", clue: "Hold for Three", viewController: self, button: nil, gesture: self.topLeftHold, view: self.topLeftHoldView, segue: "openingSegue")
             })
         }
     }
@@ -116,7 +116,7 @@ class ThreeViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isOn4")
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "4Segue", level: "3", homeSegue: "openingSegue")
+                self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "poetry", viewController: self, segue: "4Segue", level: "3", homeSegue: "openingSegue")
             })
         }
     }
