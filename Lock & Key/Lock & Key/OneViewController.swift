@@ -17,9 +17,9 @@ class OneViewController: UIViewController {
     //MARK: - Outlets
     
     @IBOutlet weak var startTextView: UITextView!
+    @IBOutlet weak var tapLabel: UILabel!
     @IBOutlet weak var level1Button: UIButton!
     @IBOutlet weak var keysButton: UIButton!
-    @IBOutlet weak var homeButton: UIButton!
     
     @IBOutlet weak var topMiddleButton: UIButton!
     @IBOutlet weak var bottomRightButton: UIButton!
@@ -55,7 +55,7 @@ class OneViewController: UIViewController {
     }
     
     private func setUpStartTextView() {
-        startTextView.backgroundColor = .white
+        startTextView.backgroundColor = .clear
         startTextView.textColor = .black
     }
     
@@ -76,6 +76,7 @@ class OneViewController: UIViewController {
     @IBAction func topMiddleButtonTapped(_ sender: Any) {
         sharedController.shadowOff(for: topMiddleButton, or: nil)
         sharedController.fadeKeysIn(for: keysButton)
+        sharedController.fadeLabelInThenOut(label: tapLabel, delay: 1.0)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
             self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Tap", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue")

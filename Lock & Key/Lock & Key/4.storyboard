@@ -46,6 +46,9 @@
                                     <constraint firstAttribute="width" secondItem="sPi-HL-LBa" secondAttribute="height" multiplier="1:1" id="Xy6-XG-RTW"/>
                                 </constraints>
                                 <state key="normal" image="Freedom"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="mG0-cs-Xo7" eventType="touchUpInside" id="6bv-yz-bJp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeb-2w-Uw4">
                                 <rect key="frame" x="20" y="64" width="80" height="80"/>
