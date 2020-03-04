@@ -92,7 +92,7 @@ class ThreeViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Keep me in check. Things get messy when i'm not well behaved.", answer: "emotions", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHold, view: self.bottomRightHoldView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "The best knew how to weild me to share their thoughts with the world, but none better than William.", answer: "poetry", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHold, view: self.bottomRightHoldView, segue: "openingSegue")
             })
         }
     }
@@ -116,7 +116,7 @@ class ThreeViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isOn4")
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addTransitionRiddleAlert(riddle: "The best knew how to weild me to convey their thoughts to the world, but none better than William.", answer: "poetry", viewController: self, segue: "4Segue", level: "3", homeSegue: "openingSegue")
+                self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "love", viewController: self, segue: "4Segue", level: "3", homeSegue: "openingSegue")
             })
         }
     }

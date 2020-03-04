@@ -69,7 +69,7 @@ class FourViewController: UIViewController {
         sharedController.fadeKeysIn(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "The greatest day of my life is when I'm broken & my master is finally free.", answer: "chains", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "Revered for my beauty, some say I can't be tamed. How fitting.", answer: "ocean", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
         })
     }
     
@@ -106,7 +106,7 @@ class FourViewController: UIViewController {
         
         UserDefaults.standard.set(true, forKey: "isOn5")
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addTransitionRiddleAlert(riddle: "Revered for my beauty, some say I can't be tamed. How fitting.", answer: "ocean", viewController: self, segue: "5Segue", level: "4", homeSegue: "openingSegue")
+            self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "freedom", viewController: self, segue: "5Segue", level: "4", homeSegue: "openingSegue")
         })
     }
     

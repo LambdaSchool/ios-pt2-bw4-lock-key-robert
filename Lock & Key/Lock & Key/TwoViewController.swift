@@ -91,7 +91,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "I am your final resting place. Hope I'm comfortable enough.", answer: "coffin", clue: "Swipe Up", viewController: self, button: nil, gesture: self.swipeUpGestureRecognizer, view: self.middleRightSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "I am your final resting place. You better make sure I'm comfortable.", answer: "coffin", clue: "Swipe Up", viewController: self, button: nil, gesture: self.swipeUpGestureRecognizer, view: self.middleRightSwipeView, segue: "openingSegue")
             })
         }
     }
@@ -102,7 +102,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Although most people fear me, all I strive to do is keep people safe.", answer: "pain", clue: "Swipe Left", viewController: self, button: nil, gesture: self.swipeLeftTwoGestureRecognizer, view: self.bottomMiddleSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "Scyth in hand, this symbol for death can be quite grim.", answer: "reaper", clue: "Swipe Left", viewController: self, button: nil, gesture: self.swipeLeftTwoGestureRecognizer, view: self.bottomMiddleSwipeView, segue: "openingSegue")
             })
         }
     }
@@ -115,7 +115,7 @@ class TwoViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isOn3")
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addTransitionRiddleAlert(riddle: "Scyth in hand, this symbol for death can be quite grim.", answer: "reaper", viewController: self, segue: "3Segue", level: "2", homeSegue: "openingSegue")
+                self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "death", viewController: self, segue: "3Segue", level: "2", homeSegue: "openingSegue")
             })
         }
     }

@@ -127,7 +127,7 @@ class FiveViewController: UIViewController {
             if UserDefaults.standard.bool(forKey: "Unlocked") == true {
                 UserDefaults.standard.set(true, forKey: "isOn6")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                    self.sharedController.addTransitionRiddleAlert(riddle: "'She's dressed in yellow, she says hello.'", answer: "bust a move", viewController: self, segue: "6Segue", level: "5", homeSegue: "openingSegue")
+                    self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "music", viewController: self, segue: "6Segue", level: "5", homeSegue: "openingSegue")
                 })
             } else {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
