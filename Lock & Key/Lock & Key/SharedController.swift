@@ -57,7 +57,7 @@ class SharedController {
     
     func fadeLabelInThenOut(label : UILabel, delay: TimeInterval) {
         
-        UIView.animate(withDuration: 1.5, animations: { () -> Void in
+        UIView.animate(withDuration: 2.0, animations: { () -> Void in
             label.alpha = 1
         }) { (Bool) -> Void in
             
