@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W94-g6-X3G">
-                                <rect key="frame" x="94.5" y="792" width="225" height="50"/>
+                                <rect key="frame" x="94.5" y="762" width="225" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orC-fT-F8u">
                                         <rect key="frame" x="0.0" y="0.0" width="61.5" height="50"/>
@@ -48,7 +48,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4Q-wc-Iqf">
-                                <rect key="frame" x="165" y="557" width="84" height="135"/>
+                                <rect key="frame" x="165" y="557" width="84" height="105"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
                                 <state key="normal" title="Play &gt;">
@@ -69,7 +69,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="W94-g6-X3G" firstAttribute="centerX" secondItem="9Br-lt-011" secondAttribute="centerX" id="F11-Tq-VY5"/>
-                            <constraint firstItem="9Br-lt-011" firstAttribute="bottom" secondItem="W94-g6-X3G" secondAttribute="bottom" constant="20" id="I56-YC-5Fh"/>
+                            <constraint firstItem="9Br-lt-011" firstAttribute="bottom" secondItem="W94-g6-X3G" secondAttribute="bottom" constant="50" id="I56-YC-5Fh"/>
                             <constraint firstItem="5lT-kx-tkZ" firstAttribute="top" relation="lessThanOrEqual" secondItem="9Br-lt-011" secondAttribute="top" constant="200" id="K5w-2N-WV8"/>
                             <constraint firstItem="5lT-kx-tkZ" firstAttribute="centerX" secondItem="9Br-lt-011" secondAttribute="centerX" id="S7B-UT-6FX"/>
                             <constraint firstItem="W94-g6-X3G" firstAttribute="top" secondItem="f4Q-wc-Iqf" secondAttribute="bottom" constant="100" id="beT-v7-tMw"/>
@@ -80,8 +80,14 @@
                     </view>
                     <connections>
                         <segue destination="oLl-Qf-Ycc" kind="show" identifier="unlockSegue" id="bgx-VI-5Bv"/>
-                        <segue destination="YWl-PW-4Ay" kind="show" identifier="progressSegue" id="OOT-ot-Nq9"/>
+                        <segue destination="YWl-PW-4Ay" kind="showDetail" identifier="progressSegue" id="OOT-ot-Nq9"/>
                         <segue destination="EWK-kq-FLp" kind="presentation" identifier="playSegue" modalPresentationStyle="fullScreen" id="twf-s2-Jaf"/>
+                        <segue destination="a74-DY-ANg" kind="presentation" identifier="2Segue" modalPresentationStyle="fullScreen" id="Wlf-YD-Sin"/>
+                        <segue destination="4Ve-mL-s51" kind="presentation" identifier="3Segue" modalPresentationStyle="fullScreen" id="2Zb-0l-q1Y"/>
+                        <segue destination="axQ-DP-WaY" kind="presentation" identifier="4Segue" modalPresentationStyle="fullScreen" id="eDm-6I-xsr"/>
+                        <segue destination="q5a-4Y-wLu" kind="presentation" identifier="5Segue" modalPresentationStyle="fullScreen" id="dcB-HX-jY0"/>
+                        <segue destination="ki7-kS-nqh" kind="presentation" identifier="6Segue" modalPresentationStyle="fullScreen" id="Lml-Uv-zDA"/>
+                        <segue destination="MUb-C1-dcq" kind="presentation" identifier="7Segue" modalPresentationStyle="fullScreen" id="Xl4-Xe-zfo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psp-lk-1un" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -115,6 +121,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNq-M0-xmj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1049" y="-145"/>
+        </scene>
+        <!--2-->
+        <scene sceneID="TXz-LN-CLj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="2" id="a74-DY-ANg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5WL-Te-YbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="-104"/>
+        </scene>
+        <!--3-->
+        <scene sceneID="HCW-Nb-vqX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="3" id="4Ve-mL-s51" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uzX-KS-yfn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="-61"/>
+        </scene>
+        <!--4-->
+        <scene sceneID="cfX-7X-HiJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="4" id="axQ-DP-WaY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sg8-RS-3Gl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="-11"/>
+        </scene>
+        <!--5-->
+        <scene sceneID="KR0-fr-EnT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="5" id="q5a-4Y-wLu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVS-8c-4mH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="34"/>
+        </scene>
+        <!--6-->
+        <scene sceneID="TSQ-bu-s98">
+            <objects>
+                <viewControllerPlaceholder storyboardName="6" id="ki7-kS-nqh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="809-cY-1Pq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="75"/>
+        </scene>
+        <!--7-->
+        <scene sceneID="fWR-b7-FYF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="7" id="MUb-C1-dcq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIX-r2-Whr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="110"/>
         </scene>
     </scenes>
     <resources>
