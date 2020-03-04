@@ -60,7 +60,7 @@ class TwoViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level2ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Swipe Left", viewController: self, button: nil, gesture: swipeLeftGestureRecognizer, view: topMiddleSwipeView, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "", answer: "grave", clue: "Swipe Left", viewController: self, button: nil, gesture: swipeLeftGestureRecognizer, view: topMiddleSwipeView, segue: "openingSegue")
     }
     
     @IBAction func swipeLeftGestureCompleted(_ sender: Any) {
@@ -69,7 +69,7 @@ class TwoViewController: UIViewController {
             sharedController.fadeKeysIn(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Swipe Right", viewController: self, button: nil, gesture: self.swipeRightGestureRecognizer, view: self.centerMiddleSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "time", clue: "Swipe Right", viewController: self, button: nil, gesture: self.swipeRightGestureRecognizer, view: self.centerMiddleSwipeView, segue: "openingSegue")
             })
         }
     }
@@ -80,7 +80,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysLeft(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Swipe Down", viewController: self, button: nil, gesture: self.swipeDownGestureRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "cobwebs", clue: "Swipe Down", viewController: self, button: nil, gesture: self.swipeDownGestureRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue")
             })
         }
     }
@@ -91,7 +91,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Swipe Up", viewController: self, button: nil, gesture: self.swipeUpGestureRecognizer, view: self.middleRightSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "coffin", clue: "Swipe Up", viewController: self, button: nil, gesture: self.swipeUpGestureRecognizer, view: self.middleRightSwipeView, segue: "openingSegue")
             })
         }
     }
@@ -102,7 +102,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Swipe Left", viewController: self, button: nil, gesture: self.swipeLeftTwoGestureRecognizer, view: self.bottomMiddleSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "pain", clue: "Swipe Left", viewController: self, button: nil, gesture: self.swipeLeftTwoGestureRecognizer, view: self.bottomMiddleSwipeView, segue: "openingSegue")
             })
         }
     }
@@ -115,7 +115,7 @@ class TwoViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isOn3")
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "3Segue", level: "2", homeSegue: "openingSegue")
+                self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "reaper", viewController: self, segue: "3Segue", level: "2", homeSegue: "openingSegue")
             })
         }
     }
