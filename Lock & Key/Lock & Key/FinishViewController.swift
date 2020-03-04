@@ -52,7 +52,7 @@ class FinishViewController: UIViewController {
     private func giddyUp() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
             self.setOffFirework()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 7.0, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.5, execute: {
                 self.sharedController.fadeLabelInThenOut(label: self.congratulationsLabel, delay: 1.0)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
                     self.performSegue(withIdentifier: "openingSegue", sender: self)
