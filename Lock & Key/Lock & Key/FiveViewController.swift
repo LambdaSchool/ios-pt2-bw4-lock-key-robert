@@ -72,7 +72,7 @@ class FiveViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level5ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Hold for Three", viewController: self, button: nil, gesture: topLeftHoldRecognizer, view: topLeftHoldView, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "", answer: "gimme shelter", clue: "Hold for Three", viewController: self, button: nil, gesture: topLeftHoldRecognizer, view: topLeftHoldView, segue: "openingSegue")
     }
     
     @IBAction func topLeftHoldComplete(_ sender: Any) {
@@ -81,7 +81,7 @@ class FiveViewController: UIViewController {
             sharedController.fadeKeysIn(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Hold for Three", viewController: self, button: nil, gesture: self.topRightHoldRecognizer, view: self.topRightHoldView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "stone", clue: "Hold for Three", viewController: self, button: nil, gesture: self.topRightHoldRecognizer, view: self.topRightHoldView, segue: "openingSegue")
             })
         }
     }
@@ -92,7 +92,7 @@ class FiveViewController: UIViewController {
             sharedController.rotateKeysLeft(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHoldRecognizer, view: self.bottomRightHoldView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "these boots", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHoldRecognizer, view: self.bottomRightHoldView, segue: "openingSegue")
             })
         }
     }
@@ -103,7 +103,7 @@ class FiveViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHoldRecognizer, view: self.bottomLeftHoldView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "fade away", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHoldRecognizer, view: self.bottomLeftHoldView, segue: "openingSegue")
             })
         }
     }
@@ -114,7 +114,7 @@ class FiveViewController: UIViewController {
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "", answer: "", clue: "Swipe Right", viewController: self, button: nil, gesture: self.middleSwipeRecognizer, view: self.middleSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "", answer: "brandy", clue: "Swipe Right", viewController: self, button: nil, gesture: self.middleSwipeRecognizer, view: self.middleSwipeView, segue: "openingSegue")
             })
         }
     }
@@ -127,7 +127,7 @@ class FiveViewController: UIViewController {
             if UserDefaults.standard.bool(forKey: "Unlocked") == true {
                 UserDefaults.standard.set(true, forKey: "isOn6")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                    self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "", viewController: self, segue: "6Segue", level: "5", homeSegue: "openingSegue")
+                    self.sharedController.addTransitionRiddleAlert(riddle: "", answer: "bust a move", viewController: self, segue: "6Segue", level: "5", homeSegue: "openingSegue")
                 })
             } else {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
