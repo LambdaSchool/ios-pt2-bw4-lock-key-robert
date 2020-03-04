@@ -13,7 +13,6 @@ class ProgressViewController: UIViewController {
     //MARK: - Properties
     
     let sharedController = SharedController()
-    let openingVC = OpeningViewController()
     
     //MARK: - Outlets
     
