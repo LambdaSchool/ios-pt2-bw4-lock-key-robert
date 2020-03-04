@@ -97,7 +97,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysDown(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "If you're not trying to have me, what's the point? I make your day brighter every time we get together.", answer: "fun", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "I am the inevitable. Theres no need to struggle, simply come with me and see when your time comes.", answer: "death", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
         })
     }
     
@@ -117,7 +117,7 @@ class OneViewController: UIViewController {
         UserDefaults.standard.set(true, forKey: "isOn2")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.sharedController.addTransitionRiddleAlert(riddle: "I am the inevitable. Theres no need to struggle, simply come with me and see when it's your time.", answer: "death", viewController: self, segue: "2Segue", level: "1", homeSegue: "openingSegue")
+            self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "life", viewController: self, segue: "2Segue", level: "1", homeSegue: "openingSegue")
         }
     }
     
