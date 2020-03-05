@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FiveViewController: UIViewController {
 
     //MARK: - Properties
     
     let sharedController = SharedController()
+    var audioPlayer: AVAudioPlayer?
     
     //MARK: - Outlets
     
@@ -69,10 +71,71 @@ class FiveViewController: UIViewController {
         sharedController.setupButtonBorders(for: rightButton)
     }
     
+    private func gimmeShelter() {
+        let gimmeShelter = Bundle.main.url(forResource: "GimmeShelter", withExtension: "mp3")!
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: gimmeShelter)
+            audioPlayer?.play()
+        } catch {
+            print("Error Playing Gimme Shelter")
+        }
+    }
+    
+    private func stone() {
+        let gimmeShelterPath = Bundle.main.path(forResource: "Stone.mp3", ofType: nil)!
+        let gimmeShelterURL = URL(fileURLWithPath: gimmeShelterPath)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: gimmeShelterURL)
+            audioPlayer?.play()
+        } catch {
+            print("Error Playing Gimme Shelter")
+        }
+    }
+    
+    private func theseBoots() {
+        let gimmeShelterPath = Bundle.main.path(forResource: "These-Boots.mp3", ofType: nil)!
+        let gimmeShelterURL = URL(fileURLWithPath: gimmeShelterPath)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: gimmeShelterURL)
+            audioPlayer?.play()
+        } catch {
+            print("Error Playing Gimme Shelter")
+        }
+    }
+    
+    private func fadeAway() {
+        let gimmeShelterPath = Bundle.main.path(forResource: "Fade-Away.mp3", ofType: nil)!
+        let gimmeShelterURL = URL(fileURLWithPath: gimmeShelterPath)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: gimmeShelterURL)
+            audioPlayer?.play()
+        } catch {
+            print("Error Playing Gimme Shelter")
+        }
+    }
+    
+    private func brandy() {
+        let gimmeShelterPath = Bundle.main.path(forResource: "Brandy.mp3", ofType: nil)!
+        let gimmeShelterURL = URL(fileURLWithPath: gimmeShelterPath)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: gimmeShelterURL)
+            audioPlayer?.play()
+        } catch {
+            print("Error Playing Gimme Shelter")
+        }
+    }
+    
+    
     //MARK: - Actions
     
     @IBAction func level5ButtonTapped(_ sender: Any) {
         sharedController.addRiddleAlert(riddle: "'It's just a shot away'", answer: "gimme shelter", clue: "Hold for Three", viewController: self, button: nil, gesture: topLeftHoldRecognizer, view: topLeftHoldView, segue: "openingSegue")
+        gimmeShelter()
     }
     
     @IBAction func topLeftHoldComplete(_ sender: Any) {
