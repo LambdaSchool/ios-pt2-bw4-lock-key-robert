@@ -147,6 +147,7 @@ class SharedController {
             }
         }))
         riddleAlert.addAction(UIAlertAction(title: "Home", style: UIAlertAction.Style.cancel, handler: { _ in
+            audioPlayer?.stop()
             self.fadeViewOut(view: viewController.view)
             self.segueAfterFadeOut(viewController: viewController, segue: segue)
         }))
