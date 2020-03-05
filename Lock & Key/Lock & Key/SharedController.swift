@@ -126,9 +126,16 @@ class SharedController {
     func addRiddleAlert(riddle: String, answer: String, clue: String, viewController: UIViewController, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String, audioPlayer: AVAudioPlayer?) {
         
         let riddleAlert = UIAlertController(title: riddle, message: "", preferredStyle: UIAlertController.Style.alert)
-        riddleAlert.addTextField(configurationHandler: { (textField) in
-            textField.placeholder = "Enter correct answer:"
-        })
+        
+        if audioPlayer == nil {
+            riddleAlert.addTextField(configurationHandler: { (textField) in
+                textField.placeholder = "Enter correct answer:"
+            })
+        } else {
+            riddleAlert.addTextField(configurationHandler: { (textField) in
+                textField.placeholder = "Enter song name:"
+            })
+        }
         
         riddleAlert.addAction(UIAlertAction(title: "Submit", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction!) in
             guard let guess = riddleAlert.textFields![0].text?.lowercased() else { return }
