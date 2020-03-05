@@ -135,6 +135,7 @@ class FiveViewController: UIViewController {
     
     @IBAction func level5ButtonTapped(_ sender: Any) {
         sharedController.addRiddleAlert(riddle: "'It's just a shot away'", answer: "gimme shelter", clue: "Hold for Three", viewController: self, button: nil, gesture: topLeftHoldRecognizer, view: topLeftHoldView, segue: "openingSegue")
+        
         gimmeShelter()
     }
     
@@ -145,6 +146,8 @@ class FiveViewController: UIViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 self.sharedController.addRiddleAlert(riddle: "'The night is my companion & the highway is my home.'", answer: "stone", clue: "Hold for Three", viewController: self, button: nil, gesture: self.topRightHoldRecognizer, view: self.topRightHoldView, segue: "openingSegue")
+                
+                self.stone()
             })
         }
     }
@@ -156,6 +159,8 @@ class FiveViewController: UIViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 self.sharedController.addRiddleAlert(riddle: "'Like the time they hid that grass from those cops in Tupalo.'", answer: "these boots", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHoldRecognizer, view: self.bottomRightHoldView, segue: "openingSegue")
+                
+                self.theseBoots()
             })
         }
     }
@@ -167,6 +172,8 @@ class FiveViewController: UIViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 self.sharedController.addRiddleAlert(riddle: "'Here's a toast to your unknown... You and I are one together.'", answer: "fade away", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHoldRecognizer, view: self.bottomLeftHoldView, segue: "openingSegue")
+                
+                self.fadeAway()
             })
         }
     }
@@ -178,6 +185,8 @@ class FiveViewController: UIViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 self.sharedController.addRiddleAlert(riddle: "'He came on a summer's day bringin' gifts from far away.'", answer: "brandy", clue: "Swipe Right", viewController: self, button: nil, gesture: self.middleSwipeRecognizer, view: self.middleSwipeView, segue: "openingSegue")
+                
+                self.brandy()
             })
         }
     }
