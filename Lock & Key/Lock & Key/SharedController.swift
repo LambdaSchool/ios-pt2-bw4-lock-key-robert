@@ -223,6 +223,7 @@ class SharedController {
         } else {
             rejectedAlert.view.tintColor = .black
         }
+    }
     
     private func addGestureAlert(with clue: String, viewController: UIViewController, audioPlayer: AVAudioPlayer?) {
         let gestureAlert = UIAlertController(title: clue, message: "", preferredStyle: UIAlertController.Style.alert)
