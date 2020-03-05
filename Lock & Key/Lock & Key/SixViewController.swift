@@ -26,6 +26,8 @@ class SixViewController: UIViewController {
     @IBOutlet weak var middleRightSwipeView: UIView!
     
     @IBOutlet weak var topHoldView: UIView!
+    @IBOutlet weak var topRightHoldView: UIView!
+    @IBOutlet weak var topLeftHoldView: UIView!
     
     @IBOutlet var holdRecognizer: UILongPressGestureRecognizer!
     @IBOutlet var middleLeftSwipeDownRecognizer: UISwipeGestureRecognizer!
@@ -60,6 +62,8 @@ class SixViewController: UIViewController {
         sharedController.setupSwipeViewBorders(for: middleRightSwipeView)
         
         sharedController.setUpHoldViewBorders(for: topHoldView)
+        sharedController.setUpHoldViewBorders(for: topRightHoldView)
+        sharedController.setUpHoldViewBorders(for: topLeftHoldView)
     }
     
     //MARK: - Actions
