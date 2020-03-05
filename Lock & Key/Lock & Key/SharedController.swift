@@ -217,6 +217,45 @@ class SharedController {
         }
     }
     
+    func addLevel5TransitionRiddleAlert(riddle: String, answer: String, viewController: UIViewController, segue: String, level: String, homeSegue: String) {
+        
+        let transitionRiddleAlert = UIAlertController(title: "Level \(level) Complete!", message: riddle, preferredStyle: UIAlertController.Style.alert)
+        transitionRiddleAlert.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "Enter correct answer:"
+        })
+        
+        transitionRiddleAlert.addAction(UIAlertAction(title: "Submit", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction!) in
+            guard let guess = transitionRiddleAlert.textFields![0].text?.lowercased() else { return }
+            
+            if guess == answer {
+                if UserDefaults.standard.bool(forKey: "Unlock") == true {
+                    transitionRiddleAlert.message = ""
+                    transitionRiddleAlert.dismiss(animated: true, completion: nil)
+                    self.fadeViewOut(view: viewController.view)
+                    self.segueAfterFadeOut(viewController: viewController, segue: segue)
+                } else {
+                    self.endFreePlayAlert(viewController: viewController, segue: homeSegue)
+                }
+            } else {
+                self.addRejectedTransitionAlert(for: viewController, riddle: riddle, answer: answer, segue: segue, level: level, segue2: homeSegue)
+            }
+        }))
+        
+        transitionRiddleAlert.addAction(UIAlertAction(title: "Home", style: UIAlertAction.Style.cancel, handler: { _ in
+            self.fadeViewOut(view: viewController.view)
+            self.segueAfterFadeOut(viewController: viewController, segue: homeSegue)
+        }))
+
+        viewController.present(transitionRiddleAlert, animated: true, completion: nil)
+        
+        
+        if viewController.traitCollection.userInterfaceStyle == .dark {
+            transitionRiddleAlert.view.tintColor = .white
+        } else {
+            transitionRiddleAlert.view.tintColor = .black
+        }
+    }
+    
     private func addRejectedTransitionAlert(for viewController: UIViewController, riddle: String, answer: String, segue: String, level: String, segue2: String) {
         let rejectedAlert = UIAlertController(title: "Wrong Answer", message: "please try again", preferredStyle: UIAlertController.Style.alert)
         rejectedAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { _ in
