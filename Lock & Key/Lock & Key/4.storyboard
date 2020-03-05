@@ -161,7 +161,7 @@
                         <action selector="bottomRightHoldComplete:" destination="mG0-cs-Xo7" id="muL-Gn-yAD"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="hTO-Dw-txP">
+                <swipeGestureRecognizer enabled="NO" direction="right" id="hTO-Dw-txP">
                     <connections>
                         <action selector="swipeRightComplete:" destination="mG0-cs-Xo7" id="BMI-Up-rez"/>
                     </connections>
