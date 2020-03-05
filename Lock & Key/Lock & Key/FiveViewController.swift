@@ -53,6 +53,8 @@ class FiveViewController: UIViewController {
         
         sharedController.fadeViewIn(view: self.view)
         bordersOn()
+        
+        warningAlert()
     }
     
     //MARK: - Methods
@@ -126,6 +128,19 @@ class FiveViewController: UIViewController {
         }
     }
     
+    private func warningAlert() {
+        let warningAlert = UIAlertController(title: "This Level Includes Audio", message: "Please Turn Sound On", preferredStyle: .alert)
+        
+        warningAlert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        
+        if self.traitCollection.userInterfaceStyle == .dark {
+            warningAlert.view.tintColor = .white
+        } else {
+            warningAlert.view.tintColor = .black
+        }
+        
+        self.present(warningAlert, animated: true, completion: nil)
+    }
     
     //MARK: - Actions
     
