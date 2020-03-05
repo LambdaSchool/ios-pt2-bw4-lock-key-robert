@@ -70,7 +70,7 @@ class OneViewController: UIViewController {
     @IBAction func levelOneButtonTapped(_ sender: Any) {
         fadeStartTextViewOff()
         
-        sharedController.addRiddleAlert(riddle: "I'm all around you, living & breathing.", answer: "nature", clue: "Tap Square", viewController: self, button: topMiddleButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
+        sharedController.addRiddleAlert(riddle: "I'm all around you, living & breathing.", answer: "nature", clue: "Tap Square", viewController: self, button: topMiddleButton, disableButton: nil, gesture: nil, disableGesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
     }
     
     @IBAction func topMiddleButtonTapped(_ sender: Any) {
@@ -79,7 +79,7 @@ class OneViewController: UIViewController {
         sharedController.fadeLabelInThenOut(label: tapLabel, delay: 1.0)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "I am the begining. Through pain, I usher in life.", answer: "birth", clue: "Tap Square", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "I am the begining. Through pain, I usher in life.", answer: "birth", clue: "Tap Square", viewController: self, button: self.bottomRightButton, disableButton: self.level1Button, gesture: nil, disableGesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -88,7 +88,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysLeft(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "Wisdom may be wasted on the old, but I am wasted on the young.", answer: "youth", clue: "Tap Square", viewController: self, button: self.topLeftButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "Wisdom may be wasted on the old, but I am wasted on the young.", answer: "youth", clue: "Tap Square", viewController: self, button: self.topLeftButton, disableButton: self.topMiddleButton, gesture: nil, disableGesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -97,7 +97,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysDown(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "I am the inevitable. Simply come with me when your time comes.", answer: "death", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "I am the inevitable. Simply come with me when your time comes.", answer: "death", clue: "Tap Square", viewController: self, button: self.topRightButton, disableButton: self.bottomRightButton, gesture: nil, disableGesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -106,7 +106,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysRight(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "Forty days and Forty nights. That’s how long you can go without me.", answer: "food", clue: "Tap Square", viewController: self, button: self.bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "Forty days and Forty nights. That’s how long you can go without me.", answer: "food", clue: "Tap Square", viewController: self, button: self.bottomLeftButton, disableButton: self.topLeftButton, gesture: nil, disableGesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -117,7 +117,7 @@ class OneViewController: UIViewController {
         UserDefaults.standard.set(true, forKey: "isOn2")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "life", viewController: self, segue: "2Segue", level: "1", homeSegue: "openingSegue")
+            self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "life", viewController: self, segue: "2Segue", level: "1", homeSegue: "openingSegue", disableButton: self.topRightButton, disableGesture: nil)
         }
     }
     

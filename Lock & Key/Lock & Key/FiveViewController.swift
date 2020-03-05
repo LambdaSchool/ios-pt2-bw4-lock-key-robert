@@ -147,7 +147,7 @@ class FiveViewController: UIViewController {
     @IBAction func level5ButtonTapped(_ sender: Any) {
         gimmeShelter()
         
-        sharedController.addRiddleAlert(riddle: "'It's just a shot away'", answer: "gimme shelter", clue: "Hold for Three", viewController: self, button: nil, gesture: topLeftHoldRecognizer, view: topLeftHoldView, segue: "openingSegue", audioPlayer: audioPlayer)
+        sharedController.addRiddleAlert(riddle: "'It's just a shot away'", answer: "gimme shelter", clue: "Hold for Three", viewController: self, button: nil, disableButton: nil, gesture: topLeftHoldRecognizer, disableGesture: nil, view: topLeftHoldView, segue: "openingSegue", audioPlayer: audioPlayer)
     }
     
     @IBAction func topLeftHoldComplete(_ sender: Any) {
@@ -158,7 +158,7 @@ class FiveViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 self.stone()
                 
-                self.sharedController.addRiddleAlert(riddle: "'The night is my companion & the highway is my home.'", answer: "stone", clue: "Hold for Three", viewController: self, button: nil, gesture: self.topRightHoldRecognizer, view: self.topRightHoldView, segue: "openingSegue", audioPlayer: self.audioPlayer)
+                self.sharedController.addRiddleAlert(riddle: "'The night is my companion & the highway is my home.'", answer: "stone", clue: "Hold for Three", viewController: self, button: nil, disableButton: self.level5Button, gesture: self.topRightHoldRecognizer, disableGesture: nil, view: self.topRightHoldView, segue: "openingSegue", audioPlayer: self.audioPlayer)
             })
         }
     }
@@ -171,7 +171,7 @@ class FiveViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 self.theseBoots()
                 
-                self.sharedController.addRiddleAlert(riddle: "'Like the time they hid that grass from those cops in Tupalo.'", answer: "these boots", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHoldRecognizer, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: self.audioPlayer)
+                self.sharedController.addRiddleAlert(riddle: "'Like the time they hid that grass from those cops in Tupalo.'", answer: "these boots", clue: "Hold for Three", viewController: self, button: nil, disableButton: nil, gesture: self.bottomRightHoldRecognizer, disableGesture: self.topLeftHoldRecognizer, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: self.audioPlayer)
             })
         }
     }
@@ -184,7 +184,7 @@ class FiveViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 self.fadeAway()
                 
-                self.sharedController.addRiddleAlert(riddle: "'Here's a toast to your unknown... You and I are one together.'", answer: "fade away", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHoldRecognizer, view: self.bottomLeftHoldView, segue: "openingSegue", audioPlayer: self.audioPlayer)
+                self.sharedController.addRiddleAlert(riddle: "'Here's a toast to your unknown... You and I are one together.'", answer: "fade away", clue: "Hold for Three", viewController: self, button: nil, disableButton: nil, gesture: self.bottomLeftHoldRecognizer, disableGesture: self.topRightHoldRecognizer, view: self.bottomLeftHoldView, segue: "openingSegue", audioPlayer: self.audioPlayer)
             })
         }
     }
@@ -197,7 +197,7 @@ class FiveViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 self.brandy()
                 
-                self.sharedController.addRiddleAlert(riddle: "'He came on a summer's day bringin' gifts from far away.'", answer: "brandy", clue: "Swipe Right", viewController: self, button: nil, gesture: self.middleSwipeRecognizer, view: self.middleSwipeView, segue: "openingSegue", audioPlayer: self.audioPlayer)
+                self.sharedController.addRiddleAlert(riddle: "'He came on a summer's day bringin' gifts from far away.'", answer: "brandy", clue: "Swipe Right", viewController: self, button: nil, disableButton: nil, gesture: self.middleSwipeRecognizer, disableGesture: self.bottomRightHoldRecognizer, view: self.middleSwipeView, segue: "openingSegue", audioPlayer: self.audioPlayer)
             })
         }
     }
@@ -208,7 +208,7 @@ class FiveViewController: UIViewController {
             sharedController.rotateKeysUp(for: keysButton)
             
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                    self.sharedController.addLevel5TransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "music", viewController: self, segue: "6Segue", level: "5", homeSegue: "openingSegue")
+                    self.sharedController.addLevel5TransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "music", viewController: self, segue: "6Segue", level: "5", homeSegue: "openingSegue", disableButton: nil, disableGesture: self.bottomLeftHoldRecognizer)
                 })
         }
     }

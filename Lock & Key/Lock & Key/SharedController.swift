@@ -123,9 +123,12 @@ class SharedController {
         }
     }
     
-    func addRiddleAlert(riddle: String, answer: String, clue: String, viewController: UIViewController, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String, audioPlayer: AVAudioPlayer?) {
+    func addRiddleAlert(riddle: String, answer: String, clue: String, viewController: UIViewController, button: UIButton?, disableButton: UIButton?, gesture: UIGestureRecognizer?, disableGesture: UIGestureRecognizer?, view: UIView?, segue: String, audioPlayer: AVAudioPlayer?) {
         
         let riddleAlert = UIAlertController(title: riddle, message: "", preferredStyle: UIAlertController.Style.alert)
+        
+        disableButton?.isEnabled = false
+        disableGesture?.isEnabled = false
         
         if audioPlayer == nil {
             riddleAlert.addTextField(configurationHandler: { (textField) in
@@ -149,7 +152,7 @@ class SharedController {
                 gesture?.isEnabled = true
             } else {
                 CATransaction.setCompletionBlock({
-                    self.addRejectedAlert(for: viewController, riddle: riddle, answer: answer, clue: clue, button: button, gesture: gesture, view: view, segue: segue, audioPlayer: audioPlayer)
+                    self.addRejectedAlert(for: viewController, riddle: riddle, answer: answer, clue: clue, button: button, disableButton: disableButton, gesture: gesture, disableGesture: disableGesture, view: view, segue: segue, audioPlayer: audioPlayer)
                 })
             }
         }))
@@ -168,10 +171,10 @@ class SharedController {
         }
     }
     
-    private func addRejectedAlert(for viewController: UIViewController, riddle: String, answer: String, clue: String, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String, audioPlayer: AVAudioPlayer?) {
+    private func addRejectedAlert(for viewController: UIViewController, riddle: String, answer: String, clue: String, button: UIButton?, disableButton: UIButton?, gesture: UIGestureRecognizer?, disableGesture: UIGestureRecognizer?, view: UIView?, segue: String, audioPlayer: AVAudioPlayer?) {
         let rejectedAlert = UIAlertController(title: "Wrong Answer", message: "please try again", preferredStyle: UIAlertController.Style.alert)
         rejectedAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { _ in
-            self.addRiddleAlert(riddle: riddle, answer: answer, clue: clue, viewController: viewController, button: button, gesture: gesture, view: view, segue: segue, audioPlayer: audioPlayer)
+            self.addRiddleAlert(riddle: riddle, answer: answer, clue: clue, viewController: viewController, button: button, disableButton: disableButton, gesture: gesture, disableGesture: disableGesture, view: view, segue: segue, audioPlayer: audioPlayer)
         }))
         viewController.present(rejectedAlert, animated: true, completion: nil)
         
@@ -182,9 +185,13 @@ class SharedController {
         }
     }
     
-    func addTransitionRiddleAlert(riddle: String, answer: String, viewController: UIViewController, segue: String, level: String, homeSegue: String) {
+    func addTransitionRiddleAlert(riddle: String, answer: String, viewController: UIViewController, segue: String, level: String, homeSegue: String, disableButton: UIButton?, disableGesture: UIGestureRecognizer?) {
         
         let transitionRiddleAlert = UIAlertController(title: "Level \(level) Complete!", message: riddle, preferredStyle: UIAlertController.Style.alert)
+        
+        disableButton?.isEnabled = false
+        disableGesture?.isEnabled = false
+        
         transitionRiddleAlert.addTextField(configurationHandler: { (textField) in
             textField.placeholder = "Enter correct answer:"
         })
@@ -198,7 +205,7 @@ class SharedController {
                 self.fadeViewOut(view: viewController.view)
                 self.segueAfterFadeOut(viewController: viewController, segue: segue)
             } else {
-                self.addRejectedTransitionAlert(for: viewController, riddle: riddle, answer: answer, segue: segue, level: level, segue2: homeSegue)
+                self.addRejectedTransitionAlert(for: viewController, riddle: riddle, answer: answer, segue: segue, level: level, segue2: homeSegue, disableButton: disableButton, disableGesture: disableGesture)
             }
         }))
         
@@ -217,7 +224,7 @@ class SharedController {
         }
     }
     
-    func addLevel5TransitionRiddleAlert(riddle: String, answer: String, viewController: UIViewController, segue: String, level: String, homeSegue: String) {
+    func addLevel5TransitionRiddleAlert(riddle: String, answer: String, viewController: UIViewController, segue: String, level: String, homeSegue: String, disableButton: UIButton?, disableGesture: UIGestureRecognizer?) {
         
         let transitionRiddleAlert = UIAlertController(title: "Level \(level) Complete!", message: riddle, preferredStyle: UIAlertController.Style.alert)
         transitionRiddleAlert.addTextField(configurationHandler: { (textField) in
@@ -237,7 +244,7 @@ class SharedController {
                     self.endFreePlayAlert(viewController: viewController, segue: homeSegue)
                 }
             } else {
-                self.addRejectedTransitionAlert(for: viewController, riddle: riddle, answer: answer, segue: segue, level: level, segue2: homeSegue)
+                self.addRejectedTransitionAlert(for: viewController, riddle: riddle, answer: answer, segue: segue, level: level, segue2: homeSegue, disableButton: disableButton, disableGesture: disableGesture)
             }
         }))
         
@@ -256,11 +263,11 @@ class SharedController {
         }
     }
     
-    private func addRejectedTransitionAlert(for viewController: UIViewController, riddle: String, answer: String, segue: String, level: String, segue2: String) {
+    private func addRejectedTransitionAlert(for viewController: UIViewController, riddle: String, answer: String, segue: String, level: String, segue2: String, disableButton: UIButton?, disableGesture: UIGestureRecognizer?) {
         let rejectedAlert = UIAlertController(title: "Wrong Answer", message: "please try again", preferredStyle: UIAlertController.Style.alert)
         rejectedAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { _ in
             CATransaction.setCompletionBlock({
-                self.addTransitionRiddleAlert(riddle: riddle, answer: answer, viewController: viewController, segue: segue, level: level, homeSegue: segue)
+                self.addTransitionRiddleAlert(riddle: riddle, answer: answer, viewController: viewController, segue: segue, level: level, homeSegue: segue, disableButton: disableButton, disableGesture: disableGesture)
             })
         }))
         viewController.present(rejectedAlert, animated: true, completion: nil)
