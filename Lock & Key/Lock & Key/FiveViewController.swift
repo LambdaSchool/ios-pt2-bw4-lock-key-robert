@@ -129,7 +129,7 @@ class FiveViewController: UIViewController {
     }
     
     private func warningAlert() {
-        let warningAlert = UIAlertController(title: "This Level Includes Audio", message: "Please Turn Sound On", preferredStyle: .alert)
+        let warningAlert = UIAlertController(title: "This Level Includes Audio", message: "Please Turn Ringer On", preferredStyle: .alert)
         
         warningAlert.addAction(UIAlertAction(title: "OK", style: .cancel))
         
