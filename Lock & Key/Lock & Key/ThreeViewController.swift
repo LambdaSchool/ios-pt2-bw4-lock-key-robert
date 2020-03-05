@@ -61,7 +61,7 @@ class ThreeViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level3ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "Some with fragrance, some with colors, some with medicine. All bring a smile to her face.", answer: "flowers", clue: "Hold for Three", viewController: self, button: nil, gesture: topRightHold, view: topRightHoldView, segue: "openingSegue", audioPlayer: nil)
+        sharedController.addRiddleAlert(riddle: "With fragrance & color a plenty, I never fail to bring a smile to her face.", answer: "flowers", clue: "Hold for Three", viewController: self, button: nil, gesture: topRightHold, view: topRightHoldView, segue: "openingSegue", audioPlayer: nil)
     }
     
     @IBAction func topRightHoldComplete(_ sender: Any) {
@@ -92,7 +92,7 @@ class ThreeViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "The best knew how to weild me to share their thoughts with the world, but none better than William.", answer: "poetry", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHold, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "As smooth as a shot of whiskey, none wrote me better than William.", answer: "poem", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHold, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
