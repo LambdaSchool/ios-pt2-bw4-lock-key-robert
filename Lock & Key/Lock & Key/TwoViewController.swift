@@ -60,7 +60,7 @@ class TwoViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level2ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "Silent as the.", answer: "grave", clue: "Swipe Left", viewController: self, button: nil, gesture: swipeLeftGestureRecognizer, view: topMiddleSwipeView, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "Silent as the.", answer: "grave", clue: "Swipe Left", viewController: self, button: nil, gesture: swipeLeftGestureRecognizer, view: topMiddleSwipeView, segue: "openingSegue", audioPlayer: nil)
     }
     
     @IBAction func swipeLeftGestureCompleted(_ sender: Any) {
@@ -69,7 +69,7 @@ class TwoViewController: UIViewController {
             sharedController.fadeKeysIn(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Constantly changing, I am one thing you can always count on running out of.", answer: "time", clue: "Swipe Right", viewController: self, button: nil, gesture: self.swipeRightGestureRecognizer, view: self.centerMiddleSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "Constantly changing, I am one thing you can always count on running out of.", answer: "time", clue: "Swipe Right", viewController: self, button: nil, gesture: self.swipeRightGestureRecognizer, view: self.centerMiddleSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -80,7 +80,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysLeft(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Haunting people for years, I am no more than a home for my arachnid friends.", answer: "cobwebs", clue: "Swipe Down", viewController: self, button: nil, gesture: self.swipeDownGestureRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "Haunting people for years, I am no more than a home for my arachnid friends.", answer: "cobwebs", clue: "Swipe Down", viewController: self, button: nil, gesture: self.swipeDownGestureRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -91,7 +91,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "I am your final resting place. You better make sure I'm comfortable.", answer: "coffin", clue: "Swipe Up", viewController: self, button: nil, gesture: self.swipeUpGestureRecognizer, view: self.middleRightSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "I am your final resting place. You better make sure I'm comfortable.", answer: "coffin", clue: "Swipe Up", viewController: self, button: nil, gesture: self.swipeUpGestureRecognizer, view: self.middleRightSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -102,7 +102,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Scyth in hand, this symbol for death can be quite grim.", answer: "reaper", clue: "Swipe Left", viewController: self, button: nil, gesture: self.swipeLeftTwoGestureRecognizer, view: self.bottomMiddleSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "Scyth in hand, this symbol for death can be quite grim.", answer: "reaper", clue: "Swipe Left", viewController: self, button: nil, gesture: self.swipeLeftTwoGestureRecognizer, view: self.bottomMiddleSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }

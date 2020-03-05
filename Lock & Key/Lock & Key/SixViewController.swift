@@ -62,7 +62,7 @@ class SixViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level6ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "With simple supplies, i could be anything. However, most children just call me this.", answer: "fort", clue: "Tap Square", viewController: self, button: bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "With simple supplies, i could be anything. However, most children just call me this.", answer: "fort", clue: "Tap Square", viewController: self, button: bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
     }
 
     @IBAction func bottomLeftButtonTapped(_ sender: Any) {
@@ -70,7 +70,7 @@ class SixViewController: UIViewController {
         sharedController.fadeKeysIn(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "I wear many faces, each loved and hated equally. If i wear the right face however, even you wouldn't be able to resist me.", answer: "music", clue: "Tap Square", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "I wear many faces, each loved and hated equally. If i wear the right face however, even you wouldn't be able to resist me.", answer: "music", clue: "Tap Square", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -79,7 +79,7 @@ class SixViewController: UIViewController {
         sharedController.rotateKeysLeft(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "To be or not to be.", answer: "question", clue: "Swipe Down", viewController: self, button: nil, gesture: self.middleLeftSwipeDownRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "To be or not to be.", answer: "question", clue: "Swipe Down", viewController: self, button: nil, gesture: self.middleLeftSwipeDownRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -89,7 +89,7 @@ class SixViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Where the skies are blue and the weather's warm, I am passed around from mouth to mouth.", answer: "aloha", clue: "Swipe Up", viewController: self, button: nil, gesture: self.middleRightSwipeUpRecognizer, view: self.middleRightSwipeView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "Where the skies are blue and the weather's warm, I am passed around from mouth to mouth.", answer: "aloha", clue: "Swipe Up", viewController: self, button: nil, gesture: self.middleRightSwipeUpRecognizer, view: self.middleRightSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -100,7 +100,7 @@ class SixViewController: UIViewController {
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "We work as a unit. If one of us fails, the others only get stronger.", answer: "senses", clue: "Hold for Three", viewController: self, button: nil, gesture: self.holdRecognizer, view: self.topHoldView, segue: "openingSegue")
+                self.sharedController.addRiddleAlert(riddle: "We work as a unit. If one of us fails, the others only get stronger.", answer: "senses", clue: "Hold for Three", viewController: self, button: nil, gesture: self.holdRecognizer, view: self.topHoldView, segue: "openingSegue", audioPlayer: nil)
             })
         }
         

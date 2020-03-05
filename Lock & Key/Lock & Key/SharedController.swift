@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class SharedController {
     
@@ -117,7 +118,7 @@ class SharedController {
         freeAlert.view.tintColor = .black
     }
     
-    func addRiddleAlert(riddle: String, answer: String, clue: String, viewController: UIViewController, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String) {
+    func addRiddleAlert(riddle: String, answer: String, clue: String, viewController: UIViewController, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String, audioPlayer: AVAudioPlayer?) {
         
         let riddleAlert = UIAlertController(title: riddle, message: "", preferredStyle: UIAlertController.Style.alert)
         riddleAlert.addTextField(configurationHandler: { (textField) in
@@ -130,13 +131,13 @@ class SharedController {
             if guess == answer {
                 riddleAlert.message = ""
                 riddleAlert.dismiss(animated: true, completion: nil)
-                self.addGestureAlert(with: clue, viewController: viewController)
+                self.addGestureAlert(with: clue, viewController: viewController, audioPlayer: audioPlayer)
                 self.shadowOn(for: button, or: view)
                 button?.isEnabled = true
                 gesture?.isEnabled = true
             } else {
                 CATransaction.setCompletionBlock({
-                    self.addRejectedAlert(for: viewController, riddle: riddle, answer: answer, clue: clue, button: button, gesture: gesture, view: view, segue: segue)
+                    self.addRejectedAlert(for: viewController, riddle: riddle, answer: answer, clue: clue, button: button, gesture: gesture, view: view, segue: segue, audioPlayer: audioPlayer)
                 })
             }
         }))
@@ -149,10 +150,10 @@ class SharedController {
         riddleAlert.view.tintColor = .black
     }
     
-    private func addRejectedAlert(for viewController: UIViewController, riddle: String, answer: String, clue: String, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String) {
+    private func addRejectedAlert(for viewController: UIViewController, riddle: String, answer: String, clue: String, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String, audioPlayer: AVAudioPlayer?) {
         let rejectedAlert = UIAlertController(title: "Wrong Answer", message: "please try again", preferredStyle: UIAlertController.Style.alert)
         rejectedAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { _ in
-            self.addRiddleAlert(riddle: riddle, answer: answer, clue: clue, viewController: viewController, button: button, gesture: gesture, view: view, segue: segue)
+            self.addRiddleAlert(riddle: riddle, answer: answer, clue: clue, viewController: viewController, button: button, gesture: gesture, view: view, segue: segue, audioPlayer: audioPlayer)
         }))
         viewController.present(rejectedAlert, animated: true, completion: nil)
         rejectedAlert.view.tintColor = .black
@@ -198,11 +199,12 @@ class SharedController {
         rejectedAlert.view.tintColor = .black
     }
     
-    private func addGestureAlert(with clue: String, viewController: UIViewController) {
+    private func addGestureAlert(with clue: String, viewController: UIViewController, audioPlayer: AVAudioPlayer?) {
         let gestureAlert = UIAlertController(title: clue, message: "", preferredStyle: UIAlertController.Style.alert)
         gestureAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
         viewController.present(gestureAlert, animated: true, completion: nil)
         gestureAlert.view.tintColor = .black
+        audioPlayer?.stop()
     }
     
     
