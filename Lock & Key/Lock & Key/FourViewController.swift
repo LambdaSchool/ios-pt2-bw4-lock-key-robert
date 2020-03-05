@@ -61,7 +61,7 @@ class FourViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level4ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "If you havent tried, you haven't lived. Come try & feel at one with the ocean.", answer: "surfing", clue: "Tap Square", viewController: self, button: topLeftButton, gesture: nil, view: nil, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "If you havent tried, you haven't lived. Come try & feel at one with the ocean.", answer: "surfing", clue: "Tap Square", viewController: self, button: topLeftButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
     }
     
     @IBAction func topLeftButtonTapped(_ sender: Any) {
