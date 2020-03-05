@@ -115,7 +115,12 @@ class SharedController {
         }))
         
         viewController.present(freeAlert, animated: true, completion: nil)
-        freeAlert.view.tintColor = .black
+        
+        if viewController.traitCollection.userInterfaceStyle == .dark {
+            freeAlert.view.tintColor = .white
+        } else {
+            freeAlert.view.tintColor = .black
+        }
     }
     
     func addRiddleAlert(riddle: String, answer: String, clue: String, viewController: UIViewController, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String, audioPlayer: AVAudioPlayer?) {
@@ -147,7 +152,12 @@ class SharedController {
         }))
         
         viewController.present(riddleAlert, animated: true, completion: nil)
-        riddleAlert.view.tintColor = .black
+        
+        if viewController.traitCollection.userInterfaceStyle == .dark {
+            riddleAlert.view.tintColor = .white
+        } else {
+            riddleAlert.view.tintColor = .black
+        }
     }
     
     private func addRejectedAlert(for viewController: UIViewController, riddle: String, answer: String, clue: String, button: UIButton?, gesture: UIGestureRecognizer?, view: UIView?, segue: String, audioPlayer: AVAudioPlayer?) {
@@ -156,7 +166,12 @@ class SharedController {
             self.addRiddleAlert(riddle: riddle, answer: answer, clue: clue, viewController: viewController, button: button, gesture: gesture, view: view, segue: segue, audioPlayer: audioPlayer)
         }))
         viewController.present(rejectedAlert, animated: true, completion: nil)
-        rejectedAlert.view.tintColor = .black
+        
+        if viewController.traitCollection.userInterfaceStyle == .dark {
+            rejectedAlert.view.tintColor = .white
+        } else {
+            rejectedAlert.view.tintColor = .black
+        }
     }
     
     func addTransitionRiddleAlert(riddle: String, answer: String, viewController: UIViewController, segue: String, level: String, homeSegue: String) {
@@ -185,7 +200,13 @@ class SharedController {
         }))
 
         viewController.present(transitionRiddleAlert, animated: true, completion: nil)
-        transitionRiddleAlert.view.tintColor = .black
+        
+        
+        if viewController.traitCollection.userInterfaceStyle == .dark {
+            transitionRiddleAlert.view.tintColor = .white
+        } else {
+            transitionRiddleAlert.view.tintColor = .black
+        }
     }
     
     private func addRejectedTransitionAlert(for viewController: UIViewController, riddle: String, answer: String, segue: String, level: String, segue2: String) {
@@ -196,14 +217,22 @@ class SharedController {
             })
         }))
         viewController.present(rejectedAlert, animated: true, completion: nil)
-        rejectedAlert.view.tintColor = .black
-    }
+        
+        if viewController.traitCollection.userInterfaceStyle == .dark {
+            rejectedAlert.view.tintColor = .white
+        } else {
+            rejectedAlert.view.tintColor = .black
+        }
     
     private func addGestureAlert(with clue: String, viewController: UIViewController, audioPlayer: AVAudioPlayer?) {
         let gestureAlert = UIAlertController(title: clue, message: "", preferredStyle: UIAlertController.Style.alert)
         gestureAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
         viewController.present(gestureAlert, animated: true, completion: nil)
-        gestureAlert.view.tintColor = .black
+        if viewController.traitCollection.userInterfaceStyle == .dark {
+            gestureAlert.view.tintColor = .white
+        } else {
+            gestureAlert.view.tintColor = .black
+        }
         audioPlayer?.stop()
     }
     
