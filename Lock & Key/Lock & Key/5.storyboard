@@ -208,27 +208,27 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Io-4g-Tb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="nFj-dk-bvF">
+                <pongPressGestureRecognizer enabled="NO" allowableMovement="10" minimumPressDuration="0.5" id="nFj-dk-bvF">
                     <connections>
                         <action selector="topLeftHoldComplete:" destination="9jl-kX-Yby" id="Cjr-NP-HMM"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Eu7-yU-i4P">
+                <pongPressGestureRecognizer enabled="NO" allowableMovement="10" minimumPressDuration="0.5" id="Eu7-yU-i4P">
                     <connections>
                         <action selector="topRightHoldComplete:" destination="9jl-kX-Yby" id="eig-s2-vzG"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="J4P-le-TY1">
+                <pongPressGestureRecognizer enabled="NO" allowableMovement="10" minimumPressDuration="0.5" id="J4P-le-TY1">
                     <connections>
                         <action selector="bottomRightHoldComplete:" destination="9jl-kX-Yby" id="nwj-FP-kzw"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Ii0-UL-gDy">
+                <pongPressGestureRecognizer enabled="NO" allowableMovement="10" minimumPressDuration="0.5" id="Ii0-UL-gDy">
                     <connections>
                         <action selector="bottomLeftHoldComplete:" destination="9jl-kX-Yby" id="T1t-KN-k5Q"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="A9b-cT-cV1">
+                <swipeGestureRecognizer enabled="NO" direction="right" id="A9b-cT-cV1">
                     <connections>
                         <action selector="middleSwipeComplete:" destination="9jl-kX-Yby" id="8Qb-id-Ebo"/>
                     </connections>
