@@ -207,17 +207,9 @@ class FiveViewController: UIViewController {
             sharedController.shadowOff(for: nil, or: middleSwipeView)
             sharedController.rotateKeysUp(for: keysButton)
             
-            if UserDefaults.standard.bool(forKey: "Unlocked") == true {
-                UserDefaults.standard.set(true, forKey: "isOn6")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                    self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "music", viewController: self, segue: "6Segue", level: "5", homeSegue: "openingSegue")
+                    self.sharedController.addLevel5TransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "music", viewController: self, segue: "6Segue", level: "5", homeSegue: "openingSegue")
                 })
-            } else {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                    self.sharedController.endFreePlayAlert(viewController: self, segue: "openingSegue")
-                    
-                })
-            }
         }
     }
     

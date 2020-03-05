@@ -37,6 +37,9 @@ class SixViewController: UIViewController {
         super.viewDidLoad()
         
         UIApplication.shared.isIdleTimerDisabled = true
+        
+        UserDefaults.standard.set(true, forKey: "isOn6")
+        
         self.view.alpha = 0
     }
     
