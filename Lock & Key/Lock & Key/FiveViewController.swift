@@ -83,11 +83,10 @@ class FiveViewController: UIViewController {
     }
     
     private func stone() {
-        let gimmeShelterPath = Bundle.main.path(forResource: "Stone.mp3", ofType: nil)!
-        let gimmeShelterURL = URL(fileURLWithPath: gimmeShelterPath)
+        let stone = Bundle.main.url(forResource: "Stone", withExtension: "mp3")!
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: gimmeShelterURL)
+            audioPlayer = try AVAudioPlayer(contentsOf: stone)
             audioPlayer?.play()
         } catch {
             print("Error Playing Gimme Shelter")
@@ -95,11 +94,10 @@ class FiveViewController: UIViewController {
     }
     
     private func theseBoots() {
-        let gimmeShelterPath = Bundle.main.path(forResource: "These-Boots.mp3", ofType: nil)!
-        let gimmeShelterURL = URL(fileURLWithPath: gimmeShelterPath)
+        let theseBoots = Bundle.main.url(forResource: "TheseBoots", withExtension: "mp3")!
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: gimmeShelterURL)
+            audioPlayer = try AVAudioPlayer(contentsOf: theseBoots)
             audioPlayer?.play()
         } catch {
             print("Error Playing Gimme Shelter")
@@ -107,11 +105,10 @@ class FiveViewController: UIViewController {
     }
     
     private func fadeAway() {
-        let gimmeShelterPath = Bundle.main.path(forResource: "Fade-Away.mp3", ofType: nil)!
-        let gimmeShelterURL = URL(fileURLWithPath: gimmeShelterPath)
+        let fadeAway = Bundle.main.url(forResource: "FadeAway", withExtension: "mp3")!
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: gimmeShelterURL)
+            audioPlayer = try AVAudioPlayer(contentsOf: fadeAway)
             audioPlayer?.play()
         } catch {
             print("Error Playing Gimme Shelter")
@@ -119,11 +116,10 @@ class FiveViewController: UIViewController {
     }
     
     private func brandy() {
-        let gimmeShelterPath = Bundle.main.path(forResource: "Brandy.mp3", ofType: nil)!
-        let gimmeShelterURL = URL(fileURLWithPath: gimmeShelterPath)
+        let brandy = Bundle.main.url(forResource: "Brandy", withExtension: "mp3")!
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: gimmeShelterURL)
+            audioPlayer = try AVAudioPlayer(contentsOf: brandy)
             audioPlayer?.play()
         } catch {
             print("Error Playing Gimme Shelter")
@@ -134,9 +130,9 @@ class FiveViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level5ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "'It's just a shot away'", answer: "gimme shelter", clue: "Hold for Three", viewController: self, button: nil, gesture: topLeftHoldRecognizer, view: topLeftHoldView, segue: "openingSegue")
-        
         gimmeShelter()
+        
+        sharedController.addRiddleAlert(riddle: "'It's just a shot away'", answer: "gimme shelter", clue: "Hold for Three", viewController: self, button: nil, gesture: topLeftHoldRecognizer, view: topLeftHoldView, segue: "openingSegue", audioPlayer: audioPlayer)
     }
     
     @IBAction func topLeftHoldComplete(_ sender: Any) {
@@ -145,9 +141,9 @@ class FiveViewController: UIViewController {
             sharedController.fadeKeysIn(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "'The night is my companion & the highway is my home.'", answer: "stone", clue: "Hold for Three", viewController: self, button: nil, gesture: self.topRightHoldRecognizer, view: self.topRightHoldView, segue: "openingSegue")
-                
                 self.stone()
+                
+                self.sharedController.addRiddleAlert(riddle: "'The night is my companion & the highway is my home.'", answer: "stone", clue: "Hold for Three", viewController: self, button: nil, gesture: self.topRightHoldRecognizer, view: self.topRightHoldView, segue: "openingSegue", audioPlayer: self.audioPlayer)
             })
         }
     }
@@ -158,9 +154,9 @@ class FiveViewController: UIViewController {
             sharedController.rotateKeysLeft(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "'Like the time they hid that grass from those cops in Tupalo.'", answer: "these boots", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHoldRecognizer, view: self.bottomRightHoldView, segue: "openingSegue")
-                
                 self.theseBoots()
+                
+                self.sharedController.addRiddleAlert(riddle: "'Like the time they hid that grass from those cops in Tupalo.'", answer: "these boots", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHoldRecognizer, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: self.audioPlayer)
             })
         }
     }
@@ -171,9 +167,9 @@ class FiveViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "'Here's a toast to your unknown... You and I are one together.'", answer: "fade away", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHoldRecognizer, view: self.bottomLeftHoldView, segue: "openingSegue")
-                
                 self.fadeAway()
+                
+                self.sharedController.addRiddleAlert(riddle: "'Here's a toast to your unknown... You and I are one together.'", answer: "fade away", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHoldRecognizer, view: self.bottomLeftHoldView, segue: "openingSegue", audioPlayer: self.audioPlayer)
             })
         }
     }
@@ -184,9 +180,9 @@ class FiveViewController: UIViewController {
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "'He came on a summer's day bringin' gifts from far away.'", answer: "brandy", clue: "Swipe Right", viewController: self, button: nil, gesture: self.middleSwipeRecognizer, view: self.middleSwipeView, segue: "openingSegue")
-                
                 self.brandy()
+                
+                self.sharedController.addRiddleAlert(riddle: "'He came on a summer's day bringin' gifts from far away.'", answer: "brandy", clue: "Swipe Right", viewController: self, button: nil, gesture: self.middleSwipeRecognizer, view: self.middleSwipeView, segue: "openingSegue", audioPlayer: self.audioPlayer)
             })
         }
     }

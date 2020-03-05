@@ -63,7 +63,7 @@ class SevenViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level7ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "My legend precedes me. Like the crack of a whip you’ll be shocked to see me", answer: "lightning", clue: "Tap Square", viewController: self, button: topLeftButton, gesture: nil, view: nil, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "My legend precedes me. Like the crack of a whip you’ll be shocked to see me", answer: "lightning", clue: "Tap Square", viewController: self, button: topLeftButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
     }
     
     @IBAction func topLeftButtonTapped(_ sender: Any) {
@@ -71,7 +71,7 @@ class SevenViewController: UIViewController {
         sharedController.fadeKeysIn(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "I allude most, but once i'm found, i'm all you need.", answer: "happiness", clue: "Tap Square", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "I allude most, but once i'm found, i'm all you need.", answer: "happiness", clue: "Tap Square", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -80,7 +80,7 @@ class SevenViewController: UIViewController {
         sharedController.rotateKeysLeft(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "Beasts to the left and the right... Akin this game, only the bold survive and leave with nothing but a diamond in the rough. What am i?", answer: "rodeo", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "Beasts to the left and the right... Akin this game, only the bold survive and leave with nothing but a diamond in the rough. What am i?", answer: "rodeo", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -89,7 +89,7 @@ class SevenViewController: UIViewController {
         sharedController.rotateKeysDown(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "Why is a raven like a writing desk?", answer: "it isn't", clue: "Tap Square", viewController: self, button: self.bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "Why is a raven like a writing desk?", answer: "it isn't", clue: "Tap Square", viewController: self, button: self.bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -98,7 +98,7 @@ class SevenViewController: UIViewController {
         sharedController.rotateKeysRight(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "It's a rock through a window. It's a riot in the street. It's a rebel revolution that's fighting for peace.", answer: "rock and roll", clue: "Hold for Five", viewController: self, button: nil, gesture: self.holdRecognizer, view: self.holdGestureView, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "It's a rock through a window. It's a riot in the street. It's a rebel revolution that's fighting for peace.", answer: "rock and roll", clue: "Hold for Five", viewController: self, button: nil, gesture: self.holdRecognizer, view: self.holdGestureView, segue: "openingSegue", audioPlayer: nil)
         })
     }
     

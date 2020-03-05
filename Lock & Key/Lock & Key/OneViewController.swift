@@ -70,7 +70,7 @@ class OneViewController: UIViewController {
     @IBAction func levelOneButtonTapped(_ sender: Any) {
         fadeStartTextViewOff()
         
-        sharedController.addRiddleAlert(riddle: "I'm all around you, living & breathing. Don't forget to enjoy me every now and then.", answer: "nature", clue: "Tap Square", viewController: self, button: topMiddleButton, gesture: nil, view: nil, segue: "openingSegue")
+        sharedController.addRiddleAlert(riddle: "I'm all around you, living & breathing. Don't forget to enjoy me every now and then.", answer: "nature", clue: "Tap Square", viewController: self, button: topMiddleButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
     }
     
     @IBAction func topMiddleButtonTapped(_ sender: Any) {
@@ -79,7 +79,7 @@ class OneViewController: UIViewController {
         sharedController.fadeLabelInThenOut(label: tapLabel, delay: 1.0)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "I am the begining. Through pain, I give life.", answer: "birth", clue: "Tap Square", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "I am the begining. Through pain, I give life.", answer: "birth", clue: "Tap Square", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -88,7 +88,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysLeft(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "Wisdom may be wasted on the old, but I am wasted on the young.", answer: "youth", clue: "Tap Square", viewController: self, button: self.topLeftButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "Wisdom may be wasted on the old, but I am wasted on the young.", answer: "youth", clue: "Tap Square", viewController: self, button: self.topLeftButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -97,7 +97,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysDown(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "I am the inevitable. Theres no need to struggle, simply come with me and see when your time comes.", answer: "death", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "I am the inevitable. Theres no need to struggle, simply come with me and see when your time comes.", answer: "death", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -106,7 +106,7 @@ class OneViewController: UIViewController {
         sharedController.rotateKeysRight(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            self.sharedController.addRiddleAlert(riddle: "A source of sustinance at its core, yet exquisite and delectible at it's best. What am I?", answer: "food", clue: "Tap Square", viewController: self, button: self.bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue")
+            self.sharedController.addRiddleAlert(riddle: "A source of sustinance at its core, yet exquisite and delectible at it's best. What am I?", answer: "food", clue: "Tap Square", viewController: self, button: self.bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
