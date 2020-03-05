@@ -77,7 +77,7 @@ class SixViewController: UIViewController {
         sharedController.fadeKeysIn(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "I wear many faces, each loved and hated equally. If i wear the right face however, even you wouldn't be able to resist me.", answer: "music", clue: "Tap Square", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "I wear many faces. If i wear the right face however, even you wouldn't be able to resist me.", answer: "music", clue: "Tap Square", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
