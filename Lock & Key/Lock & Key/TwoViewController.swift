@@ -60,7 +60,7 @@ class TwoViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level2ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "Silent as the.", answer: "grave", clue: "Swipe Left", viewController: self, button: nil, gesture: swipeLeftGestureRecognizer, view: topMiddleSwipeView, segue: "openingSegue", audioPlayer: nil)
+        sharedController.addRiddleAlert(riddle: "Silent as the.", answer: "grave", clue: "Swipe Left", viewController: self, button: nil, disableButton: nil, gesture: swipeLeftGestureRecognizer, disableGesture: nil, view: topMiddleSwipeView, segue: "openingSegue", audioPlayer: nil)
     }
     
     @IBAction func swipeLeftGestureCompleted(_ sender: Any) {
@@ -69,7 +69,7 @@ class TwoViewController: UIViewController {
             sharedController.fadeKeysIn(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Constantly changing, I am one thing you can always count on running out of.", answer: "time", clue: "Swipe Right", viewController: self, button: nil, gesture: self.swipeRightGestureRecognizer, view: self.centerMiddleSwipeView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "Constantly changing, I am one thing you can always count on running out of.", answer: "time", clue: "Swipe Right", viewController: self, button: nil, disableButton: self.level2Button, gesture: self.swipeRightGestureRecognizer, disableGesture: nil, view: self.centerMiddleSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -80,7 +80,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysLeft(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Haunting people for years, I am no more than a home for my spider friends.", answer: "cobwebs", clue: "Swipe Down", viewController: self, button: nil, gesture: self.swipeDownGestureRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "Haunting people for years, I am no more than a home for my spider friends.", answer: "cobwebs", clue: "Swipe Down", viewController: self, button: nil, disableButton: nil, gesture: self.swipeDownGestureRecognizer, disableGesture: self.swipeLeftGestureRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -91,7 +91,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "I am your final resting place… unless you’re a vampire of course.", answer: "coffin", clue: "Swipe Up", viewController: self, button: nil, gesture: self.swipeUpGestureRecognizer, view: self.middleRightSwipeView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "I am your final resting place… unless you’re a vampire of course.", answer: "coffin", clue: "Swipe Up", viewController: self, button: nil, disableButton: nil, gesture: self.swipeUpGestureRecognizer, disableGesture: self.swipeRightGestureRecognizer, view: self.middleRightSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -102,7 +102,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Scyth in hand, this symbol for death can be quite grim.", answer: "reaper", clue: "Swipe Left", viewController: self, button: nil, gesture: self.swipeLeftTwoGestureRecognizer, view: self.bottomMiddleSwipeView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "Scyth in hand, this symbol for death can be quite grim.", answer: "reaper", clue: "Swipe Left", viewController: self, button: nil, disableButton: nil, gesture: self.swipeLeftTwoGestureRecognizer, disableGesture: self.swipeDownGestureRecognizer, view: self.bottomMiddleSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -115,7 +115,7 @@ class TwoViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isOn3")
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "death", viewController: self, segue: "3Segue", level: "2", homeSegue: "openingSegue")
+                self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "death", viewController: self, segue: "3Segue", level: "2", homeSegue: "openingSegue", disableButton: nil, disableGesture: self.swipeUpGestureRecognizer)
             })
         }
     }

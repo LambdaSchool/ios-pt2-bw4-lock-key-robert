@@ -66,7 +66,7 @@ class FourViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level4ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "If you havent tried, you're missing out. Come & feel at one with the ocean.", answer: "surfing", clue: "Tap Square", viewController: self, button: topLeftButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
+        sharedController.addRiddleAlert(riddle: "If you havent tried, you're missing out. Come & feel at one with the ocean.", answer: "surfing", clue: "Tap Square", viewController: self, button: topLeftButton, disableButton: nil, gesture: nil, disableGesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
     }
     
     @IBAction func topLeftButtonTapped(_ sender: Any) {
@@ -74,7 +74,7 @@ class FourViewController: UIViewController {
         sharedController.fadeKeysIn(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "They are more free than we could ever be.", answer: "birds", clue: "Tap Square", viewController: self, button: self.topRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "They are more free than we could ever be.", answer: "birds", clue: "Tap Square", viewController: self, button: self.topRightButton, disableButton: self.level4Button, gesture: nil, disableGesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -83,7 +83,7 @@ class FourViewController: UIViewController {
         sharedController.rotateKeysLeft(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "Revered for my beauty, some say I can't be tamed... How fitting.", answer: "ocean", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHoldRecognizer, view: self.bottomLeftHoldView, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "Revered for my beauty, some say I can't be tamed... How fitting.", answer: "ocean", clue: "Hold for Three", viewController: self, button: nil, disableButton: self.topLeftButton, gesture: self.bottomLeftHoldRecognizer, disableGesture: nil, view: self.bottomLeftHoldView, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -92,7 +92,7 @@ class FourViewController: UIViewController {
         sharedController.rotateKeysDown(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "Soaring through the air on a daily basis, I'm an iconic symbol where I reside.", answer: "bald eagle", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHoldRecognizer, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "Soaring through the air on a daily basis, I'm an iconic symbol where I reside.", answer: "bald eagle", clue: "Hold for Three", viewController: self, button: nil, disableButton: self.topRightButton, gesture: self.bottomRightHoldRecognizer, disableGesture: nil, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -101,7 +101,7 @@ class FourViewController: UIViewController {
         sharedController.rotateKeysRight(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "Constantly changing like the water, I'm a bit more breezy.", answer: "wind", clue: "Swipe Right", viewController: self, button: nil, gesture: self.swipeRightRecognizer, view: self.swipeView, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "Constantly changing like the water, I'm a bit more breezy.", answer: "wind", clue: "Swipe Right", viewController: self, button: nil, disableButton: nil, gesture: self.swipeRightRecognizer, disableGesture: self.bottomLeftHoldRecognizer, view: self.swipeView, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -111,7 +111,7 @@ class FourViewController: UIViewController {
         
         UserDefaults.standard.set(true, forKey: "isOn5")
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "freedom", viewController: self, segue: "5Segue", level: "4", homeSegue: "openingSegue")
+            self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "freedom", viewController: self, segue: "5Segue", level: "4", homeSegue: "openingSegue", disableButton: nil, disableGesture: self.bottomRightHoldRecognizer)
         })
     }
     

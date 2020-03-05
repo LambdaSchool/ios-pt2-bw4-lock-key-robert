@@ -61,7 +61,7 @@ class ThreeViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level3ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "With fragrance & color a plenty, I never fail to bring a smile to her face.", answer: "flowers", clue: "Hold for Three", viewController: self, button: nil, gesture: topRightHold, view: topRightHoldView, segue: "openingSegue", audioPlayer: nil)
+        sharedController.addRiddleAlert(riddle: "With fragrance & color a plenty, I never fail to bring a smile to her face.", answer: "flowers", clue: "Hold for Three", viewController: self, button: nil, disableButton: nil, gesture: topRightHold, disableGesture: nil, view: topRightHoldView, segue: "openingSegue", audioPlayer: nil)
     }
     
     @IBAction func topRightHoldComplete(_ sender: Any) {
@@ -70,7 +70,7 @@ class ThreeViewController: UIViewController {
             sharedController.fadeKeysIn(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "The French speak this language so well, they named Paris after me.", answer: "romance", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomLeftHold, view: self.bottomLeftHoldView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "The French speak this language so well, they named Paris after me.", answer: "romance", clue: "Hold for Three", viewController: self, button: nil, disableButton: self.level3Button, gesture: self.bottomLeftHold, disableGesture: nil, view: self.bottomLeftHoldView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -81,7 +81,7 @@ class ThreeViewController: UIViewController {
             sharedController.rotateKeysLeft(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Listen to me, and you'll never go wrong.", answer: "heart", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomMiddleHold, view: self.bottomMiddleHoldView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "Listen to me, and you'll never go wrong.", answer: "heart", clue: "Hold for Three", viewController: self, button: nil, disableButton: nil, gesture: self.bottomMiddleHold, disableGesture: self.topRightHold, view: self.bottomMiddleHoldView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -92,7 +92,7 @@ class ThreeViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "As smooth as a shot of whiskey, none wrote me better than William.", answer: "poem", clue: "Hold for Three", viewController: self, button: nil, gesture: self.bottomRightHold, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "As smooth as a shot of whiskey, none wrote me better than William.", answer: "poem", clue: "Hold for Three", viewController: self, button: nil, disableButton: nil, gesture: self.bottomRightHold, disableGesture: self.bottomLeftHold, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -103,7 +103,7 @@ class ThreeViewController: UIViewController {
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "The key to a shallow woman's heart.", answer: "diamonds", clue: "Hold for Three", viewController: self, button: nil, gesture: self.topLeftHold, view: self.topLeftHoldView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "The key to a shallow woman's heart.", answer: "diamonds", clue: "Hold for Three", viewController: self, button: nil, disableButton: nil, gesture: self.topLeftHold, disableGesture: self.bottomMiddleHold, view: self.topLeftHoldView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -116,7 +116,7 @@ class ThreeViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isOn4")
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "love", viewController: self, segue: "4Segue", level: "3", homeSegue: "openingSegue")
+                self.sharedController.addTransitionRiddleAlert(riddle: "What is the theme of this level?", answer: "love", viewController: self, segue: "4Segue", level: "3", homeSegue: "openingSegue", disableButton: nil, disableGesture: self.bottomRightHold)
             })
         }
     }

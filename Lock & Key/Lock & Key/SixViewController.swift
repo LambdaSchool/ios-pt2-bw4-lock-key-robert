@@ -69,7 +69,7 @@ class SixViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func level6ButtonTapped(_ sender: Any) {
-        sharedController.addRiddleAlert(riddle: "With simple supplies, i could be anything. However, most children just call me this.", answer: "fort", clue: "Tap Square", viewController: self, button: bottomLeftButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
+        sharedController.addRiddleAlert(riddle: "With simple supplies, i could be anything. However, most children just call me this.", answer: "fort", clue: "Tap Square", viewController: self, button: bottomLeftButton, disableButton: nil, gesture: nil, disableGesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
     }
 
     @IBAction func bottomLeftButtonTapped(_ sender: Any) {
@@ -77,7 +77,7 @@ class SixViewController: UIViewController {
         sharedController.fadeKeysIn(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "I wear many faces. If i wear the right face however, even you wouldn't be able to resist me.", answer: "music", clue: "Tap Square", viewController: self, button: self.bottomRightButton, gesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "I wear many faces. If i wear the right face however, even you wouldn't be able to resist me.", answer: "music", clue: "Tap Square", viewController: self, button: self.bottomRightButton, disableButton: self.level6Button, gesture: nil, disableGesture: nil, view: nil, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -86,7 +86,7 @@ class SixViewController: UIViewController {
         sharedController.rotateKeysLeft(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "To be or not to be.", answer: "question", clue: "Swipe Down", viewController: self, button: nil, gesture: self.middleLeftSwipeDownRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "To be or not to be.", answer: "question", clue: "Swipe Down", viewController: self, button: nil, disableButton: self.bottomLeftButton, gesture: self.middleLeftSwipeDownRecognizer, disableGesture: nil, view: self.middleLeftSwipeView, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -96,7 +96,7 @@ class SixViewController: UIViewController {
             sharedController.rotateKeysDown(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Where the skies are blue and the weather's warm, I am passed around from mouth to mouth.", answer: "aloha", clue: "Swipe Up", viewController: self, button: nil, gesture: self.middleRightSwipeUpRecognizer, view: self.middleRightSwipeView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "Where the skies are blue and the weather's warm, I am passed around from mouth to mouth.", answer: "aloha", clue: "Swipe Up", viewController: self, button: nil, disableButton: self.bottomRightButton, gesture: self.middleRightSwipeUpRecognizer, disableGesture: nil, view: self.middleRightSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
@@ -107,7 +107,7 @@ class SixViewController: UIViewController {
             sharedController.rotateKeysRight(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addRiddleAlert(riddle: "We work as a unit. If one of us fails, the others only get stronger.", answer: "senses", clue: "Hold for Three", viewController: self, button: nil, gesture: self.holdRecognizer, view: self.topHoldView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "We work as a unit. If one of us fails, the others only get stronger.", answer: "senses", clue: "Hold for Three", viewController: self, button: nil, disableButton: nil, gesture: self.holdRecognizer, disableGesture: self.middleLeftSwipeDownRecognizer, view: self.topHoldView, segue: "openingSegue", audioPlayer: nil)
             })
         }
         
@@ -121,7 +121,7 @@ class SixViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isOn7")
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.sharedController.addTransitionRiddleAlert(riddle: "Through the beatings, I stand strong... for this is what I live for. What am I?", answer: "drums", viewController: self, segue: "7Segue", level: "6", homeSegue: "openingSegue")
+                self.sharedController.addTransitionRiddleAlert(riddle: "Through the beatings, I stand strong... for this is what I live for. What am I?", answer: "drums", viewController: self, segue: "7Segue", level: "6", homeSegue: "openingSegue", disableButton: nil, disableGesture: self.middleRightSwipeUpRecognizer)
             })
         }
     }
