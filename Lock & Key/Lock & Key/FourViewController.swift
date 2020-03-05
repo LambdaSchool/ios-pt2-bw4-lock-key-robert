@@ -24,6 +24,9 @@ class FourViewController: UIViewController {
     
     @IBOutlet weak var bottomLeftHoldView: UIView!
     @IBOutlet weak var bottomRightHoldView: UIView!
+    
+    @IBOutlet weak var middleRightSwipeView: UIView!
+    @IBOutlet weak var middleLeftSwipeView: UIView!
     @IBOutlet weak var swipeView: UIView!
     
     @IBOutlet var bottomLeftHoldRecognizer: UILongPressGestureRecognizer!
@@ -55,6 +58,8 @@ class FourViewController: UIViewController {
         sharedController.setUpHoldViewBorders(for: bottomLeftHoldView)
         sharedController.setUpHoldViewBorders(for: bottomRightHoldView)
         
+        sharedController.setupSwipeViewBorders(for: middleLeftSwipeView)
+        sharedController.setupSwipeViewBorders(for: middleRightSwipeView)
         sharedController.setupSwipeViewBorders(for: swipeView)
     }
     
