@@ -80,7 +80,7 @@ class TwoViewController: UIViewController {
             sharedController.rotateKeysLeft(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "Haunting people for years, I am no more than a home for my spider friends.", answer: "cobwebs", clue: "Swipe Down", viewController: self, button: nil, disableButton: nil, gesture: self.swipeDownGestureRecognizer, disableGesture: self.swipeLeftGestureRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "Haunting people for years, I am no more than a home for my eight legged friends.", answer: "cobwebs", clue: "Swipe Down", viewController: self, button: nil, disableButton: nil, gesture: self.swipeDownGestureRecognizer, disableGesture: self.swipeLeftGestureRecognizer, view: self.middleLeftSwipeView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
