@@ -92,7 +92,7 @@ class FourViewController: UIViewController {
         sharedController.rotateKeysDown(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "Soaring through the air on a daily basis, I'm an iconic symbol where I reside.", answer: "bald eagle", clue: "Hold for Three", viewController: self, button: nil, disableButton: self.topRightButton, gesture: self.bottomRightHoldRecognizer, disableGesture: nil, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "With a maine of white, I soar with pride.", answer: "bald eagle", clue: "Hold for Three", viewController: self, button: nil, disableButton: self.topRightButton, gesture: self.bottomRightHoldRecognizer, disableGesture: nil, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: nil)
         })
     }
     
@@ -101,7 +101,7 @@ class FourViewController: UIViewController {
         sharedController.rotateKeysRight(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "Constantly changing like the water, I'm a bit more breezy.", answer: "wind", clue: "Swipe Right", viewController: self, button: nil, disableButton: nil, gesture: self.swipeRightRecognizer, disableGesture: self.bottomLeftHoldRecognizer, view: self.swipeView, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "Constantly changing like the water, except I'm a bit more breezy.", answer: "wind", clue: "Swipe Right", viewController: self, button: nil, disableButton: nil, gesture: self.swipeRightRecognizer, disableGesture: self.bottomLeftHoldRecognizer, view: self.swipeView, segue: "openingSegue", audioPlayer: nil)
         })
     }
     

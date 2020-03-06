@@ -70,7 +70,7 @@ class ThreeViewController: UIViewController {
             sharedController.fadeKeysIn(for: keysButton)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-                self.sharedController.addRiddleAlert(riddle: "The French speak this language so well, they named Paris after me.", answer: "romance", clue: "Hold for Three", viewController: self, button: nil, disableButton: self.level3Button, gesture: self.bottomLeftHold, disableGesture: nil, view: self.bottomLeftHoldView, segue: "openingSegue", audioPlayer: nil)
+                self.sharedController.addRiddleAlert(riddle: "What are they selling????", answer: "chocolate", clue: "Hold for Three", viewController: self, button: nil, disableButton: self.level3Button, gesture: self.bottomLeftHold, disableGesture: nil, view: self.bottomLeftHoldView, segue: "openingSegue", audioPlayer: nil)
             })
         }
     }
