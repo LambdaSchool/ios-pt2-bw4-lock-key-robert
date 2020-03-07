@@ -41,7 +41,6 @@ class SixViewController: UIViewController {
         UIApplication.shared.isIdleTimerDisabled = true
         
         UserDefaults.standard.set(true, forKey: "isOn6")
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
