@@ -12,6 +12,10 @@ import AVFoundation
 
 class SharedController {
     
+    //MARK: - Properties
+    
+    var blackWindow: UIWindow?
+    
     //MARK: - Animation Methods
     
     func rotateKeysLeft(for button: UIButton) {
@@ -51,8 +55,15 @@ class SharedController {
     }
     
     func fadeViewOut(view: UIView) {
+        blackWindow = UIWindow(windowScene: view.window!.windowScene!)
+        blackWindow?.backgroundColor = .black
+        blackWindow?.alpha = 0
+        blackWindow?.makeKeyAndVisible()
+        
         UIView.animate(withDuration: 1.5, animations: {
-            view.alpha = 0
+            
+            self.blackWindow?.alpha = 1
+//            view.alpha = 0
         })
     }
     
@@ -324,8 +335,17 @@ class SharedController {
     //MARK: - Segue Methods
     
     func segueAfterFadeOut(viewController: UIViewController, segue: String) {
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             viewController.performSegue(withIdentifier: segue, sender: viewController)
+            UIView.animate(withDuration: 1.5, animations: {
+                self.blackWindow?.alpha = 0
+            }) { (_) in
+                self.blackWindow?.isHidden = true
+                self.blackWindow = nil
+                viewController.view.window?.makeKeyAndVisible()
+            }
         })
     }
     
