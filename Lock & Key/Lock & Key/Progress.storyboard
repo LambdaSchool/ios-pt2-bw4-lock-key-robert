@@ -345,13 +345,13 @@
                         <outlet property="level7Button" destination="Pis-8j-74v" id="tFQ-P6-3Zv"/>
                         <outlet property="level7ButtonLabel" destination="yJc-y7-wal" id="SfZ-qA-ju2"/>
                         <outlet property="level7Label" destination="5KS-P7-vzP" id="SaP-tq-Wks"/>
-                        <segue destination="ele-tn-7tf" kind="presentation" identifier="Level1Segue" modalPresentationStyle="fullScreen" id="xK3-HX-pii"/>
-                        <segue destination="GQs-97-gbQ" kind="presentation" identifier="Level2Segue" modalPresentationStyle="fullScreen" id="S1D-d3-NAY"/>
-                        <segue destination="6xp-AI-99c" kind="presentation" identifier="Level3Segue" modalPresentationStyle="fullScreen" id="2oF-3c-fAJ"/>
-                        <segue destination="nPd-4W-nfN" kind="presentation" identifier="Level4Segue" modalPresentationStyle="fullScreen" id="E6w-XD-mKO"/>
-                        <segue destination="Tr8-kO-mxI" kind="presentation" identifier="Level5Segue" modalPresentationStyle="fullScreen" id="14k-fZ-YJK"/>
-                        <segue destination="Dbv-uq-AGZ" kind="presentation" identifier="Level6Segue" modalPresentationStyle="fullScreen" id="8Wt-Nb-VHx"/>
-                        <segue destination="4NY-C1-GZh" kind="presentation" identifier="Level7Segue" modalPresentationStyle="fullScreen" id="gy1-WF-ykK"/>
+                        <segue destination="ele-tn-7tf" kind="presentation" identifier="Level1Segue" animates="NO" modalPresentationStyle="fullScreen" id="xK3-HX-pii"/>
+                        <segue destination="GQs-97-gbQ" kind="presentation" identifier="Level2Segue" animates="NO" modalPresentationStyle="fullScreen" id="S1D-d3-NAY"/>
+                        <segue destination="6xp-AI-99c" kind="presentation" identifier="Level3Segue" animates="NO" modalPresentationStyle="fullScreen" id="2oF-3c-fAJ"/>
+                        <segue destination="nPd-4W-nfN" kind="presentation" identifier="Level4Segue" animates="NO" modalPresentationStyle="fullScreen" id="E6w-XD-mKO"/>
+                        <segue destination="Tr8-kO-mxI" kind="presentation" identifier="Level5Segue" animates="NO" modalPresentationStyle="fullScreen" id="14k-fZ-YJK"/>
+                        <segue destination="Dbv-uq-AGZ" kind="presentation" identifier="Level6Segue" animates="NO" modalPresentationStyle="fullScreen" id="8Wt-Nb-VHx"/>
+                        <segue destination="4NY-C1-GZh" kind="presentation" identifier="Level7Segue" animates="NO" modalPresentationStyle="fullScreen" id="gy1-WF-ykK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IQ-V6-Chr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -42,13 +42,11 @@ class SixViewController: UIViewController {
         
         UserDefaults.standard.set(true, forKey: "isOn6")
         
-        self.view.alpha = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        sharedController.fadeViewIn(view: self.view)
         bordersOn()
     }
     

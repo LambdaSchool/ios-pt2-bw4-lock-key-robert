@@ -39,13 +39,11 @@ class FourViewController: UIViewController {
         super.viewDidLoad()
         
         UIApplication.shared.isIdleTimerDisabled = true
-        self.view.alpha = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        sharedController.fadeViewIn(view: self.view)
         bordersOn()
     }
     
