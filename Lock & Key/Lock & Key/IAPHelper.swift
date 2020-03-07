@@ -10,7 +10,7 @@ import Foundation
 import StoreKit
 
 enum IAPProduct: String {
-    case Unlock = ""
+    case Unlock = "Cannot use the same ID here. It works on my other project"
 }
 
 class IAPService: NSObject {
