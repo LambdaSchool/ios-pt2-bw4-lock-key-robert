@@ -63,7 +63,6 @@ class SharedController {
         UIView.animate(withDuration: 1.5, animations: {
             
             self.blackWindow?.alpha = 1
-//            view.alpha = 0
         })
     }
     
@@ -339,6 +338,7 @@ class SharedController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             viewController.performSegue(withIdentifier: segue, sender: viewController)
+            
             UIView.animate(withDuration: 1.5, animations: {
                 self.blackWindow?.alpha = 0
             }) { (_) in

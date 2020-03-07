@@ -41,17 +41,12 @@ class FiveViewController: UIViewController {
     
     //MARK: - Views
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        UIApplication.shared.isIdleTimerDisabled = true
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        UIApplication.shared.isIdleTimerDisabled = true
+
         bordersOn()
-        
         warningAlert()
     }
     

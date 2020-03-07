@@ -35,16 +35,12 @@ class SixViewController: UIViewController {
     
     //MARK: - Views
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
         UIApplication.shared.isIdleTimerDisabled = true
         
         UserDefaults.standard.set(true, forKey: "isOn6")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         
         bordersOn()
     }
