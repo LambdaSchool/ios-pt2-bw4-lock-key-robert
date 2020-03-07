@@ -335,7 +335,6 @@ class SharedController {
     
     func segueAfterFadeOut(viewController: UIViewController, segue: String) {
         
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             viewController.performSegue(withIdentifier: segue, sender: viewController)
             
