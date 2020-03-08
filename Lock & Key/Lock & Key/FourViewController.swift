@@ -34,12 +34,11 @@ class FourViewController: UIViewController {
     @IBOutlet var swipeRightRecognizer: UISwipeGestureRecognizer!
     
     //MARK: - Views
-    
+   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         UIApplication.shared.isIdleTimerDisabled = true
-
         bordersOn()
     }
     
@@ -86,7 +85,7 @@ class FourViewController: UIViewController {
         sharedController.rotateKeysDown(for: keysButton)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.sharedController.addRiddleAlert(riddle: "With a maine of white, I soar with pride.", answer: "bald eagle", clue: "Hold for Three", viewController: self, button: nil, disableButton: self.topRightButton, gesture: self.bottomRightHoldRecognizer, disableGesture: nil, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: nil)
+            self.sharedController.addRiddleAlert(riddle: "With a mane of white, I soar with pride.", answer: "bald eagle", clue: "Hold for Three", viewController: self, button: nil, disableButton: self.topRightButton, gesture: self.bottomRightHoldRecognizer, disableGesture: nil, view: self.bottomRightHoldView, segue: "openingSegue", audioPlayer: nil)
         })
     }
     

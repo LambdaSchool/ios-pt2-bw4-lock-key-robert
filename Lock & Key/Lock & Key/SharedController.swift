@@ -61,7 +61,6 @@ class SharedController {
         blackWindow?.makeKeyAndVisible()
         
         UIView.animate(withDuration: 1.5, animations: {
-            
             self.blackWindow?.alpha = 1
         })
     }
@@ -117,7 +116,7 @@ class SharedController {
     
     func endFreePlayAlert(viewController: UIViewController, segue: String) {
         
-        let freeAlert = UIAlertController(title: "This is the End of the Free Game", message: "Please unlock final levels", preferredStyle: .alert)
+        let freeAlert = UIAlertController(title: "This is the End of the Free Game", message: "Please unlock bonus levels", preferredStyle: .alert)
         
         freeAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
             self.fadeViewOut(view: viewController.view)
@@ -244,8 +243,11 @@ class SharedController {
         transitionRiddleAlert.addAction(UIAlertAction(title: "Submit", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction!) in
             guard let guess = transitionRiddleAlert.textFields![0].text?.lowercased() else { return }
             
+            UserDefaults.standard.set(true, forKey: "is5Complete")
+            
             if guess == answer {
-                if UserDefaults.standard.bool(forKey: "Unlock") == true {
+                if UserDefaults.standard.bool(forKey: "Unlocked") == true {
+                    UserDefaults.standard.set(true, forKey: "isOn6")
                     transitionRiddleAlert.message = ""
                     transitionRiddleAlert.dismiss(animated: true, completion: nil)
                     self.fadeViewOut(view: viewController.view)
@@ -334,7 +336,6 @@ class SharedController {
     //MARK: - Segue Methods
     
     func segueAfterFadeOut(viewController: UIViewController, segue: String) {
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             viewController.performSegue(withIdentifier: segue, sender: viewController)
             

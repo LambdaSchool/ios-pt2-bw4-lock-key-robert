@@ -37,7 +37,7 @@ class TwoViewController: UIViewController {
         super.viewWillAppear(true)
         
         UIApplication.shared.isIdleTimerDisabled = true
-
+        
         bordersOn()
     }
     

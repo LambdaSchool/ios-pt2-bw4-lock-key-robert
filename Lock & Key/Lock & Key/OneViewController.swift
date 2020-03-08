@@ -33,7 +33,7 @@ class OneViewController: UIViewController {
         super.viewWillAppear(true)
         
         UIApplication.shared.isIdleTimerDisabled = true
-
+        
         bordersOn()
         setUpStartTextView()
     }

@@ -10,7 +10,7 @@ import Foundation
 import StoreKit
 
 enum IAPProduct: String {
-    case Unlock = "Cannot use the same ID here. It works on my other project"
+    case Unlock = "com.BobbyKeffury.Lock_Key.buy_in"
 }
 
 class IAPService: NSObject {
@@ -19,7 +19,7 @@ class IAPService: NSObject {
     
     static let shared = IAPService()
     let paymentQueue = SKPaymentQueue.default()
-    var product: SKProduct?
+    var product = [SKProduct]()
     
     //MARK: - Methods
     
@@ -34,8 +34,8 @@ class IAPService: NSObject {
         paymentQueue.add(self)
     }
     
-    func purchase(product: IAPProduct) {
-        guard let product = self.product else { return }
+    func purchase(producty: IAPProduct) {
+        guard let product = self.product.filter({ $0.productIdentifier == producty.rawValue }).first else { return }
         
         let payment = SKPayment(product: product)
         paymentQueue.add(payment)
@@ -49,7 +49,7 @@ class IAPService: NSObject {
 extension IAPService: SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        self.product = response.products.first
+        self.product = response.products
         
         for product in response.products {
             print(product.localizedTitle)
@@ -60,8 +60,16 @@ extension IAPService: SKProductsRequestDelegate, SKPaymentTransactionObserver {
         for transaction in transactions {
             if transaction.transactionState == .purchased {
                 UserDefaults.standard.set(true, forKey: "Unlocked")
+                
+                if UserDefaults.standard.bool(forKey: "is5Complete") == true {
+                    UserDefaults.standard.set(true, forKey: "isOn6")
+                }
             } else if transaction.transactionState == .restored {
                 UserDefaults.standard.set(true, forKey: "Unlocked")
+                
+                if UserDefaults.standard.bool(forKey: "is5Complete") == true {
+                    UserDefaults.standard.set(true, forKey: "isOn6")
+                }
             }
             print(transaction.transactionState.status())
         }

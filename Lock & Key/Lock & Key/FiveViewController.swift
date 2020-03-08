@@ -40,12 +40,12 @@ class FiveViewController: UIViewController {
     @IBOutlet var middleSwipeRecognizer: UISwipeGestureRecognizer!
     
     //MARK: - Views
-    
+   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         UIApplication.shared.isIdleTimerDisabled = true
-
+        
         bordersOn()
         warningAlert()
     }
