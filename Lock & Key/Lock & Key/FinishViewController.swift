@@ -21,16 +21,9 @@ class FinishViewController: UIViewController {
     
     //MARK: - Views
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.view.alpha = 0
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        sharedController.fadeViewIn(view: self.view)
         giddyUp()
     }
     
