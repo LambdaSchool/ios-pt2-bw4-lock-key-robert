@@ -40,8 +40,6 @@ class SixViewController: UIViewController {
         
         UIApplication.shared.isIdleTimerDisabled = true
         
-        UserDefaults.standard.set(true, forKey: "isOn6")
-        
         bordersOn()
     }
     
